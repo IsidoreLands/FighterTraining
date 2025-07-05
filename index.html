@@ -62,16 +62,17 @@
     let timeOnEnemyTarget = 0; // Player's score
     const WIN_TIME = 5; // seconds
 
-    // --- Fighter Class ---
+    // --- Fighter Class with Image Support ---
     class Fighter {
-        constructor(x, y, color) {
+        constructor(x, y, imageSrc, scale) {
             this.x = x;
             this.y = y;
             this.v = 2.5; // Current speed
             this.angle = -Math.PI / 2;
             this.rotation = 0;
-            this.color = color;
-            this.size = 20;
+            this.image = new Image();
+            this.image.src = imageSrc; // Set image source
+            this.scale = scale; // Scale for the image
             this.turnSpeed = 0.06;
             this.minSpeed = 1.5;
             this.maxSpeed = 5;
@@ -81,7 +82,7 @@
         draw() {
             ctx.save();
             ctx.translate(this.x, this.y);
-            ctx.rotate(this.angle);
+            ctx.rotate(this.angle + Math.PI / 2); // Adjust rotation for image orientation
 
             // Draw target cone ("the six")
             ctx.beginPath();
@@ -91,14 +92,12 @@
             ctx.fillStyle = 'rgba(255, 255, 255, 0.05)';
             ctx.fill();
 
-            // Draw fighter triangle
-            ctx.beginPath();
-            ctx.moveTo(this.size, 0);
-            ctx.lineTo(-this.size / 2, -this.size / 2);
-            ctx.lineTo(-this.size / 2, this.size / 2);
-            ctx.closePath();
-            ctx.fillStyle = this.color;
-            ctx.fill();
+            // Draw image if loaded, replacing the triangle
+            if (this.image.complete && this.image.naturalHeight !== 0) {
+                const width = this.image.width * this.scale;
+                const height = this.image.height * this.scale;
+                ctx.drawImage(this.image, -width / 2, -height / 2, width, height);
+            }
 
             ctx.restore();
         }
@@ -119,8 +118,9 @@
         }
     }
 
-    const player = new Fighter(canvas.width / 2, canvas.height * 0.75, '#22c55e');
-    const enemy = new Fighter(canvas.width / 2, canvas.height * 0.25, '#ef4444');
+    // Instantiate fighters with image sources
+    const player = new Fighter(canvas.width / 2, canvas.height * 0.75, 'F16 Player.png', 0.08);
+    const enemy = new Fighter(canvas.width / 2, canvas.height * 0.25, 'MiG25 Enemy.png', 0.07);
 
     // --- Keyboard Controls ---
     const keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false };
