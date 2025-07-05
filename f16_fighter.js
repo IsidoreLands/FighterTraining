@@ -6,13 +6,13 @@ let f16Loaded = false;
 
 function f16AssetLoaded() {
     f16Loaded = true;
-    if (f16Loaded && migLoaded) {
-        startGame(); // Calls startGame from index.html when both images are loaded
+    if (f16Loaded && mig25Loaded) {
+        startGame(); // Calls startGame from index.html
     }
 }
 
 f16Img.onload = f16AssetLoaded;
-f16Img.src = 'F16_Player.png';
+f16Img.src = 'F16 Player.png'; // Matches the uploaded file with space
 
 // --- F16 Fighter Class ---
 class F16Fighter {
