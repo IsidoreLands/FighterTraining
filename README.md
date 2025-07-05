@@ -1,2 +1,2 @@
-# FighterTraining
-A Proposed Plan for Fighter vs Fighter Training and Aerial Attack Study
+# PilotTraining
+A Proposed Plan for Pilot vs Pilot Training and Aerial Attack Study
