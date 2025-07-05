@@ -62,7 +62,7 @@
     let timeOnEnemyTarget = 0; // Player's score
     const WIN_TIME = 5; // seconds
 
-    // --- Fighter Class with Image Support ---
+    // --- Fighter Class with SVG Image Support ---
     class Fighter {
         constructor(x, y, imageSrc, scale) {
             this.x = x;
@@ -71,7 +71,7 @@
             this.angle = -Math.PI / 2;
             this.rotation = 0;
             this.image = new Image();
-            this.image.src = imageSrc; // Set image source
+            this.image.src = imageSrc; // SVG file as image source
             this.scale = scale; // Scale for the image
             this.turnSpeed = 0.06;
             this.minSpeed = 1.5;
@@ -82,7 +82,7 @@
         draw() {
             ctx.save();
             ctx.translate(this.x, this.y);
-            ctx.rotate(this.angle + Math.PI / 2); // Adjust rotation for image orientation
+            ctx.rotate(this.angle + Math.PI / 2); // Adjust for proper orientation
 
             // Draw target cone ("the six")
             ctx.beginPath();
@@ -92,7 +92,7 @@
             ctx.fillStyle = 'rgba(255, 255, 255, 0.05)';
             ctx.fill();
 
-            // Draw image if loaded, replacing the triangle
+            // Draw SVG image if loaded, replacing the triangle
             if (this.image.complete && this.image.naturalHeight !== 0) {
                 const width = this.image.width * this.scale;
                 const height = this.image.height * this.scale;
@@ -118,9 +118,9 @@
         }
     }
 
-    // Instantiate fighters with image sources
-    const player = new Fighter(canvas.width / 2, canvas.height * 0.75, 'F16 Player.png', 0.08);
-    const enemy = new Fighter(canvas.width / 2, canvas.height * 0.25, 'MiG25 Enemy.png', 0.07);
+    // Instantiate fighters with SVG images, defaulting to F16 for player and MiG25 for enemy
+    const player = new Fighter(canvas.width / 2, canvas.height * 0.75, 'F16_2D.svg', 0.2); // F16 as player
+    const enemy = new Fighter(canvas.width / 2, canvas.height * 0.25, 'MiG25_2D.svg', 0.2); // MiG25 as enemy
 
     // --- Keyboard Controls ---
     const keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false };
