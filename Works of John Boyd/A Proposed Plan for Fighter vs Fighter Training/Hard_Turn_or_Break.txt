@@ -1,0 +1,5 @@
+a. Estimate range and angle off of the attacking aircraft.
+b. Call a hard turn if your opponent is 2000' or more and 30° or more angle off. (Hard turn is a near maximum performance maneuver with visual control of situation.)
+c. Call a “break” if the aircraft is within 2000' and at a low angle off, less than 30°. (“Break” is an emergency maneuver requiring immediate action without regard for visual sighting of opponent.)
+d. Use rudder leading into turn as this will tend to slow you down and also tighten your turn. In other words, you will hasten a speed differential and thus force your opponent to the outside, gaining lateral separation.
+e. If your opponent is within break range but with excessive closing speed, it might not be necessary to use a maximum performance turn to force him to the outside. Remember, when on the defensive, your first concern is to gain lateral separation. However, try and save part of your airspeed for future maneuvering.
