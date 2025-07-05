@@ -1,1 +1,1 @@
-This is some initial text with old_text.
+This is some initial text with new_text.
