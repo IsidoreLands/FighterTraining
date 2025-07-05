@@ -45,169 +45,220 @@
             Enemy Status: <span id="enemy-status" class="status-bad">VULNERABLE</span>
         </div>
     </div>
+<script>
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+    const missionDisplay = document.getElementById('mission-display');
+    const objectiveDisplay = document.getElementById('objective-display');
+    const playerStatusEl = document.getElementById('player-status');
+    const enemyStatusEl = document.getElementById('enemy-status');
 
-    <script src="f16_fighter.js"></script>
-    <script src="mig25_fighter.js"></script>
-    <script>
-        const canvas = document.getElementById('gameCanvas');
-        const ctx = canvas.getContext('2d');
-        const missionDisplay = document.getElementById('mission-display');
-        const objectiveDisplay = document.getElementById('objective-display');
-        const playerStatusEl = document.getElementById('player-status');
-        const enemyStatusEl = document.getElementById('enemy-status');
+    canvas.width = Math.min(window.innerWidth - 30, 800);
+    canvas.height = Math.min(window.innerHeight - 150, 600);
 
-        canvas.width = Math.min(window.innerWidth - 30, 800);
-        canvas.height = Math.min(window.innerHeight - 150, 600);
+    // --- Game State ---
+    let currentLevel = 1;
+    let timeOnPlayerTarget = 0; // Enemy's score
+    let timeOnEnemyTarget = 0; // Player's score
+    const WIN_TIME = 5; // seconds
 
-        // --- Game State ---
-        let currentLevel = 1;
-        let timeOnPlayerTarget = 0; // Enemy's score
-        let timeOnEnemyTarget = 0; // Player's score
-        const WIN_TIME = 5; // seconds
+    // --- Fighter Class ---
+    class Fighter {
+        constructor(x, y, color) {
+            this.x = x;
+            this.y = y;
+            this.v = 2.5; // Current speed
+            this.angle = -Math.PI / 2;
+            this.rotation = 0;
+            this.color = color;
+            this.size = 20;
+            this.turnSpeed = 0.06;
+            this.minSpeed = 1.5;
+            this.maxSpeed = 5;
+            this.isBraking = false;
+        }
 
-        // Instantiate fighters using the new classes
-        const player = new F16Fighter(canvas.width / 2, canvas.height * 0.75, 0.08);
-        const enemy = new MiG25Fighter(canvas.width / 2, canvas.height * 0.25, 0.07);
+        draw() {
+            ctx.save();
+            ctx.translate(this.x, this.y);
+            ctx.rotate(this.angle);
 
-        // --- Keyboard Controls ---
-        const keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false };
-        window.addEventListener('keydown', (e) => { if (e.key in keys) { e.preventDefault(); keys[e.key] = true; }});
-        window.addEventListener('keyup', (e) => { if (e.key in keys) keys[e.key] = false; });
+            // Draw target cone ("the six")
+            ctx.beginPath();
+            ctx.moveTo(0, 0);
+            ctx.arc(0, 0, 90, Math.PI * 0.75, Math.PI * 1.25, true);
+            ctx.closePath();
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.05)';
+            ctx.fill();
 
-        function handleInput() {
-            if (keys.ArrowUp) player.v = Math.min(player.maxSpeed, player.v + 0.05);
-            if (keys.ArrowDown) player.v = Math.max(player.minSpeed, player.v - 0.05);
-            player.rotation = 0;
-            if (keys.ArrowLeft) player.rotation = -player.turnSpeed;
-            if (keys.ArrowRight) player.rotation = player.turnSpeed;
+            // Draw fighter triangle
+            ctx.beginPath();
+            ctx.moveTo(this.size, 0);
+            ctx.lineTo(-this.size / 2, -this.size / 2);
+            ctx.lineTo(-this.size / 2, this.size / 2);
+            ctx.closePath();
+            ctx.fillStyle = this.color;
+            ctx.fill();
+
+            ctx.restore();
+        }
+
+        update() {
+            this.angle += this.rotation;
+            const vx = Math.cos(this.angle) * this.v;
+            const vy = Math.sin(this.angle) * this.v;
+            
+            this.x += vx;
+            this.y += vy;
+
+            // Screen wrapping
+            if (this.x < 0) this.x = canvas.width;
+            if (this.x > canvas.width) this.x = 0;
+            if (this.y < 0) this.y = canvas.height;
+            if (this.y > canvas.height) this.y = 0;
+        }
+    }
+
+    const player = new Fighter(canvas.width / 2, canvas.height * 0.75, '#22c55e');
+    const enemy = new Fighter(canvas.width / 2, canvas.height * 0.25, '#ef4444');
+
+    // --- Keyboard Controls ---
+    const keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false };
+    window.addEventListener('keydown', (e) => { if (e.key in keys) { e.preventDefault(); keys[e.key] = true; }});
+    window.addEventListener('keyup', (e) => { if (e.key in keys) keys[e.key] = false; });
+
+    function handleInput() {
+        if (keys.ArrowUp) player.v = Math.min(player.maxSpeed, player.v + 0.05);
+        if (keys.ArrowDown) player.v = Math.max(player.minSpeed, player.v - 0.05);
+        player.rotation = 0;
+        if (keys.ArrowLeft) player.rotation = -player.turnSpeed;
+        if (keys.ArrowRight) player.rotation = player.turnSpeed;
+    }
+    
+    // --- AI Brain ---
+    function ai_level_1(ai, target) {
+        const dx = target.x - ai.x;
+        const dy = target.y - ai.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        
+        // This logic is based on the "Hard Turn" section [cite: 2831]
+        // The AI is on the defensive and its goal is to force an overshoot.
+        ai.rotation = 0;
+        
+        // "Call a “break” if the aircraft is within 2000' and at a low angle off" [cite: 2835]
+        // I'm using pixel distance as a proxy for feet, so 200 pixels.
+        if (distance < 200) {
+            ai.rotation = ai.turnSpeed * 1.5; // Max performance break
+        } else {
+            // "Call a hard turn if your opponent is 2000' or more" [cite: 2833]
+            ai.rotation = ai.turnSpeed; // Near max performance turn
         }
         
-        // --- AI Brain ---
-        function ai_level_1(ai, target) {
-            const dx = target.x - ai.x;
-            const dy = target.y - ai.y;
+        // Always apply thrust to maintain maneuvering potential
+        ai.v = Math.min(ai.maxSpeed, ai.v + 0.02);
+    }
+    
+    // Mission Control
+    const missions = [
+        null, // Index 0 is unused
+        {
+            name: "Mission 1: The Defensive Turn",
+            objective: "Enemy is executing a hard turn. Get on his six for 5 seconds.",
+            aiBehavior: ai_level_1,
+            setup: () => {
+                player.x = canvas.width / 2; player.y = canvas.height * 0.75; player.angle = -Math.PI / 2; player.v = 3;
+                enemy.x = canvas.width / 2; enemy.y = canvas.height * 0.25; enemy.angle = Math.PI / 2; enemy.v = 3;
+            }
+        }
+        // Future missions will go here
+    ];
+
+    function resetMission() {
+        timeOnPlayerTarget = 0;
+        timeOnEnemyTarget = 0;
+        const mission = missions[currentLevel];
+        missionDisplay.textContent = mission.name;
+        objectiveDisplay.textContent = mission.objective;
+        mission.setup();
+    }
+
+    function checkGameState(dt) {
+        const checkTargeting = (attacker, defender) => {
+            const dx = defender.x - attacker.x;
+            const dy = defender.y - attacker.y;
             const distance = Math.sqrt(dx * dx + dy * dy);
-            
-            // This logic is based on the "Hard Turn" section [cite: 2831]
-            // The AI is on the defensive and its goal is to force an overshoot.
-            ai.rotation = 0;
-            
-            // "Call a “break” if the aircraft is within 2000' and at a low angle off" [cite: 2835]
-            // I'm using pixel distance as a proxy for feet, so 200 pixels.
-            if (distance < 200) {
-                ai.rotation = ai.turnSpeed * 1.5; // Max performance break
-            } else {
-                // "Call a hard turn if your opponent is 2000' or more" [cite: 2833]
-                ai.rotation = ai.turnSpeed; // Near max performance turn
+
+            if (distance < 100) { // Effective weapons range
+                const angleToTarget = Math.atan2(dy, dx);
+                let angleDiff = angleToTarget - attacker.angle;
+                while (angleDiff > Math.PI) angleDiff -= 2 * Math.PI;
+                while (angleDiff < -Math.PI) angleDiff += 2 * Math.PI;
+
+                if (Math.abs(angleDiff) < 0.35) { // In the cone
+                    return true;
+                }
             }
-            
-            // Always apply thrust to maintain maneuvering potential
-            ai.v = Math.min(ai.maxSpeed, ai.v + 0.02);
-        }
+            return false;
+        };
         
-        // Mission Control
-        const missions = [
-            null, // Index 0 is unused
-            {
-                name: "Mission 1: The Defensive Turn",
-                objective: "Enemy is executing a hard turn. Get on his six for 5 seconds.",
-                aiBehavior: ai_level_1,
-                setup: () => {
-                    player.x = canvas.width / 2; player.y = canvas.height * 0.75; player.angle = -Math.PI / 2; player.v = 3;
-                    enemy.x = canvas.width / 2; enemy.y = canvas.height * 0.25; enemy.angle = Math.PI / 2; enemy.v = 3;
-                }
-            }
-            // Future missions will go here
-        ];
-
-        function resetMission() {
-            timeOnPlayerTarget = 0;
-            timeOnEnemyTarget = 0;
-            const mission = missions[currentLevel];
-            missionDisplay.textContent = mission.name;
-            objectiveDisplay.textContent = mission.objective;
-            mission.setup();
+        if (checkTargeting(player, enemy)) {
+            timeOnEnemyTarget += dt;
+            enemyStatusEl.textContent = `TARGETED (${timeOnEnemyTarget.toFixed(1)}s)`;
+            enemyStatusEl.className = 'status-bad';
+        } else {
+            enemyStatusEl.textContent = 'EVADING';
+            enemyStatusEl.className = 'status-good';
         }
 
-        function checkGameState(dt) {
-            const checkTargeting = (attacker, defender) => {
-                const dx = defender.x - attacker.x;
-                const dy = defender.y - attacker.y;
-                const distance = Math.sqrt(dx * dx + dy * dy);
-
-                if (distance < 100) { // Effective weapons range
-                    const angleToTarget = Math.atan2(dy, dx);
-                    let angleDiff = angleToTarget - attacker.angle;
-                    while (angleDiff > Math.PI) angleDiff -= 2 * Math.PI;
-                    while (angleDiff < -Math.PI) angleDiff += 2 * Math.PI;
-
-                    if (Math.abs(angleDiff) < 0.35) { // In the cone
-                        return true;
-                    }
-                }
-                return false;
-            };
-            
-            if (checkTargeting(player, enemy)) {
-                timeOnEnemyTarget += dt;
-                enemyStatusEl.textContent = `TARGETED (${timeOnEnemyTarget.toFixed(1)}s)`;
-                enemyStatusEl.className = 'status-bad';
-            } else {
-                enemyStatusEl.textContent = 'EVADING';
-                enemyStatusEl.className = 'status-good';
-            }
-
-            if (checkTargeting(enemy, player)) {
-                timeOnPlayerTarget += dt;
-                playerStatusEl.textContent = `VULNERABLE (${timeOnPlayerTarget.toFixed(1)}s)`;
-                playerStatusEl.className = 'status-bad';
-            } else {
-                playerStatusEl.textContent = 'SAFE';
-                playerStatusEl.className = 'status-good';
-            }
-
-            // Win/Loss conditions
-            if (timeOnEnemyTarget > WIN_TIME) {
-                alert("Objective Complete! Moving to next level.");
-                currentLevel++; // This will break for now, but sets up the future
-                if (currentLevel >= missions.length) { currentLevel = 1; }
-                resetMission();
-            }
-
-            if (timeOnPlayerTarget > WIN_TIME) {
-                alert("DEFEATED. Resetting mission.");
-                resetMission();
-            }
+        if (checkTargeting(enemy, player)) {
+            timeOnPlayerTarget += dt;
+            playerStatusEl.textContent = `VULNERABLE (${timeOnPlayerTarget.toFixed(1)}s)`;
+            playerStatusEl.className = 'status-bad';
+        } else {
+            playerStatusEl.textContent = 'SAFE';
+            playerStatusEl.className = 'status-good';
         }
 
-        // --- Game Loop ---
-        let lastTime = 0;
-        function gameLoop(currentTime) {
-            const dt = (currentTime - lastTime) / 1000;
-            lastTime = currentTime;
-            
-            const mission = missions[currentLevel];
-            
-            handleInput();
-            mission.aiBehavior(enemy, player);
-
-            player.update();
-            enemy.update();
-            
-            checkGameState(dt || 0);
-
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            player.draw();
-            enemy.draw();
-            
-            requestAnimationFrame(gameLoop);
-        }
-
-        // Start the game only after images are loaded
-        function startGame() {
+        // Win/Loss conditions
+        if (timeOnEnemyTarget > WIN_TIME) {
+            alert("Objective Complete! Moving to next level.");
+            currentLevel++; // This will break for now, but sets up the future
+            if (currentLevel >= missions.length) { currentLevel = 1; }
             resetMission();
-            gameLoop(0);
         }
-    </script>
+
+        if (timeOnPlayerTarget > WIN_TIME) {
+            alert("DEFEATED. Resetting mission.");
+            resetMission();
+        }
+    }
+
+    // --- Game Loop ---
+    let lastTime = 0;
+    function gameLoop(currentTime) {
+        const dt = (currentTime - lastTime) / 1000;
+        lastTime = currentTime;
+        
+        const mission = missions[currentLevel];
+        
+        handleInput();
+        mission.aiBehavior(enemy, player);
+
+        player.update();
+        enemy.update();
+        
+        checkGameState(dt || 0);
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        player.draw();
+        enemy.draw();
+        
+        requestAnimationFrame(gameLoop);
+    }
+
+    // Start the game
+    resetMission();
+    gameLoop(0);
+</script>
 </body>
 </html>
