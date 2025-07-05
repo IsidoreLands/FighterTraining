@@ -46,7 +46,8 @@
         </div>
     </div>
 
-    <script src="fighter_images.js"></script>
+    <script src="f16_fighter.js"></script>
+    <script src="mig25_fighter.js"></script>
     <script>
         const canvas = document.getElementById('gameCanvas');
         const ctx = canvas.getContext('2d');
@@ -64,9 +65,9 @@
         let timeOnEnemyTarget = 0; // Player's score
         const WIN_TIME = 5; // seconds
 
-        // Use the Fighter class from fighter_images.js
-        const player = new Fighter(canvas.width / 2, canvas.height * 0.75, playerImg, 0.08);
-        const enemy = new Fighter(canvas.width / 2, canvas.height * 0.25, enemyImg, 0.07);
+        // Instantiate fighters using the new classes
+        const player = new F16Fighter(canvas.width / 2, canvas.height * 0.75, 0.08);
+        const enemy = new MiG25Fighter(canvas.width / 2, canvas.height * 0.25, 0.07);
 
         // --- Keyboard Controls ---
         const keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false };
@@ -202,7 +203,7 @@
             requestAnimationFrame(gameLoop);
         }
 
-        // Start the game only after images are loaded
+        // Start the game only after both images are loaded
         function startGame() {
             resetMission();
             gameLoop(0);
