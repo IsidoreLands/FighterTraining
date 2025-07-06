@@ -25,7 +25,7 @@ def create_file(file_path, content="", message=None):
     if message is None:
         message = f"Create file {file_path}"
     run_git_command(['commit', '-m', message])
-    # push_changes()
+        push_changes()
 
 def execute(args):
     parser = argparse.ArgumentParser(description="Create a new file")
