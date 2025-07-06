@@ -13,9 +13,16 @@ def push_changes():
     remote = run_git_command(['config', '--get', f'branch.{current_branch}.remote']).stdout.strip()
     run_git_command(['push', remote, current_branch])
 
+def is_file_tracked(file_path):
+    result = run_git_command(['ls-files', '--error-unmatch', file_path], check=False)
+    return result.returncode == 0
+
 def delete_file(file_path, message=None):
     if not os.path.exists(file_path):
         raise ValueError(f"File '{file_path}' does not exist.")
+    if not is_file_tracked(file_path):
+        run_git_command(['add', file_path])
+        run_git_command(['commit', '-m', f"Add {file_path} before deletion"])
     run_git_command(['rm', file_path])
     if message is None:
         message = f"Delete file {file_path}"
