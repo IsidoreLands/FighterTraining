@@ -11,4 +11,4 @@ function drawHUD1(ctx, canvas) {
     ctx.fillText("Efficiency: 0.8", hud1X, hud1Y + 40);
     ctx.globalAlpha = 1.0; // Reset transparency
 }
-console.log("HUD1 loaded");
+(function() { console.log("HUD1 loaded with debug at", performance.now()); })();

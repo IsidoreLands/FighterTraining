@@ -40,4 +40,4 @@ function updateHUD2Values(newFuel, newHealth) {
     fuel = Math.max(0, Math.min(100, newFuel)); // Clamp between 0 and 100
     health = Math.max(0, Math.min(100, newHealth)); // Clamp between 0 and 100
 }
-console.log("HUD2 loaded");
+(function() { console.log("HUD2 loaded with debug at", performance.now()); })();
