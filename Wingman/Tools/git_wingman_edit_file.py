@@ -26,6 +26,11 @@ def edit_file(file_path, content, message=None):
     with open(file_path, 'w') as f:
         f.write(content)
     run_git_command(['add', file_path])
+    # Check if there are changes to commit
+    status_result = run_git_command(['status', '--porcelain'], check=False)
+    if not status_result.stdout.strip():
+        print(f"No changes made to {file_path}. Skipping commit.")
+        return
     if message is None:
         message = f"Edit file {file_path}"
     run_git_command(['commit', '-m', message])
