@@ -24,7 +24,7 @@ def create_folder(folder_name, message=None):
     if message is None:
         message = f"Create folder {folder_name}"
     run_git_command(['commit', '-m', message])
-        push_changes()
+    push_changes()
 
 def execute(args):
     parser = argparse.ArgumentParser(description="Create a new folder with .gitkeep")
