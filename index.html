@@ -256,8 +256,8 @@
             enemy.draw();
             
             // Draw HUDs
-            drawHUD1(ctx, canvas);
-            drawHUD2(ctx, canvas);
+            if (typeof drawHUD1 === 'function') drawHUD1(ctx, canvas);
+            if (typeof drawHUD2 === 'function') drawHUD2(ctx, canvas);
 
             requestAnimationFrame(gameLoop);
         }
