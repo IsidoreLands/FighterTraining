@@ -1,0 +1,11 @@
+TYPES OF PURSUIT CURVE ATTACKS
+Until now, we have made a general analysis of the type of attack we
+will be performing against high-speed targets. Now, we will discuss specific
+types of pursuit curve attacks and see if one or more of these attacks offers
+advantages over the others. There are four basic types of pursuit attack:
+1. The High-side or Level Attack
+2. The Overhead Attack
+3. The underside Attack
+4. The Nose-quarter Attack
+
+17

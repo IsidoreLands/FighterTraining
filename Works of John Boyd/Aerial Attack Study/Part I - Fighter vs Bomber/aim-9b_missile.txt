@@ -1,0 +1,1010 @@
+AIM-9B Missile against a Non-Maneuvering Target
+IR Pattern
+Range
+G
+Lambda
+
+1
+2
+4
+6
+7
+
+Mechanics of the Pursuit Curve
+
+11
+
+Limitations of Our Weapons System in a Pursuit Curve Attack
+The AIM-9B Missile
+
+16
+17
+
+Types of Pursuit Curve Attack
+The High-side Attack
+The Overhead Attack
+Underside Attack
+Nose-quarter Attack
+
+17
+18
+19
+21
+22
+
+The Best Type of Attack against a Non-Maneuvering Target with AIM-9B
+Overhead Attack
+High side Attack
+Six-O’Clock Attack
+Underside Attack
+
+22
+22
+24
+25
+25
+
+Best Type of Attack against a Non-maneuvering Target with the 20 mm Cannon
+
+27
+
+Maneuvering for the Attack
+
+31
+
+Flight Tactics
+
+35
+
+Summary – Fighter vs Bomber
+
+38
+
+Part II – Fighter vs Fighter
+Introduction
+
+41
+
+Chapter 1 - Basic Limitations of AIM-9B against a Maneuvering Target
+
+42
+
+Chapter 2 - Fighter Maneuvers
+Defensive Turn
+Procedures for the Defensive Turn
+Adverse Yaw
+The Scissors Maneuver
+Procedures for the Scissors Maneuver
+Countering the Scissors Maneuver
+Procedures for Maneuvering against a Scissors Counter
+Procedures for Maneuvering Against a Scissors Counter
+
+49
+51
+53
+53
+55
+56
+58
+61
+61
+
+The Attack
+Procedures for the Initial Attack
+High-Speed Yo-Yo
+Procedures for the High-Speed Yo-Yo
+Procedures for Countering the High-Speed Yo-Yo
+Barrel-Roll Attack
+Procedures for the Barrel-Roll Attack
+Procedures for Countering the Barrel-Roll Maneuver
+The Low-Speed Yo-Yo
+Procedures for the Low-Speed Yo-Yo
+Procedures for Countering the Low-Speed Yo-Yo
+Countering the Overhead Attack with a Negative Delta Mach
+Procedures for Countering the Overhead Attack with a Negative Delta Mach
+Maneuvering from an Overhead Attack with a Negative Delta Mach
+Procedures for Maneuvering from an Overhead Attack with a Negative Delta Mach
+The Vertical Rolling Scissors
+Procedures for the Vertical Rolling Scissors
+Procedures for Countering the Vertical Rolling Scissors
+
+62
+63
+64
+70
+72
+73
+77
+78
+79
+83
+84
+84
+87
+89
+92
+93
+96
+96
+
+The High-G Barrel-Roll
+The High-G Barrel-Roll over the Top
+The High-G Roll Underneath
+Procedures for the High-G Barrel-Roll Over the Top
+Procedures for the High-G Roll Underneath
+Maneuvering from a Nose-Quarter Attack
+Procedures for the Nose-Quarter Attack
+Procedure for Countering the Nose-Quarter Attack
+
+97
+98
+101
+103
+105
+105
+110
+111
+
+Chapter 3 - Tactical formation
+
+112
+
+Procedures for Flying Element Formation
+Flying the Position of Wingman in Patrol Formation
+Flying the Fighting Position as a Wingman in Element Formation
+
+119
+119
+120
+
+Procedures for Flying the Fluid Four Patrol
+Flying Position of Fluid Element Leader
+Flying Position of Wingman in Fluid Four Patrol
+
+120
+120
+121
+
+Chapter 4 - Flight Tactics
+
+122
+
+Two Attacking Two
+
+122
+
+Procedures for Maneuvering Against a Defensive Split
+
+127
+
+Defending Two when Attacked by Two
+
+129
+
+Procedures for Employing the Defensive Split
+Performing the Defensive Split
+Executing a Defensive Split when the Attacker Selects the Low Defender
+Executing the Defensive Split when the Attacking Element Selects the High Defender
+Playing the Defensive Split when the Attacking Element Splits
+Executing the Defensive Split when the Attack Switches from Low Defender to High Defender
+
+136
+136
+137
+137
+137
+138
+
+Attacking Four with Two
+
+138
+
+Attacking a Flight of Four with Four
+
+139
+
+Procedures for Attacking Four with Two
+
+142
+
+Procedures for Attacking Four with Four
+
+142
+
+Defending Four when Attacked by Two
+
+144
+
+Defending Four when Attacked by Four
+
+144
+
+Procedures for Defending Four when Attacked by Two
+
+144
+
+Procedures for Defending Four when Attacked by Four
+
+146
+
+Summary – Fighter vs Fighter
+
+146
+
+Bibliography
+
+147
+
+STATEMENT OF REVIEW
+1. In accordance with AFR 5-5 and in compliance with AFR 5-5/Wing
+Supplement-1, Nellis Air Force Base, dated 21 March 1960, this publication
+has been thoroughly reviewed by the undersigned officers, and:
+a. Is considered essential for the following reasons:
+(1) It satisfies a Tactical Air Command need for GAR-8 employment
+information.
+(2) It provides a complete and authoritative analysis of Aerial Studies for use by
+all fighter units with TAC.
+(3) It will be used as a reference work in support of Course No. 1115053, and
+by units undergoing training in the Academic Section of the USAF Fighter
+Weapons School.
+b. It has been determined to be an original work which does not duplicate
+any similar publication.
+c. It does not contain any matter which might be considered objectionable or
+subject to ridicule.
+d. No further coordination is deemed necessary.
+
+Introduction
+Tactics – fighter-versus-bomber, fighter-versus-fighter, or even ground
+attack – are developed according to the performance capabilities or
+limitations of the weapons or weapons systems used. In other words,
+effective tactics reflect the best way to employ a given weapon against
+a given enemy with known or estimated capabilities. Assuming this to
+be true, tactics are functional – that is, they reflect the capabilities and
+limitations of the opponent’s weapons as well as our own. Therefore, in
+our discussion of aerial attack, we must determine the operation envelopes
+of our weapons systems (this includes the aircraft and its associated
+armament). After having learned these envelope parameters, the discussion
+will center on how to best employer weapons systems in a given fighterversus-fighter or fighter-versus-bomber situation, in which we assume that
+our opponent has comparable capabilities.
+Fighter-versus-bomber tactics will be covered first. In this phase, we
+assume that a maneuvering fighter attacks a non-maneuvering target;
+whereas in the fighter-versus-fighter phase, we assume that a maneuvering
+fighter attacks a maneuvering target. Since the fighter-versus-bomber
+situation has only one variable – the maneuvering fighter – a more exact
+technical analysis can be accomplished on it. In addition, fighter-versusbomber theory is a fundamental departure point for fighter-versus-fighter
+combat.
+
+BASIC LIMITATIONS OF THE DISTURBED SIGHT AND THE 20MM
+CANNON
+To adequately employ the disturbed sight and the 20mm cannon, we
+must understand the limitations of this equipment in any tactical situation.
+The operating range of the ASG-17 disturbed sight is from 600
+to 6000 feet. It will compute the proper prediction angle for a target
+throughout that range, from the ground up to 50,000 feet and from zero to
+nine G, if the pilot can track the target properly. However, it is improbable
+that a pilot would be able to deliver a lethal burst of fire at a range greater
+than 3,000 feet because of the difficulty in tracking beyond that range.
+To accurately predict the lead requirement, any disturbed sight
+requires the following basic information: range and target angular velocity.
+In the disturbed sight, range is provided by the ranging radar, and target
+angular velocity information is acquired by tracking the target aircraft.
+Since the pilot is forced to turn his aircraft at a certain rate, this rate of
+turn is a representation of target motion and is directly proportional to
+target speed. The angular velocity of the attacking aircraft is set into the
+sight through gyro action. The information is then married to the input
+from the radar and the proper prediction angle is computed by placing
+an electrical restraint (stiffness current) on the gyros. At long ranges,
+little restraint is applied, while at short ranges a great amount of restraint
+is applied. At ranges beyond 3,000 feet, little restraint is applied, thus
+producing a tracking index which is quite loose and difficult to control.
+Since the pilot’s responses are not precise enough, results are usually poor,
+even though the equipment may be working properly.
+Another limitation is the cone of dispersion of the 20mm cannon.
+For the M-39, harmonization criteria specifies that 80% of all rounds fired
+must impact in a 4-mil cone. As we increase firing range, bullet density will
+be decreased by a function of the square (if range doubles, bullet density
+quarters). At 3,000 feet, bullet density will be decreased to 1 ∕ 9 that at 1,000
+feet. As a result, an attacker must fire over a longer time span in order to
+deliver a lethal burst. At the same time, he must track a target smaller in
+perspective. Since it is extremely difficult to track with the disturbed sight
+at ranges greater than 3,000 feet, and the 20mm cone of dispersion causes
+loss of effective bullet density at this range, we consider our maximum
+range for the disturbed sight/20mm cannon as 3,000 feet.
+BASIC LIMITATIONS OF THE AIM-9B (GAR-8) MISSILE AGAINST A
+NON-MANEUVERING TARGET
+AIM-9B is a supersonic infra-red-homing missile, launched in the
+target’s tail cone on a pursuit course, using the fixed sight. After launch, the
+missile maneuvers to establish a collision course with
+
+1
+
+the target. In other words, the missile determines where the target is going
+and heads for that point in space. To successfully employ Sidewinder in a
+given tactical situation, you must be within its firing envelope. This firing
+envelope is determined by: (1) The radiation pattern of the target and
+(2) The performance envelope of the missile. The radiation pattern of a
+particular target is the area in which you can detect its IR radiation. The
+performance envelope is determined by: Range of the missile, number of
+G which the missile can pull and lambda (look -angle) limitations. Thus,
+the basic limitations of the missile, against a non-maneuvering target are
+determined by: Infra-red pattern, range, G and lambda. Since tactics are
+developed according to the performance capabilities or limitations of the
+weapons used, discussion of the limitations is in order.
+IR Pattern
+The missile gyro-seeker locks onto the strongest point-source of
+IR radiation. For a target in military power, the strongest point-source
+is the hot metal of the jet’s tailpipe. Approximately 85% of the IR signal
+generated comes from this hot metal and the remaining 15% comes from
+the hot jet exhaust. For a target operating in afterburner, the primary
+source of radiation is the hot exhaust flame. Approximately 60% of the
+signal generated comes from flame and 40% is generated by the hot metal
+of the tailpipe. In the discussion of radiation patterns, it is necessary to
+keep in mind the shape of the pattern. In aircraft with shielded tailpipes,
+radiation patterns are generally long and relatively narrow; whereas, in
+aircraft which do not have shielded tailpipes, the patterns are long and
+wide. In fighter -type aircraft, the radiation pattern is generally long and
+relatively narrow since the geometry of the aircraft shields the tailpipe. This
+applies in military power only. In afterburner power, naturally, the pattern
+is long and wide, since the flame of the afterburner is not shielded by the
+jet’s aft fuselage. In both English and Soviet bomber-type airplanes, in the
+horizontal plane, the jet tailpipe is shielded by the sweep-back of the wings,
+thus presenting a long narrow pattern. In the vertical plane, however, the
+pattern is long and wide, since the wings do not shield the hot metal and
+the jet exhaust. USAF bomber-type aircraft, on the other hand, present
+long and wide horizontal patterns, since the engine nacelles are suspended
+below the wing, providing the gyro-seeker a relatively unrestricted view
+of the jet exhaust. In the overhead vertical plane, the pattern is long and
+narrow, since the wing shields the IR radiation from the gyro-seeker.
+Radiation patterns vary with tailpipe temperature as well as with area of
+the source. In other words, the greater the temperature, the greater the
+radiation pattern; and, logically, the larger the source, the greater the
+radiation pattern. To illustrate: A bomber with 8 engines in military power,
+as compared to a fighter with one engine in military power, would generate
+a much larger radiation pattern because the area of the source is much
+greater.
+
+2
+
+Background IR sources are significant factors affecting the size and
+shape of radiation patterns. Important background IR sources are (1) Sun,
+(2) Clouds, (3) Water, (4) Snow and (5) Terrain.
+(1) Sun: The sun is the strongest source of infra-red energy known.
+You cannot fire Sidewinder at targets flying directly between you and the
+sun, since the sun’s radiation will decoy the missile away from the target.
+Therefore, do not fire at a target which is within 25° of the sun. Also, do
+not continuously point the missile directly at the sun for more than ten
+seconds, or the lead sulphide detector may be permanently damaged.
+(2) Clouds: Clouds reflect IR radiation from the sun – particularly
+cumulus clouds. If you must fire at a target which is framed against a bright
+cloud background, in all probability you will be forced to reduce your slant
+range to 6,000 or 8,000 feet (AFMDC ADJ SS-845) to obtain proper signal
+discrimination. If the target is hidden by clouds, the clouds will confuse the
+target signal so that the missile will not home. The signal which you receive
+will be the background radiation reflected by the clouds. A good ruleof-thumb for flying in clouds or against a cloud background is: diminish
+range until it is possible to discriminate between the background and the
+target signal.
+(3) Water: Water, like clouds, reflects IR energy from the sun. Calm
+water is a tremendous background radiator when the sun’s images can
+actually be seen in the water. Rough or choppy water, on the other hand,
+reflects IR radiation in all directions and the attacker need not be in a
+position where he can see the image of the sun on the water. As when
+operating against a cloud background, diminish range until you can
+achieve proper signal discrimination.
+(4) Snow: Snow, like water and clouds, reflects the sun’s IR energy.
+When firing against a snow background, as compared to a water or cloud
+background, you will have to diminish your slant range much more in
+order to get proper signal discrimination. There is a good possibility that
+you will be forced inside the missile’s minimum range, thereby precluding
+a missile attack.
+(5) Terrain: Terrain background reduces maximum missile range,
+as do clouds and other previously mentioned backgrounds. Light
+terrain in particular, such as dry lakes and sand, provides maximum
+background radiation. When firing against the three previously mentioned
+backgrounds, under an overcast, max range is not diminished nearly as
+much as when firing under CAVU conditions, since the clouds act as a
+device for shielding out the sun’s IR radiation.
+
+3
+
+Range:
+AIM-9B has both minimum and maximum range restrictions. Basic
+minimum range for launching is 3,000 feet. This is determined by three
+factors: (1) Time for the influence fuze to arm, (2) Time for the missile to
+set up a collision course, and (3) Delta Mach. To be assured of a kill, all
+three of these factors must be considered. First, time for the influence fuze
+to arm: It has been proven through empirical testing, that approximately
+85% of the kills achieved have been through influence fuze action. Since
+it takes the influence fuze about two seconds to arm – at rocket motor
+burn-out – a minimum range must be considered. Second, time for the
+missile to set up a collision course: After launching, the missile does not
+begin to guide until it clears the launch aircraft. This delay lasts for about
+1 ∕ 2 second, at the end of which time the missile receives its first guidance
+command and starts to set up a collision course. Third, Delta Mach (rate
+of closure): At rocket motor burn-out, the missile is traveling about 1.7
+Mach above the speed of the launch aircraft. If the launch aircraft has a
+high rate of closure, the missile has a faster airspeed relative to the target.
+Since it takes a definite time for the influence fuze to arm, and a definite
+time for the missile to set up a collision course, the missile must travel a
+greater distance, relative to the target, before either one of these occurs.
+Missile firing range can be determined by use of the following formula:
+Minimum range is equal to 3000 ± (Delta Mach × 3000). To illustrate :
+If the launch aircraft is traveling at 1.2 Mach and the target aircraft at .8
+Mach, we have a Delta Mach of .4. Applying this to the formula, we see that
+minimum range is equal to 3000 + (.4 × 3000), or 4200 feet. The general
+“rule-of-thumb” for minimum range, co-airspeed, co-altitude, however,
+is 3000 feet. Maximum Range: Maximum range is determined by three
+factors – guidance time, air density, and Delta Mach. Missile guidance time
+is approximately 18 seconds, which is a constant value applied to both air
+density and Delta Mach. Air density is important factor, in that the higher
+the air density the greater the aerodynamic drag, thus the shorter the range
+over an 18-second time period. Delta Mach is important in that the faster
+the launch aircraft, the faster the missile in relation to the target; thus, over
+an 18-second time period, the greater the distance the missile will travel.
+Many max-range charts have been developed by both the Air Force and
+the Navy to depict the maximum range at various altitudes, airspeeds, and
+Delta Mach relationships; however, it is virtually impossible to remember
+all these relationships.
+The following “rules-of-thumb” may be used by the pilot to determine
+max range:
+(1) For co-speed attacks against trans-sonic bombers – one mile for
+altitudes below 10,000 feet, add one-half mile range for each additional
+10,000 feet increase in altitude.
+
+4
+
+(2) For co-speed attacks against supersonic targets – one mile range
+for altitudes below 20,000 feet and add one-half mile for each additional
+10,000-foot increase in altitude. In applying the rules-of-thumb we can
+see that Sidewinder’s max-effective range against a sub-sonic target at
+30,000 feet would be two miles, or, roughly 10,000 feet slant range. Against
+a supersonic target at 30,000 feet, the maximum slant range would be
+approximately one and one-half mile, or, roughly 7800 feet.
+(3) Delta Mach “rule-of-thumb”: Add one thousand feet for each .1
+Delta Mach when above 30,000 feet altitude. To illustrate: A .8 Mach target,
+at 30,000 feet, is being attacked by a 1.2-Mach fighter at the same altitude.
+Applying the sub-sonic rule-of-thumb, we find that the max-effective range
+at which we can launch the missile is 10,000 feet, or approximately 2 miles,
+for a co-speed condition. Adding 4000 feet for .4 Delta Mach, we compute
+a new max-effective range of 14,000 feet.
+The only problem now is range estimation. When in the cockpit of
+an attacking fighter, at minimum ranges, there is no problem, since we
+may use the ASG-17 radar to determine range. At max range, however,
+we are beyond the capability of the radar and must use another means
+of determining our approximate range from a given target. For normal
+missile firing ranges, fairly accurate range estimation can be accomplished
+by comparing a known aircraft wingspan with the sight reticle radius, or
+with pipper diameter. Applying the formula,
+X=
+
+WS × 1000
+S
+
+Where
+X = size of the target in mils
+WS= wingspan of the target in feet
+S = range of the attacking fighter from the target
+we can determine the size of the target, in relation to the 70-mil-diameter
+reticle or 2-mil pipper.
+Example 1:
+Size of Badger (wingspan 116’) in mils when range is 10,000’
+X=
+
+116 × 1000
+= 11.6 or approximately 12 mils
+10,000
+
+This means that at 10,000 feet, the Badger wingspan will subtend 1 ∕ 3 of
+reticle radius (35 mils). At 20,000 feet the Badger span will be 6 mils and
+will subtend 3 pipper widths. At 5,000 feet the Badger span will be 23 mils
+and will subtend 2 ∕ 3 of a reticle radius.
+
+5
+
+Example 2
+Size of F-100 (wingspan 39’) in mils when range is 10,000 feet
+39 × 1000
+= 3.9 or approximately 4 mils
+10,000
+At 10,000 feet the F-100 wingspan will subtend 2 pipper widths. At 20,000
+feet it will subtend 1 pipper width, and at 5000 feet, 4 pipper widths or
+approximately 1 ∕ 5 of radius.
+X=
+
+G
+AIM-9B can pull approximately 10G at sea level and approximately
+3.5 G at 50,000 feet. The 10G maximum at sea level extends almost
+all the way to 30,000 feet. From that altitude upward, the capability
+decreases until, at 50,000 feet the missile can pull approximately 3.5 G. In
+other words, Sidewinder can pull 10G from sea level to 30,000 feet and
+approximately 3.5 G at 50,000 feet. Maximum fighter G, when launching,
+is approximately 2G below 40,000 feet and 1.6 G above 40,000 feet. The
+G-capability of the missile determines the G-limit on the fighter at launch.
+To illustrate: The rate of turn of the fighter in a pursuit curve is dependent
+on target speed, angle off, and range, as indicated by the following formula:
+Vt × Sin θ
+W=
+Range
+Where
+W = Rate of turn in radians per second
+Vt = Target velocity in feet per second
+Sinθ = Sine of the angle-off
+By examining the formula we can see that the rate of turn (W) increases
+any time target velocity or angle-off increases, and decreases as range
+increases. The number of G which the fighter pulls, at a given rate of turn,
+is directly proportional to fighter speed, and may be represented by the
+following formula:
+W=
+
+32.2 × N
+Vf
+
+Where
+N = Number of radial G
+Vf = Fighter velocity in feet per second
+W = Rate of turn in radians per second
+We can see from the formula that any time fighter velocity increases, we
+must also increase G (N), in an effort to maintain a given turn rate.
+Rate of turn required for the missile to set up a collision course is
+dependent upon five factors: (1) target speed, (2) angle-off,
+6
+
+(3) range, (4) enabling time, and, (5) the navigational constant. The
+number of G which the missile pulls, for a given rate of turn, is directly
+proportional to missile speed. The higher the speed, the higher the G.
+If the missile is launched from a Mach 1 fighter pulling 2G, how many
+G must the missile pull in order to maintain the same rate of turn as the
+launching fighter? As shown by the formula
+Vf × W
+32.2
+since the missile (V) is going 1.7 Mach above the launch aircraft’s velocity,
+or 2.7 Mach, it must pull 5.4 G, in order to maintain the same rate of turn
+as the launching fighter. Why, then, are we committed to pull a maximum
+of 2G when the missile can pull 10G, an amount considerably greater than
+the 5.4 G which we just computed? AIM-9B does not begin to guide until
+1 ∕ 2 second after launch, at which time it receives its first guidance signal
+to set up a collision course. During this enabling period (1 ∕ 2 second) the
+missile has the characteristics of an ordinary rocket. Because of this, an
+additional rate of turn is necessary to set up its collision course. To set up
+the collision course, Sidewinder turns 3 1 ∕ 2 times the rate of turn of the
+gyro-seeker – this is a navigational constant. Because of this, the rate of
+turn generated by the missile, in the first maneuver, is greater than the
+rate of turn of the launching fighter. Since the number of G pulled by the
+missile and fighter is equated to rate of turn and velocity, it is obvious that
+the 2G limitation of the fighter at launch is tied to the 10G limitation of the
+missile. If more than 2G is pulled, the tracking rate of the gyro-seeker is
+exceeded by the line-of-sight rate, thus the seeker loses the target.
+N=
+
+Another means of exceeding the tracking rate of the gyro-seeker is
+to launch the missile with an angle-of-attack in excess of 12° (the angle
+between the missile’s longitudinal axis and the launch aircraft’s flight
+path). For the F-100, since the missile launcher line is aligned 2° below
+the fuselage reference line, the maximum aircraft angle of attack is 14°. If
+launched with a greater angle of attack, Sidewinder will jump toward flight
+path, causing the tracking rate of the gyro-seeker to be exceeded by the
+line-of-sight rate, consequently the gyro-seeker will lose the target. When
+this happens, the missile goes ballistic. To avoid exceeding a 14° angle
+of attack, the F-100 should not be flown at less than 170 knots in a 1G
+condition and 230 knots in a 2G condition.
+Lambda
+Lambda limit is simply the max look-angle between the axis of the
+gyro-seeker and the longitudinal axis of the missile – a 25-degree cone
+with its center along the longitudinal axis of the missile. Why are we
+interested in this lambda limitation? It is possible for a pilot to satisfy the
+conditions of IR, range, and G, yet be outside the lambda capability of the
+missile. Lambda limit may be exceeded by a combination of two factors:
+low missile velocity and high angle-off.
+7
+
+(1) Low Missile Velocity: One-half second after launch, Sidewinder
+turns to establish a collision course with the target. Two seconds after
+launch, it has a velocity 1.7 Mach greater than that of the launch aircraft.
+To establish a collision course, Sidewinder turns 3 1 ∕ 2 times the rate of
+the gyro-seeker axis to reduce the line of sight rate to zero, or establish
+a constant angular relationship between the missile and the target. After
+rocket motor burn-out, the missile begins to slow down. In order to
+maintain a collision course after deceleration, the gyro-seeker must look
+farther and farther to the side as it nears the target. In other words, as
+illustrated by figures 1 and 2, as the missile slows down, the lambda angle
+increases until collision occurs.
+
+FAST MISSILE
+Figure 1
+
+SLOW MISSILE
+Figure 2
+8
+
+(2) High Angle-Off, the other basic cause of lambda-limiting is
+understood by considering a missile which, immediately upon launching,
+could turn onto the collision course. The line-of-sight angle would remain
+constant and the gyro-seeker would thus remain with its axis along the
+initial pursuit heading. It can be seen in figures 3 and 4 that the collision
+course for launching well off the tail differs in direction from the initial
+heading much more than does the collision course for launching slightly
+off the tail.
+
+LARGE INITIAL ANGLE OFF
+Figure 3
+
+SMALL INITIAL ANGLE OFF
+Figure 4
+
+9
+
+Consequently, the higher the angle-off, the greater the lambda angle. At
+long range (within max missile range) lambda limitation occurs at smaller
+angles-off, because of the effect of lambda-limitation on decreasing missile
+velocity. At short range, lambda limitation is caused by the sharp turn
+which the missile must perform. You will recall that if an attacker fires
+with any appreciable angle-off at short range, he will be very near his 2G
+limitation, or near the 10G limitation of the missile itself. This means that
+the missile is turning sharply to set up its collision course. The sharper the
+turn, the higher the missile angle of attack. As shown in figure 5, the angle
+of attack adds to the lambda angle so that lambda limit is reached. When
+lambda limit is exceeded, the gyro-seeker bumps against a mechanical stop,
+slows the gyro to a halt and the missile goes ballistic. Since we have no
+instrumentation available to measure lambda limit, we provide an artificial
+means to represent this lambda limitation – do not fire at angles-off greater
+than 30°. At 40,000 feet and above,
+
+SHORT RANGE LAMBDA LIMITATION
+Figure 5
+
+10
+
+do not exceed 10° angle-off – this is primarily because of servo-bias (poor
+burning of powder). This will preclude the possibility of an attacking pilot
+exceeding the lambda limitation of his missile.
+In order to kill with Sidewinder, you must be within the firing
+envelope as defined by the infrared, range, G and lambda limitations. If a
+pilot exceeds any one of these limits, kill-probability drops drastically. For
+practical purposes, we can define the missile firing envelope as a 60° cone
+emanating from the tail of the target aircraft, with its length dependent
+upon altitude and rate of closure (Delta Mach). For future use, we will
+describe this cone as an angular velocity cone or a cone of maximum
+performance.
+MECHANICS OF THE PURSUIT CURVE
+To fully comprehend the limitations of our weapons system, so that
+we may develop effective tactics, we need to know something of the nature
+of the attack in which we will be employing Sidewinder – the pursuit curve
+attack. A pursuit curve attack is basically an attack in which the flight
+path of the attacking fighter is continuously pointed at a moving target.
+To provide an insight into this type of attack, we will employ the following
+formula.
+S=
+
+Vf × Vt × Sin θ
+32.2 N
+
+Where
+S = Range
+Vf = Fighter velocity in feet per second
+Vt = Target velocity in feet per second
+Sinθ = Sine of the angle-off of the attacking fighter
+N = Number of radial Gs pulled by the attacker
+With the above formula, we can compute the range for a given G and
+angle-off for any combination of target and fighter speeds. It should be
+noted however, that the formula does not consider lead for target motion,
+nor does it represent the flight path of the attacking aircraft. Instead it
+represents distance/bearing relationships for a given set of values at a
+specific point in space.
+Despite the above limitations , the formula is still valid, in that it provides
+an insight into the problems associated with the pursuit curve. Study of the
+formula reveals:
+1. The area of vulnerability is a narrow cone emanating from the tail
+of the target aircraft. This can be amply illustrated in the formula above by
+analyzing figure 6.
+11
+
+For fighter and target at 35,000’,
+Vf = 1.2M = 693 KTAS = 1,170’ ∕ second
+Vt = .8M = 463 KTAS = 782’ ∕ second
+S=
+
+Vf × Vt × Sin θ 28, 450 × Sin θ
+=
+32.2 N
+N
+
+For N = 3, S = 9,480 Sinθ
+θ
+15°
+20°
+25°
+30°
+
+For N = 3.5, S = 8,130 Sinθ
+
+S
+2,460’
+3,240
+4,010’
+4,740’
+
+θ
+15°
+20°
+25°
+30°
+
+S
+2,110’
+2,780’
+3,440’
+4,060’
+
+Figure 6
+As shown in figure 6, the cone becomes narrower at firing ranges if the fighter
+velocity and/or target velocity is increased. In other words, the attacking fighter will
+be forced to fire at smaller angles-off if he does not wish to increase his firing range.
+Reducing angle-off against bomber-type targets places the attacking fighter in the
+bomber’s effective cone of fire. Therefore, if the velocities of the target and fighter
+increase, and we do not reduce angle-off, the range must, of necessity, increase. The
+increase in range will be in proportion to the velocity increase of the fighter or the
+target. If both target and fighter velocities are increased, the increase in range will
+be a multiple of the increases of the fighter and target velocities (for example – if Vf
+and Vt are doubled, the range will be quadrupled).
+2. The cone becomes narrower with an increase in altitude (the formula is
+a function of fighter velocity, G, and angle-off). It is a recognized fact that the
+available G of the fighter decreases with an increase in altitude and, as shown in the
+formula, any such decrease in G will be accompanied by an increase in range.
+In a curve of pursuit, the rate of turn necessary to track a given target is
+determined by range, angle-off and target velocity. This rate of turn may be
+expressed by the following formula:
+W=
+
+Vt × Sin θ
+Range
+
+Where
+W = Radians per second
+Vt = Target velocity in feet per second
+Sinθ = Sine of the angle-off
+12
+
+On the basis of the formula, if angle-off diminishes more rapidly than the
+range, the rate of turn will decrease (this will occur in some part of the
+pursuit curve when the fighter velocity is less than twice the velocity of the
+target). If range diminishes more rapidly than angle-off, throughout the
+curve, the rate of turn or G will increase (this will occur when the fighter
+velocity is more than twice as great as the velocity of the target). To find
+the parts of the curve where we will achieve these increases or decreases in
+rates of turn, we can use the following formula:
+CoSin of the angle-off where maximum G occurs =
+
+Vf
+2 × Vt
+
+Where
+Vf = Fighter velocity
+Vt = Target velocity
+NOTE: These two velocities may be expressed in knots, miles per hour,
+feet per second, or any other appropriate unit, as long as Vf and Vt are
+expressed in like values.
+This formula will enable us to determine the point on the pursuit
+curve where maximum G will be encountered. For example: If we have
+a fighter with a velocity of 1.2 Mach attacking a target with a velocity of
+.8 Mach, the point of max-G will be about 41.4° angle-off. Therefore, in
+effect, we are saying that at angles greater than 41.4°, the rate of turn (or
+G) is increasing. At angles of less than 41.4° the rate of turn is decreasing.
+To further illustrate – if we have a fighter traveling at twice or greater than
+twice the speed of the tar­get, the max-G point will occur at zero-degrees
+angle-off. In other words, there will be a G build-up or an increase in the
+rate of turn throughout the entire pass.
+In pursuit attacks with today’s fighter-bomber velocities, a fighter is
+forced to fire under conditions where its velocity is less than twice that
+of the target. In this type of attack, the fighter is not only forced to fire
+at longer ranges, but also to fire where his rate of turn is decreasing. We
+can see from studying figure 7 that the attacker’s rate of turn is not only
+decreasing, but it is decreasing at an increasing rate. In other words, the
+attacker is being “sucked” or forced in-trail. As illustrated in figure 7, the
+attacker loses .19 G/sec at 30° angle-off. At 25° angle-off he loses .27 G ∕ sec
+and so on until at 10° angle-off he loses .45 G ∕ sec.
+
+13
+
+For fighter and target at 35 - 80,000’,
+Vf = 1.2M
+Vt = .8M
+Angle of Max-G = 41.4°
+Nr = 4 @ 41.4°
+
+θ
+41.4°
+30°
+25°
+20°
+15°
+10°
+
+N
+4
+3.83
+3.64
+3.36
+2.97
+2.49
+
+Ń
+0
+.19
+.27
+.35
+.41
+.46
+
+S
+4620
+3660
+3260
+2850
+2440
+1960
+
+Figure 7
+
+If the attacker decreases his G at the max-G point (with the same
+fighter velocities as shown is figure 8, he will be able to diminish his rate of
+G bleed-off. However, this will force him to fire at longer ranges. Naturally
+an attacker does not want to do this, because, as range increases, his bullet
+density decreases by a function of the square (if range doubles, bullet
+density quarters). As a result, an attacker must fire over a longer time span
+to deliver a lethal burst. At the same time, he must track a target smaller in
+perspective. Under these conditions, it becomes quite difficult to deliver an
+effective burst.
+For fighter and target at 35 - 80,000’,
+Vf = 1.2 Mach
+Vt = .9 Mach
+Angle of Max-G = 41.4°
+Nr = 3 @ 41.4°
+
+14
+
+θ
+41.4°
+30°
+25°
+20°
+15°
+10°
+
+N
+3
+2.88
+2.74
+2.53
+2.23
+1.87
+
+Ń
+0
+.11
+.16
+.20
+.23
+.26
+
+S
+6180
+4870
+4330
+3790
+3250
+2600
+
+Figure 8
+
+If the attacker increases his G at the Max-G point, as shown in figure
+9, he will be able to fire at shorter ranges. However, if he does this, his G
+bleed-off will become even more rapid than originally shown.
+For fighter and target at 35 - 80,000’,
+Vf = 1.2 Mach
+Vt = .8 Mach
+Angle of Max G = 41.4°
+Nr = 5 @ 41.1°
+Ń = Rate of change G ∕ sec 2
+
+θ
+41.4°
+30°
+25°
+20°
+15°
+10°
+
+N
+5
+4.80
+4.56
+4.21
+3.72
+3.12
+
+Ń
+0
+.30
+.43
+.55
+.63
+.72
+Figure 9
+
+15
+
+S
+3710
+2920
+2600
+2280
+1950
+1560
+
+LIMITATIONS OF OUR WEAPONS SYSTEM IN A PURSUIT CURVE
+ATTACK
+To accurately predict the lead requirement (prediction angle) any
+sight requires the following basic information: range and target angular
+velocity. In the disturbed sight, range is provided by the ranging radar
+and target angular velocity information is acquired by tracking the target
+aircraft. Since the pilot is forced to turn his aircraft at a certain rate, this
+rate of turn is a representation of target motion and is directly proportional
+to target speed. The angular velocity of the attacking aircraft is fed into the
+sight through gyro action. This information is then married to the input
+from the radar and the proper prediction angle is computed by placing an
+electrical restraint (stiffness current) on the gyros. At long ranges, little
+restraint is applied, while at short ranges, great restraint is applied. In other
+words, the disturbed sight is directly tied to the responses of the pilot and
+to the dynamics of the aircraft when computing for target motion.
+In an attack where the fighter velocity is less than twice that of the
+target, the following occurs:
+1. The rate of turn necessary to track the target diminishes as the
+range decreases.
+2. The stiffness current to the gyros in the sight increases as the range
+decreases.
+Because of these two conditions, a pilot closing for the attack experiences
+a sensation that the pipper is drifting in front of the target. To correct
+for this, he relaxes back-pressure to reduce his turn rate. This, in turn,
+creates a lower rate input to the sight gyros, which causes the pipper
+to be repositioned to match the new turn rate. So, once again, the pilot
+must change is turn rate to reposition his tracking index, which again
+repositions his pipper and so on. Yet, for the attacker to have the proper
+prediction angle, he must continually make these corrections and also tract
+the target one-half to two-thirds the time of flight of the bullet, to allow for
+sight solution time. As we can see, a pilot may nullify this effect of chasing
+the pipper by firing at lower G. However, if he does, he will be forced to fire
+at longer range. His sight will have even less restraint and his target will be
+smaller in perspective. If he fires at higher G (shorter range) his sight will
+have more restraint, but the prediction angle will continuously change in
+greater magnitude. As a result, the attacker has very little choice as to the
+type of pass he may execute. He is forced into a narrow attack cone to avoid
+either extreme.
+To solve this problem of G bleed-off, we must refer back to the
+mechanics of the pursuit curve. You will recall that if an attacker’s
+
+16
+
+velocity is twice or more than twice that of a target, there will be an
+increase in rate of turn. In attacks of this nature, a different situation exist.
+1. The rate of turn necessary to track a target increases as the range
+decreases.
+2. The stiffness current to the sight gyros increases as the rate
+decreases.
+In an attack where these conditions exist, the pipper tends to remain on the
+target because the forward drift of the pipper is cancelled by the demand
+for greater G as range diminishes. In this attack, as the prediction angle
+is changing less in magnitude, the pilot has a more stable tracking index,
+and consequently, is more able to track for the required time to achieve
+sight solution. Naturally, this would be the ideal attack for us to perform;
+however, this is impossible, because the disproportionate increase in
+fighter and target velocities has not only pushed the firing range out, but
+has also created conditions where the sight prediction angle is continuously
+changing in considerable magnitude. These conditions seriously impair
+our ability to destroy a non-maneuvering target with a gun attack.
+AIM-9B Missile
+Sidewinder is not affected by the limitations of a computing sight
+because, in a missile attack, the pilot uses a 70-mil tracking cone with a
+fixed sight. This allows him to track the target quite successfully. The G
+bleed-off characteristics of today’s pursuit attacks actually help the attacker
+to position himself within the 60° launch cone behind the target aircraft,
+since the attacker is being forced into the trail position – behind his
+respective target – with a G bleed-off.
