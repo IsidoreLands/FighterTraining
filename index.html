@@ -61,6 +61,9 @@
     let timeOnPlayerTarget = 0; // Enemy's score
     let timeOnEnemyTarget = 0; // Player's score
     const WIN_TIME = 5; // seconds
+    let fuel = 100; // Placeholder, max 100
+    let health = 100; // Placeholder, max 100
+    const fuelThreshold = 20; // Fuel bar turns red below 20%
 
     // --- Fighter Class with SVG Image Support ---
     class Fighter {
@@ -118,7 +121,7 @@
         }
     }
 
-    // Instantiate fighters with SVG images, defaulting to F16 for player and MiG25 for enemy
+    // Instantiate fighters with SVG images
     const player = new Fighter(canvas.width / 2, canvas.height * 0.75, 'F16_2D.svg', 0.2); // F16 as player
     const enemy = new Fighter(canvas.width / 2, canvas.height * 0.25, 'MiG25_2D.svg', 0.2); // MiG25 as enemy
 
@@ -253,7 +256,57 @@
         player.draw();
         enemy.draw();
         
+        // Draw HUDs
+        drawHUD1();
+        drawHUD2();
+
         requestAnimationFrame(gameLoop);
+    }
+
+    // HUD 1: EM Scores / Equations (Upper Right Corner)
+    function drawHUD1() {
+        ctx.font = 'bold 16px Arial';
+        ctx.fillStyle = '#00FF00'; // Vibrant green
+        ctx.globalAlpha = 0.8; // Transparency
+        const hud1X = canvas.width - 200; // 200px from right edge
+        const hud1Y = 20; // 20px from top
+        // Placeholder EM data (replace with actual metrics)
+        ctx.fillText("Energy: 50000 ft", hud1X, hud1Y);
+        ctx.fillText("Energy Rate: 100 ft/s", hud1X, hud1Y + 20);
+        ctx.fillText("Efficiency: 0.8", hud1X, hud1Y + 40);
+        ctx.globalAlpha = 1.0; // Reset transparency
+    }
+
+    // HUD 2: Fuel and Health Bars (Bottom Strips)
+    function drawHUD2() {
+        const barHeight = 20;
+        const barMargin = 5;
+        const fuelBarY = canvas.height - 2 * barHeight - barMargin; // Fuel bar above health bar
+        const healthBarY = canvas.height - barHeight; // Health bar at bottom
+
+        // Fuel Bar
+        ctx.globalAlpha = 0.5; // Background transparency
+        ctx.fillStyle = '#004400'; // Dark green background
+        ctx.fillRect(0, fuelBarY, canvas.width, barHeight); // Full bar background
+        ctx.globalAlpha = 0.8; // Filled portion transparency
+        ctx.fillStyle = fuel < fuelThreshold ? '#FF0000' : '#00FF00'; // Red if low, else green
+        const fuelWidth = (fuel / 100) * canvas.width; // Proportional width
+        ctx.fillRect(0, fuelBarY, fuelWidth, barHeight); // Filled portion
+        ctx.fillStyle = '#00FF00';
+        ctx.fillText("Fuel", 10, fuelBarY - 5); // Label above bar
+
+        // Health Bar
+        ctx.globalAlpha = 0.5;
+        ctx.fillStyle = '#004400'; // Dark green background
+        ctx.fillRect(0, healthBarY, canvas.width, barHeight);
+        ctx.globalAlpha = 0.8;
+        ctx.fillStyle = checkTargeting(enemy, player) ? '#FF0000' : '#00FF00'; // Red if vulnerable
+        const healthWidth = (health / 100) * canvas.width;
+        ctx.fillRect(0, healthBarY, healthWidth, barHeight);
+        ctx.fillStyle = '#00FF00';
+        ctx.fillText("Health", 10, healthBarY - 5); // Label above bar
+
+        ctx.globalAlpha = 1.0; // Reset transparency
     }
 
     // Start the game
