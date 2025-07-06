@@ -1,0 +1,99 @@
+MANEUVERING FOR THE ATTACK
+Success, in air-to-air combat, depends on the ability of a pilot to place
+himself in a position from which he can deliver his fire power. In fighterversus-bomber combat, time is important also and can be considered a
+measurement of success. To illustrate: If we have a bomber attempting
+to destroy a given target, we must not only position ourselves to deliver
+our fire power, but must also expedite our positioning before the bomber
+reaches “bombs away” points. Since timing is so critical, we must use the
+very best method by which we can position ourselves for this attack. As
+we have shown, the best weapon in terms of performance and ease of
+delivery, is AIM-9B. The best attack with this weapon and our aircraft, is
+the underside attack. Positioning for this attack depends upon the space
+relationship between you and the target. Considering this relationship, GCI
+may provide a set-up from three possible positions.
+
+31
+
+Figure 15
+32
+ROLL-SLIDE ATTACK
+
+1. Nose-quarter
+2. Abeam, or 90°
+3. Tail-quarter
+Assuming VFR conditions, it will be the responsibility of each attacker –
+upon visually acquiring the target – to maneuver from any one of these
+set-ups to the firing envelope behind the target. To get into this position
+quickly, an attacker must maneuver in a three-dimensional field to acquire
+the maximum benefits from airspeed and turn. If the attacker does not
+understand three-dimensional maneuvering, he will be little more effective
+than GCI in maneuvering from a setup or approach, to a final firing
+position (GCI will place him in the firing envelope through the use of twodimensional maneuvers).
+The Nose-Quarter Attack: In performing the nose-quarter attack, we
+do not choose to approach our target from a direct head-on position. If we
+do, we will be forced to perform a 180° change of direction by executing
+a level or a climbing turn (high-speed yo-yo) to approach our target from
+a six-o’clock position. The time consumed in a level turn allows the target
+to generate a great amount of longitudinal separation. This allows the
+target aircraft to make considerable penetration of a defense area before
+the attacker can set up a missile attack. The climbing turn or high-speed
+yo-yo allows the attacker to complete his change of direction in less time;
+however, at the end of this maneuver, the attacker will find himself with
+considerable longitudinal separation in relation to the target, since his
+airspeed has decayed considerably below that of the target. Once again,
+the target aircraft will effect considerable penetration before the attacker
+can position himself to launch AIM-9B. If the attacker is directed by GCI
+for a nose-quarter attack, he should request GCI to set him up on an
+anti-parallel course to an offset point 15,000 feet to one side of the target’s
+line of flight. When the attacker visually acquires the target, or when GCI
+indicates that he is ten miles from the target, the attacker should apply full
+afterburner power. At the same time, he should dive to an altitude about
+5,000 feet below the target, so he will be offset in both the vertical and
+horizontal planes. This provides the attacker with maneuvering airspeed
+and a position from which to execute a chandelle followed by a low-speed
+yo-yo (a dive behind and below the target) to the attack cone behind the
+target. See figure 16. Compared to a level turn, this maneuver allows the
+attacker to complete his 180° change of direction more rapidly. In addition,
+since the attacker is turning through both the vertical and horizontal
+planes, his horizontal turning component is reduced. As a result of these
+two factors – fast turn rate and small turn radius – the attacker will be in
+a position much nearer the target’s attack cone. To prevent the target from
+penetrating the defense area excessively, the attacker must dive behind and
+below the target at the completion of 90°
+
+33
+
+Figure 16
+
+34
+NOSE-QUARTER ATTACK
+
+of turn. This will aid the attacker in recouping the speed lost in the
+chandelle. Also, it allows him to turn inside the target’s line of flight,
+because he is able to reduce his horizontal turning component by
+maneuvering through both the vertical and horizontal planes. Result:
+The attacker quickly positions himself – at six-o’clock-low – to launch
+Sidewinder.
+The Beam or 90° Approach: In a beam approach, our problem
+remains essentially the same as that in a nose-quarter attack. That is, we
+must quickly place the attacker in a launch position, to reduce penetration
+time. The best means by which to accomplish this, upon visually acquiring
+the target, is to use afterburner and perform a diving turn, below and
+behind the target’s line of flight. Once again, afterburner, coupled with a
+descending turn, will increase rate of closure, because of rapid acceleration.
+At the same time, since the turn is through both the vertical and horizontal
+planes, a cutoff is easily effected. Result: the attacker is quickly set up for
+a missile attack from six-o’clock-low. If the beam attack starts from a high
+position, the same procedures should still be used. Remember, the attacker
+wants to reduce the target’s penetration time. At the same time, he wants
+to set up for the best possible attack. A diving turn or low-speed yo-yo will
+satisfy both of these conditions. If a beam attack is initiated from a low
+position, the previous procedures still apply, since the attacker is trying
+to reduce target penetration time by rapid closure and a cutoff inside the
+target’s line of flight.
+In a tail-quarter attack, the problem of defense area penetration is
+most critical. To reduce this penetration time and to allow the attacker to
+position himself for the best possible missile attack, he must accomplish a
+dive below and inside his opponent’s line of flight, up to an attack position
+(inside yo-yo). Since penetration time is so critical, the procedure will
+remain the same whether the attack starts from a high or low position.

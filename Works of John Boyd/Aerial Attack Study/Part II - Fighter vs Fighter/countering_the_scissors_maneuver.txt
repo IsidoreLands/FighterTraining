@@ -1,0 +1,2381 @@
+Countering the Scissors Maneuver
+Procedures for Maneuvering against a Scissors Counter
+Procedures for Maneuvering Against a Scissors Counter
+
+49
+51
+53
+53
+55
+56
+58
+61
+61
+
+The Attack
+Procedures for the Initial Attack
+High-Speed Yo-Yo
+Procedures for the High-Speed Yo-Yo
+Procedures for Countering the High-Speed Yo-Yo
+Barrel-Roll Attack
+Procedures for the Barrel-Roll Attack
+Procedures for Countering the Barrel-Roll Maneuver
+The Low-Speed Yo-Yo
+Procedures for the Low-Speed Yo-Yo
+Procedures for Countering the Low-Speed Yo-Yo
+Countering the Overhead Attack with a Negative Delta Mach
+Procedures for Countering the Overhead Attack with a Negative Delta Mach
+Maneuvering from an Overhead Attack with a Negative Delta Mach
+Procedures for Maneuvering from an Overhead Attack with a Negative Delta Mach
+The Vertical Rolling Scissors
+Procedures for the Vertical Rolling Scissors
+Procedures for Countering the Vertical Rolling Scissors
+
+62
+63
+64
+70
+72
+73
+77
+78
+79
+83
+84
+84
+87
+89
+92
+93
+96
+96
+
+The High-G Barrel-Roll
+The High-G Barrel-Roll over the Top
+The High-G Roll Underneath
+Procedures for the High-G Barrel-Roll Over the Top
+Procedures for the High-G Roll Underneath
+Maneuvering from a Nose-Quarter Attack
+Procedures for the Nose-Quarter Attack
+Procedure for Countering the Nose-Quarter Attack
+
+97
+98
+101
+103
+105
+105
+110
+111
+
+Chapter 3 - Tactical formation
+
+112
+
+Procedures for Flying Element Formation
+Flying the Position of Wingman in Patrol Formation
+Flying the Fighting Position as a Wingman in Element Formation
+
+119
+119
+120
+
+Procedures for Flying the Fluid Four Patrol
+Flying Position of Fluid Element Leader
+Flying Position of Wingman in Fluid Four Patrol
+
+120
+120
+121
+
+Chapter 4 - Flight Tactics
+
+122
+
+Two Attacking Two
+
+122
+
+Procedures for Maneuvering Against a Defensive Split
+
+127
+
+Defending Two when Attacked by Two
+
+129
+
+Procedures for Employing the Defensive Split
+Performing the Defensive Split
+Executing a Defensive Split when the Attacker Selects the Low Defender
+Executing the Defensive Split when the Attacking Element Selects the High Defender
+Playing the Defensive Split when the Attacking Element Splits
+Executing the Defensive Split when the Attack Switches from Low Defender to High Defender
+
+136
+136
+137
+137
+137
+138
+
+Attacking Four with Two
+
+138
+
+Attacking a Flight of Four with Four
+
+139
+
+Procedures for Attacking Four with Two
+
+142
+
+Procedures for Attacking Four with Four
+
+142
+
+Defending Four when Attacked by Two
+
+144
+
+Defending Four when Attacked by Four
+
+144
+
+Procedures for Defending Four when Attacked by Two
+
+144
+
+Procedures for Defending Four when Attacked by Four
+
+146
+
+Summary – Fighter vs Fighter
+
+146
+
+Bibliography
+
+147
+
+STATEMENT OF REVIEW
+1. In accordance with AFR 5-5 and in compliance with AFR 5-5/Wing
+Supplement-1, Nellis Air Force Base, dated 21 March 1960, this publication
+has been thoroughly reviewed by the undersigned officers, and:
+a. Is considered essential for the following reasons:
+(1) It satisfies a Tactical Air Command need for GAR-8 employment
+information.
+(2) It provides a complete and authoritative analysis of Aerial Studies for use by
+all fighter units with TAC.
+(3) It will be used as a reference work in support of Course No. 1115053, and
+by units undergoing training in the Academic Section of the USAF Fighter
+Weapons School.
+b. It has been determined to be an original work which does not duplicate
+any similar publication.
+c. It does not contain any matter which might be considered objectionable or
+subject to ridicule.
+d. No further coordination is deemed necessary.
+
+Introduction
+Tactics – fighter-versus-bomber, fighter-versus-fighter, or even ground
+attack – are developed according to the performance capabilities or
+limitations of the weapons or weapons systems used. In other words,
+effective tactics reflect the best way to employ a given weapon against
+a given enemy with known or estimated capabilities. Assuming this to
+be true, tactics are functional – that is, they reflect the capabilities and
+limitations of the opponent’s weapons as well as our own. Therefore, in
+our discussion of aerial attack, we must determine the operation envelopes
+of our weapons systems (this includes the aircraft and its associated
+armament). After having learned these envelope parameters, the discussion
+will center on how to best employer weapons systems in a given fighterversus-fighter or fighter-versus-bomber situation, in which we assume that
+our opponent has comparable capabilities.
+Fighter-versus-bomber tactics will be covered first. In this phase, we
+assume that a maneuvering fighter attacks a non-maneuvering target;
+whereas in the fighter-versus-fighter phase, we assume that a maneuvering
+fighter attacks a maneuvering target. Since the fighter-versus-bomber
+situation has only one variable – the maneuvering fighter – a more exact
+technical analysis can be accomplished on it. In addition, fighter-versusbomber theory is a fundamental departure point for fighter-versus-fighter
+combat.
+
+BASIC LIMITATIONS OF THE DISTURBED SIGHT AND THE 20MM
+CANNON
+To adequately employ the disturbed sight and the 20mm cannon, we
+must understand the limitations of this equipment in any tactical situation.
+The operating range of the ASG-17 disturbed sight is from 600
+to 6000 feet. It will compute the proper prediction angle for a target
+throughout that range, from the ground up to 50,000 feet and from zero to
+nine G, if the pilot can track the target properly. However, it is improbable
+that a pilot would be able to deliver a lethal burst of fire at a range greater
+than 3,000 feet because of the difficulty in tracking beyond that range.
+To accurately predict the lead requirement, any disturbed sight
+requires the following basic information: range and target angular velocity.
+In the disturbed sight, range is provided by the ranging radar, and target
+angular velocity information is acquired by tracking the target aircraft.
+Since the pilot is forced to turn his aircraft at a certain rate, this rate of
+turn is a representation of target motion and is directly proportional to
+target speed. The angular velocity of the attacking aircraft is set into the
+sight through gyro action. The information is then married to the input
+from the radar and the proper prediction angle is computed by placing
+an electrical restraint (stiffness current) on the gyros. At long ranges,
+little restraint is applied, while at short ranges a great amount of restraint
+is applied. At ranges beyond 3,000 feet, little restraint is applied, thus
+producing a tracking index which is quite loose and difficult to control.
+Since the pilot’s responses are not precise enough, results are usually poor,
+even though the equipment may be working properly.
+Another limitation is the cone of dispersion of the 20mm cannon.
+For the M-39, harmonization criteria specifies that 80% of all rounds fired
+must impact in a 4-mil cone. As we increase firing range, bullet density will
+be decreased by a function of the square (if range doubles, bullet density
+quarters). At 3,000 feet, bullet density will be decreased to 1 ∕ 9 that at 1,000
+feet. As a result, an attacker must fire over a longer time span in order to
+deliver a lethal burst. At the same time, he must track a target smaller in
+perspective. Since it is extremely difficult to track with the disturbed sight
+at ranges greater than 3,000 feet, and the 20mm cone of dispersion causes
+loss of effective bullet density at this range, we consider our maximum
+range for the disturbed sight/20mm cannon as 3,000 feet.
+BASIC LIMITATIONS OF THE AIM-9B (GAR-8) MISSILE AGAINST A
+NON-MANEUVERING TARGET
+AIM-9B is a supersonic infra-red-homing missile, launched in the
+target’s tail cone on a pursuit course, using the fixed sight. After launch, the
+missile maneuvers to establish a collision course with
+
+1
+
+the target. In other words, the missile determines where the target is going
+and heads for that point in space. To successfully employ Sidewinder in a
+given tactical situation, you must be within its firing envelope. This firing
+envelope is determined by: (1) The radiation pattern of the target and
+(2) The performance envelope of the missile. The radiation pattern of a
+particular target is the area in which you can detect its IR radiation. The
+performance envelope is determined by: Range of the missile, number of
+G which the missile can pull and lambda (look -angle) limitations. Thus,
+the basic limitations of the missile, against a non-maneuvering target are
+determined by: Infra-red pattern, range, G and lambda. Since tactics are
+developed according to the performance capabilities or limitations of the
+weapons used, discussion of the limitations is in order.
+IR Pattern
+The missile gyro-seeker locks onto the strongest point-source of
+IR radiation. For a target in military power, the strongest point-source
+is the hot metal of the jet’s tailpipe. Approximately 85% of the IR signal
+generated comes from this hot metal and the remaining 15% comes from
+the hot jet exhaust. For a target operating in afterburner, the primary
+source of radiation is the hot exhaust flame. Approximately 60% of the
+signal generated comes from flame and 40% is generated by the hot metal
+of the tailpipe. In the discussion of radiation patterns, it is necessary to
+keep in mind the shape of the pattern. In aircraft with shielded tailpipes,
+radiation patterns are generally long and relatively narrow; whereas, in
+aircraft which do not have shielded tailpipes, the patterns are long and
+wide. In fighter -type aircraft, the radiation pattern is generally long and
+relatively narrow since the geometry of the aircraft shields the tailpipe. This
+applies in military power only. In afterburner power, naturally, the pattern
+is long and wide, since the flame of the afterburner is not shielded by the
+jet’s aft fuselage. In both English and Soviet bomber-type airplanes, in the
+horizontal plane, the jet tailpipe is shielded by the sweep-back of the wings,
+thus presenting a long narrow pattern. In the vertical plane, however, the
+pattern is long and wide, since the wings do not shield the hot metal and
+the jet exhaust. USAF bomber-type aircraft, on the other hand, present
+long and wide horizontal patterns, since the engine nacelles are suspended
+below the wing, providing the gyro-seeker a relatively unrestricted view
+of the jet exhaust. In the overhead vertical plane, the pattern is long and
+narrow, since the wing shields the IR radiation from the gyro-seeker.
+Radiation patterns vary with tailpipe temperature as well as with area of
+the source. In other words, the greater the temperature, the greater the
+radiation pattern; and, logically, the larger the source, the greater the
+radiation pattern. To illustrate: A bomber with 8 engines in military power,
+as compared to a fighter with one engine in military power, would generate
+a much larger radiation pattern because the area of the source is much
+greater.
+
+2
+
+Background IR sources are significant factors affecting the size and
+shape of radiation patterns. Important background IR sources are (1) Sun,
+(2) Clouds, (3) Water, (4) Snow and (5) Terrain.
+(1) Sun: The sun is the strongest source of infra-red energy known.
+You cannot fire Sidewinder at targets flying directly between you and the
+sun, since the sun’s radiation will decoy the missile away from the target.
+Therefore, do not fire at a target which is within 25° of the sun. Also, do
+not continuously point the missile directly at the sun for more than ten
+seconds, or the lead sulphide detector may be permanently damaged.
+(2) Clouds: Clouds reflect IR radiation from the sun – particularly
+cumulus clouds. If you must fire at a target which is framed against a bright
+cloud background, in all probability you will be forced to reduce your slant
+range to 6,000 or 8,000 feet (AFMDC ADJ SS-845) to obtain proper signal
+discrimination. If the target is hidden by clouds, the clouds will confuse the
+target signal so that the missile will not home. The signal which you receive
+will be the background radiation reflected by the clouds. A good ruleof-thumb for flying in clouds or against a cloud background is: diminish
+range until it is possible to discriminate between the background and the
+target signal.
+(3) Water: Water, like clouds, reflects IR energy from the sun. Calm
+water is a tremendous background radiator when the sun’s images can
+actually be seen in the water. Rough or choppy water, on the other hand,
+reflects IR radiation in all directions and the attacker need not be in a
+position where he can see the image of the sun on the water. As when
+operating against a cloud background, diminish range until you can
+achieve proper signal discrimination.
+(4) Snow: Snow, like water and clouds, reflects the sun’s IR energy.
+When firing against a snow background, as compared to a water or cloud
+background, you will have to diminish your slant range much more in
+order to get proper signal discrimination. There is a good possibility that
+you will be forced inside the missile’s minimum range, thereby precluding
+a missile attack.
+(5) Terrain: Terrain background reduces maximum missile range,
+as do clouds and other previously mentioned backgrounds. Light
+terrain in particular, such as dry lakes and sand, provides maximum
+background radiation. When firing against the three previously mentioned
+backgrounds, under an overcast, max range is not diminished nearly as
+much as when firing under CAVU conditions, since the clouds act as a
+device for shielding out the sun’s IR radiation.
+
+3
+
+Range:
+AIM-9B has both minimum and maximum range restrictions. Basic
+minimum range for launching is 3,000 feet. This is determined by three
+factors: (1) Time for the influence fuze to arm, (2) Time for the missile to
+set up a collision course, and (3) Delta Mach. To be assured of a kill, all
+three of these factors must be considered. First, time for the influence fuze
+to arm: It has been proven through empirical testing, that approximately
+85% of the kills achieved have been through influence fuze action. Since
+it takes the influence fuze about two seconds to arm – at rocket motor
+burn-out – a minimum range must be considered. Second, time for the
+missile to set up a collision course: After launching, the missile does not
+begin to guide until it clears the launch aircraft. This delay lasts for about
+1 ∕ 2 second, at the end of which time the missile receives its first guidance
+command and starts to set up a collision course. Third, Delta Mach (rate
+of closure): At rocket motor burn-out, the missile is traveling about 1.7
+Mach above the speed of the launch aircraft. If the launch aircraft has a
+high rate of closure, the missile has a faster airspeed relative to the target.
+Since it takes a definite time for the influence fuze to arm, and a definite
+time for the missile to set up a collision course, the missile must travel a
+greater distance, relative to the target, before either one of these occurs.
+Missile firing range can be determined by use of the following formula:
+Minimum range is equal to 3000 ± (Delta Mach × 3000). To illustrate :
+If the launch aircraft is traveling at 1.2 Mach and the target aircraft at .8
+Mach, we have a Delta Mach of .4. Applying this to the formula, we see that
+minimum range is equal to 3000 + (.4 × 3000), or 4200 feet. The general
+“rule-of-thumb” for minimum range, co-airspeed, co-altitude, however,
+is 3000 feet. Maximum Range: Maximum range is determined by three
+factors – guidance time, air density, and Delta Mach. Missile guidance time
+is approximately 18 seconds, which is a constant value applied to both air
+density and Delta Mach. Air density is important factor, in that the higher
+the air density the greater the aerodynamic drag, thus the shorter the range
+over an 18-second time period. Delta Mach is important in that the faster
+the launch aircraft, the faster the missile in relation to the target; thus, over
+an 18-second time period, the greater the distance the missile will travel.
+Many max-range charts have been developed by both the Air Force and
+the Navy to depict the maximum range at various altitudes, airspeeds, and
+Delta Mach relationships; however, it is virtually impossible to remember
+all these relationships.
+The following “rules-of-thumb” may be used by the pilot to determine
+max range:
+(1) For co-speed attacks against trans-sonic bombers – one mile for
+altitudes below 10,000 feet, add one-half mile range for each additional
+10,000 feet increase in altitude.
+
+4
+
+(2) For co-speed attacks against supersonic targets – one mile range
+for altitudes below 20,000 feet and add one-half mile for each additional
+10,000-foot increase in altitude. In applying the rules-of-thumb we can
+see that Sidewinder’s max-effective range against a sub-sonic target at
+30,000 feet would be two miles, or, roughly 10,000 feet slant range. Against
+a supersonic target at 30,000 feet, the maximum slant range would be
+approximately one and one-half mile, or, roughly 7800 feet.
+(3) Delta Mach “rule-of-thumb”: Add one thousand feet for each .1
+Delta Mach when above 30,000 feet altitude. To illustrate: A .8 Mach target,
+at 30,000 feet, is being attacked by a 1.2-Mach fighter at the same altitude.
+Applying the sub-sonic rule-of-thumb, we find that the max-effective range
+at which we can launch the missile is 10,000 feet, or approximately 2 miles,
+for a co-speed condition. Adding 4000 feet for .4 Delta Mach, we compute
+a new max-effective range of 14,000 feet.
+The only problem now is range estimation. When in the cockpit of
+an attacking fighter, at minimum ranges, there is no problem, since we
+may use the ASG-17 radar to determine range. At max range, however,
+we are beyond the capability of the radar and must use another means
+of determining our approximate range from a given target. For normal
+missile firing ranges, fairly accurate range estimation can be accomplished
+by comparing a known aircraft wingspan with the sight reticle radius, or
+with pipper diameter. Applying the formula,
+X=
+
+WS × 1000
+S
+
+Where
+X = size of the target in mils
+WS= wingspan of the target in feet
+S = range of the attacking fighter from the target
+we can determine the size of the target, in relation to the 70-mil-diameter
+reticle or 2-mil pipper.
+Example 1:
+Size of Badger (wingspan 116’) in mils when range is 10,000’
+X=
+
+116 × 1000
+= 11.6 or approximately 12 mils
+10,000
+
+This means that at 10,000 feet, the Badger wingspan will subtend 1 ∕ 3 of
+reticle radius (35 mils). At 20,000 feet the Badger span will be 6 mils and
+will subtend 3 pipper widths. At 5,000 feet the Badger span will be 23 mils
+and will subtend 2 ∕ 3 of a reticle radius.
+
+5
+
+Example 2
+Size of F-100 (wingspan 39’) in mils when range is 10,000 feet
+39 × 1000
+= 3.9 or approximately 4 mils
+10,000
+At 10,000 feet the F-100 wingspan will subtend 2 pipper widths. At 20,000
+feet it will subtend 1 pipper width, and at 5000 feet, 4 pipper widths or
+approximately 1 ∕ 5 of radius.
+X=
+
+G
+AIM-9B can pull approximately 10G at sea level and approximately
+3.5 G at 50,000 feet. The 10G maximum at sea level extends almost
+all the way to 30,000 feet. From that altitude upward, the capability
+decreases until, at 50,000 feet the missile can pull approximately 3.5 G. In
+other words, Sidewinder can pull 10G from sea level to 30,000 feet and
+approximately 3.5 G at 50,000 feet. Maximum fighter G, when launching,
+is approximately 2G below 40,000 feet and 1.6 G above 40,000 feet. The
+G-capability of the missile determines the G-limit on the fighter at launch.
+To illustrate: The rate of turn of the fighter in a pursuit curve is dependent
+on target speed, angle off, and range, as indicated by the following formula:
+Vt × Sin θ
+W=
+Range
+Where
+W = Rate of turn in radians per second
+Vt = Target velocity in feet per second
+Sinθ = Sine of the angle-off
+By examining the formula we can see that the rate of turn (W) increases
+any time target velocity or angle-off increases, and decreases as range
+increases. The number of G which the fighter pulls, at a given rate of turn,
+is directly proportional to fighter speed, and may be represented by the
+following formula:
+W=
+
+32.2 × N
+Vf
+
+Where
+N = Number of radial G
+Vf = Fighter velocity in feet per second
+W = Rate of turn in radians per second
+We can see from the formula that any time fighter velocity increases, we
+must also increase G (N), in an effort to maintain a given turn rate.
+Rate of turn required for the missile to set up a collision course is
+dependent upon five factors: (1) target speed, (2) angle-off,
+6
+
+(3) range, (4) enabling time, and, (5) the navigational constant. The
+number of G which the missile pulls, for a given rate of turn, is directly
+proportional to missile speed. The higher the speed, the higher the G.
+If the missile is launched from a Mach 1 fighter pulling 2G, how many
+G must the missile pull in order to maintain the same rate of turn as the
+launching fighter? As shown by the formula
+Vf × W
+32.2
+since the missile (V) is going 1.7 Mach above the launch aircraft’s velocity,
+or 2.7 Mach, it must pull 5.4 G, in order to maintain the same rate of turn
+as the launching fighter. Why, then, are we committed to pull a maximum
+of 2G when the missile can pull 10G, an amount considerably greater than
+the 5.4 G which we just computed? AIM-9B does not begin to guide until
+1 ∕ 2 second after launch, at which time it receives its first guidance signal
+to set up a collision course. During this enabling period (1 ∕ 2 second) the
+missile has the characteristics of an ordinary rocket. Because of this, an
+additional rate of turn is necessary to set up its collision course. To set up
+the collision course, Sidewinder turns 3 1 ∕ 2 times the rate of turn of the
+gyro-seeker – this is a navigational constant. Because of this, the rate of
+turn generated by the missile, in the first maneuver, is greater than the
+rate of turn of the launching fighter. Since the number of G pulled by the
+missile and fighter is equated to rate of turn and velocity, it is obvious that
+the 2G limitation of the fighter at launch is tied to the 10G limitation of the
+missile. If more than 2G is pulled, the tracking rate of the gyro-seeker is
+exceeded by the line-of-sight rate, thus the seeker loses the target.
+N=
+
+Another means of exceeding the tracking rate of the gyro-seeker is
+to launch the missile with an angle-of-attack in excess of 12° (the angle
+between the missile’s longitudinal axis and the launch aircraft’s flight
+path). For the F-100, since the missile launcher line is aligned 2° below
+the fuselage reference line, the maximum aircraft angle of attack is 14°. If
+launched with a greater angle of attack, Sidewinder will jump toward flight
+path, causing the tracking rate of the gyro-seeker to be exceeded by the
+line-of-sight rate, consequently the gyro-seeker will lose the target. When
+this happens, the missile goes ballistic. To avoid exceeding a 14° angle
+of attack, the F-100 should not be flown at less than 170 knots in a 1G
+condition and 230 knots in a 2G condition.
+Lambda
+Lambda limit is simply the max look-angle between the axis of the
+gyro-seeker and the longitudinal axis of the missile – a 25-degree cone
+with its center along the longitudinal axis of the missile. Why are we
+interested in this lambda limitation? It is possible for a pilot to satisfy the
+conditions of IR, range, and G, yet be outside the lambda capability of the
+missile. Lambda limit may be exceeded by a combination of two factors:
+low missile velocity and high angle-off.
+7
+
+(1) Low Missile Velocity: One-half second after launch, Sidewinder
+turns to establish a collision course with the target. Two seconds after
+launch, it has a velocity 1.7 Mach greater than that of the launch aircraft.
+To establish a collision course, Sidewinder turns 3 1 ∕ 2 times the rate of
+the gyro-seeker axis to reduce the line of sight rate to zero, or establish
+a constant angular relationship between the missile and the target. After
+rocket motor burn-out, the missile begins to slow down. In order to
+maintain a collision course after deceleration, the gyro-seeker must look
+farther and farther to the side as it nears the target. In other words, as
+illustrated by figures 1 and 2, as the missile slows down, the lambda angle
+increases until collision occurs.
+
+FAST MISSILE
+Figure 1
+
+SLOW MISSILE
+Figure 2
+8
+
+(2) High Angle-Off, the other basic cause of lambda-limiting is
+understood by considering a missile which, immediately upon launching,
+could turn onto the collision course. The line-of-sight angle would remain
+constant and the gyro-seeker would thus remain with its axis along the
+initial pursuit heading. It can be seen in figures 3 and 4 that the collision
+course for launching well off the tail differs in direction from the initial
+heading much more than does the collision course for launching slightly
+off the tail.
+
+LARGE INITIAL ANGLE OFF
+Figure 3
+
+SMALL INITIAL ANGLE OFF
+Figure 4
+
+9
+
+Consequently, the higher the angle-off, the greater the lambda angle. At
+long range (within max missile range) lambda limitation occurs at smaller
+angles-off, because of the effect of lambda-limitation on decreasing missile
+velocity. At short range, lambda limitation is caused by the sharp turn
+which the missile must perform. You will recall that if an attacker fires
+with any appreciable angle-off at short range, he will be very near his 2G
+limitation, or near the 10G limitation of the missile itself. This means that
+the missile is turning sharply to set up its collision course. The sharper the
+turn, the higher the missile angle of attack. As shown in figure 5, the angle
+of attack adds to the lambda angle so that lambda limit is reached. When
+lambda limit is exceeded, the gyro-seeker bumps against a mechanical stop,
+slows the gyro to a halt and the missile goes ballistic. Since we have no
+instrumentation available to measure lambda limit, we provide an artificial
+means to represent this lambda limitation – do not fire at angles-off greater
+than 30°. At 40,000 feet and above,
+
+SHORT RANGE LAMBDA LIMITATION
+Figure 5
+
+10
+
+do not exceed 10° angle-off – this is primarily because of servo-bias (poor
+burning of powder). This will preclude the possibility of an attacking pilot
+exceeding the lambda limitation of his missile.
+In order to kill with Sidewinder, you must be within the firing
+envelope as defined by the infrared, range, G and lambda limitations. If a
+pilot exceeds any one of these limits, kill-probability drops drastically. For
+practical purposes, we can define the missile firing envelope as a 60° cone
+emanating from the tail of the target aircraft, with its length dependent
+upon altitude and rate of closure (Delta Mach). For future use, we will
+describe this cone as an angular velocity cone or a cone of maximum
+performance.
+MECHANICS OF THE PURSUIT CURVE
+To fully comprehend the limitations of our weapons system, so that
+we may develop effective tactics, we need to know something of the nature
+of the attack in which we will be employing Sidewinder – the pursuit curve
+attack. A pursuit curve attack is basically an attack in which the flight
+path of the attacking fighter is continuously pointed at a moving target.
+To provide an insight into this type of attack, we will employ the following
+formula.
+S=
+
+Vf × Vt × Sin θ
+32.2 N
+
+Where
+S = Range
+Vf = Fighter velocity in feet per second
+Vt = Target velocity in feet per second
+Sinθ = Sine of the angle-off of the attacking fighter
+N = Number of radial Gs pulled by the attacker
+With the above formula, we can compute the range for a given G and
+angle-off for any combination of target and fighter speeds. It should be
+noted however, that the formula does not consider lead for target motion,
+nor does it represent the flight path of the attacking aircraft. Instead it
+represents distance/bearing relationships for a given set of values at a
+specific point in space.
+Despite the above limitations , the formula is still valid, in that it provides
+an insight into the problems associated with the pursuit curve. Study of the
+formula reveals:
+1. The area of vulnerability is a narrow cone emanating from the tail
+of the target aircraft. This can be amply illustrated in the formula above by
+analyzing figure 6.
+11
+
+For fighter and target at 35,000’,
+Vf = 1.2M = 693 KTAS = 1,170’ ∕ second
+Vt = .8M = 463 KTAS = 782’ ∕ second
+S=
+
+Vf × Vt × Sin θ 28, 450 × Sin θ
+=
+32.2 N
+N
+
+For N = 3, S = 9,480 Sinθ
+θ
+15°
+20°
+25°
+30°
+
+For N = 3.5, S = 8,130 Sinθ
+
+S
+2,460’
+3,240
+4,010’
+4,740’
+
+θ
+15°
+20°
+25°
+30°
+
+S
+2,110’
+2,780’
+3,440’
+4,060’
+
+Figure 6
+As shown in figure 6, the cone becomes narrower at firing ranges if the fighter
+velocity and/or target velocity is increased. In other words, the attacking fighter will
+be forced to fire at smaller angles-off if he does not wish to increase his firing range.
+Reducing angle-off against bomber-type targets places the attacking fighter in the
+bomber’s effective cone of fire. Therefore, if the velocities of the target and fighter
+increase, and we do not reduce angle-off, the range must, of necessity, increase. The
+increase in range will be in proportion to the velocity increase of the fighter or the
+target. If both target and fighter velocities are increased, the increase in range will
+be a multiple of the increases of the fighter and target velocities (for example – if Vf
+and Vt are doubled, the range will be quadrupled).
+2. The cone becomes narrower with an increase in altitude (the formula is
+a function of fighter velocity, G, and angle-off). It is a recognized fact that the
+available G of the fighter decreases with an increase in altitude and, as shown in the
+formula, any such decrease in G will be accompanied by an increase in range.
+In a curve of pursuit, the rate of turn necessary to track a given target is
+determined by range, angle-off and target velocity. This rate of turn may be
+expressed by the following formula:
+W=
+
+Vt × Sin θ
+Range
+
+Where
+W = Radians per second
+Vt = Target velocity in feet per second
+Sinθ = Sine of the angle-off
+12
+
+On the basis of the formula, if angle-off diminishes more rapidly than the
+range, the rate of turn will decrease (this will occur in some part of the
+pursuit curve when the fighter velocity is less than twice the velocity of the
+target). If range diminishes more rapidly than angle-off, throughout the
+curve, the rate of turn or G will increase (this will occur when the fighter
+velocity is more than twice as great as the velocity of the target). To find
+the parts of the curve where we will achieve these increases or decreases in
+rates of turn, we can use the following formula:
+CoSin of the angle-off where maximum G occurs =
+
+Vf
+2 × Vt
+
+Where
+Vf = Fighter velocity
+Vt = Target velocity
+NOTE: These two velocities may be expressed in knots, miles per hour,
+feet per second, or any other appropriate unit, as long as Vf and Vt are
+expressed in like values.
+This formula will enable us to determine the point on the pursuit
+curve where maximum G will be encountered. For example: If we have
+a fighter with a velocity of 1.2 Mach attacking a target with a velocity of
+.8 Mach, the point of max-G will be about 41.4° angle-off. Therefore, in
+effect, we are saying that at angles greater than 41.4°, the rate of turn (or
+G) is increasing. At angles of less than 41.4° the rate of turn is decreasing.
+To further illustrate – if we have a fighter traveling at twice or greater than
+twice the speed of the tar­get, the max-G point will occur at zero-degrees
+angle-off. In other words, there will be a G build-up or an increase in the
+rate of turn throughout the entire pass.
+In pursuit attacks with today’s fighter-bomber velocities, a fighter is
+forced to fire under conditions where its velocity is less than twice that
+of the target. In this type of attack, the fighter is not only forced to fire
+at longer ranges, but also to fire where his rate of turn is decreasing. We
+can see from studying figure 7 that the attacker’s rate of turn is not only
+decreasing, but it is decreasing at an increasing rate. In other words, the
+attacker is being “sucked” or forced in-trail. As illustrated in figure 7, the
+attacker loses .19 G/sec at 30° angle-off. At 25° angle-off he loses .27 G ∕ sec
+and so on until at 10° angle-off he loses .45 G ∕ sec.
+
+13
+
+For fighter and target at 35 - 80,000’,
+Vf = 1.2M
+Vt = .8M
+Angle of Max-G = 41.4°
+Nr = 4 @ 41.4°
+
+θ
+41.4°
+30°
+25°
+20°
+15°
+10°
+
+N
+4
+3.83
+3.64
+3.36
+2.97
+2.49
+
+Ń
+0
+.19
+.27
+.35
+.41
+.46
+
+S
+4620
+3660
+3260
+2850
+2440
+1960
+
+Figure 7
+
+If the attacker decreases his G at the max-G point (with the same
+fighter velocities as shown is figure 8, he will be able to diminish his rate of
+G bleed-off. However, this will force him to fire at longer ranges. Naturally
+an attacker does not want to do this, because, as range increases, his bullet
+density decreases by a function of the square (if range doubles, bullet
+density quarters). As a result, an attacker must fire over a longer time span
+to deliver a lethal burst. At the same time, he must track a target smaller in
+perspective. Under these conditions, it becomes quite difficult to deliver an
+effective burst.
+For fighter and target at 35 - 80,000’,
+Vf = 1.2 Mach
+Vt = .9 Mach
+Angle of Max-G = 41.4°
+Nr = 3 @ 41.4°
+
+14
+
+θ
+41.4°
+30°
+25°
+20°
+15°
+10°
+
+N
+3
+2.88
+2.74
+2.53
+2.23
+1.87
+
+Ń
+0
+.11
+.16
+.20
+.23
+.26
+
+S
+6180
+4870
+4330
+3790
+3250
+2600
+
+Figure 8
+
+If the attacker increases his G at the Max-G point, as shown in figure
+9, he will be able to fire at shorter ranges. However, if he does this, his G
+bleed-off will become even more rapid than originally shown.
+For fighter and target at 35 - 80,000’,
+Vf = 1.2 Mach
+Vt = .8 Mach
+Angle of Max G = 41.4°
+Nr = 5 @ 41.1°
+Ń = Rate of change G ∕ sec 2
+
+θ
+41.4°
+30°
+25°
+20°
+15°
+10°
+
+N
+5
+4.80
+4.56
+4.21
+3.72
+3.12
+
+Ń
+0
+.30
+.43
+.55
+.63
+.72
+Figure 9
+
+15
+
+S
+3710
+2920
+2600
+2280
+1950
+1560
+
+LIMITATIONS OF OUR WEAPONS SYSTEM IN A PURSUIT CURVE
+ATTACK
+To accurately predict the lead requirement (prediction angle) any
+sight requires the following basic information: range and target angular
+velocity. In the disturbed sight, range is provided by the ranging radar
+and target angular velocity information is acquired by tracking the target
+aircraft. Since the pilot is forced to turn his aircraft at a certain rate, this
+rate of turn is a representation of target motion and is directly proportional
+to target speed. The angular velocity of the attacking aircraft is fed into the
+sight through gyro action. This information is then married to the input
+from the radar and the proper prediction angle is computed by placing an
+electrical restraint (stiffness current) on the gyros. At long ranges, little
+restraint is applied, while at short ranges, great restraint is applied. In other
+words, the disturbed sight is directly tied to the responses of the pilot and
+to the dynamics of the aircraft when computing for target motion.
+In an attack where the fighter velocity is less than twice that of the
+target, the following occurs:
+1. The rate of turn necessary to track the target diminishes as the
+range decreases.
+2. The stiffness current to the gyros in the sight increases as the range
+decreases.
+Because of these two conditions, a pilot closing for the attack experiences
+a sensation that the pipper is drifting in front of the target. To correct
+for this, he relaxes back-pressure to reduce his turn rate. This, in turn,
+creates a lower rate input to the sight gyros, which causes the pipper
+to be repositioned to match the new turn rate. So, once again, the pilot
+must change is turn rate to reposition his tracking index, which again
+repositions his pipper and so on. Yet, for the attacker to have the proper
+prediction angle, he must continually make these corrections and also tract
+the target one-half to two-thirds the time of flight of the bullet, to allow for
+sight solution time. As we can see, a pilot may nullify this effect of chasing
+the pipper by firing at lower G. However, if he does, he will be forced to fire
+at longer range. His sight will have even less restraint and his target will be
+smaller in perspective. If he fires at higher G (shorter range) his sight will
+have more restraint, but the prediction angle will continuously change in
+greater magnitude. As a result, the attacker has very little choice as to the
+type of pass he may execute. He is forced into a narrow attack cone to avoid
+either extreme.
+To solve this problem of G bleed-off, we must refer back to the
+mechanics of the pursuit curve. You will recall that if an attacker’s
+
+16
+
+velocity is twice or more than twice that of a target, there will be an
+increase in rate of turn. In attacks of this nature, a different situation exist.
+1. The rate of turn necessary to track a target increases as the range
+decreases.
+2. The stiffness current to the sight gyros increases as the rate
+decreases.
+In an attack where these conditions exist, the pipper tends to remain on the
+target because the forward drift of the pipper is cancelled by the demand
+for greater G as range diminishes. In this attack, as the prediction angle
+is changing less in magnitude, the pilot has a more stable tracking index,
+and consequently, is more able to track for the required time to achieve
+sight solution. Naturally, this would be the ideal attack for us to perform;
+however, this is impossible, because the disproportionate increase in
+fighter and target velocities has not only pushed the firing range out, but
+has also created conditions where the sight prediction angle is continuously
+changing in considerable magnitude. These conditions seriously impair
+our ability to destroy a non-maneuvering target with a gun attack.
+AIM-9B Missile
+Sidewinder is not affected by the limitations of a computing sight
+because, in a missile attack, the pilot uses a 70-mil tracking cone with a
+fixed sight. This allows him to track the target quite successfully. The G
+bleed-off characteristics of today’s pursuit attacks actually help the attacker
+to position himself within the 60° launch cone behind the target aircraft,
+since the attacker is being forced into the trail position – behind his
+respective target – with a G bleed-off.
+TYPES OF PURSUIT CURVE ATTACKS
+Until now, we have made a general analysis of the type of attack we
+will be performing against high-speed targets. Now, we will discuss specific
+types of pursuit curve attacks and see if one or more of these attacks offers
+advantages over the others. There are four basic types of pursuit attack:
+1. The High-side or Level Attack
+2. The Overhead Attack
+3. The underside Attack
+4. The Nose-quarter Attack
+
+17
+
+The High-Side Attack
+In any attack, the rate of turn which an attacker needs to track a target
+may be expressed as radial G, and can be shown by the following formula:
+N=
+
+Vf × Vt × Sin θ
+32.2 S
+
+The radial G expressed here represents the lateral acceleration of the
+fighter in the horizontal plane. It does not represent the total G on the
+aircraft, since it neglects the pull of gravity (1G). Total G is the resultant
+of radial G and 1G pull of gravity acting through the vertical axis of the
+aircraft. This total G determines angle of attack – the angle between the
+mean chord line and the relative wind. Since total G determines angle of
+attack, the aircraft stalls on total G. In view of this fact, and because our
+previous formula considered only radial G, we must determine the exact
+relationship between total and radial G. It may be expressed as follows:
+Gt2 = Gr2 + 1
+Where
+Gt = Total G
+Gr = Radial G
+1 = 1 G gravity
+We can see, by the formula, that total G will always be greater than radial
+G. This is a disadvantage, because the rate of turn which an attacker needs
+to track a target, or the range to which an attacker can approach a target is
+dependent upon radial G, not total G. This disadvantage becomes less at
+higher G values because the difference between total and radial G is less.
+Example:
+If Gt = 4
+Gr = Gt − 1 = 16 − 1 = 3.87
+If Gt = 1
+Gr = Gt − 1 = 4 − 1 = 1.73
+The difference between 2 and 1.73 = .27 whereas the difference between 4
+and 3.87 = .13
+Since a greater difference exist between Gt and Gr at lower G values, the
+rate of turn is reduced not only because less total G is available, but also
+because an even greater loss of radial G is experienced.
+18
+
+The Overhead Attack
+The overhead attack, as compared to the high-side or level attack, has
+the apparent advantage of maintaining airspeed and G because the thrust
+vector and gravity act together to provide a greater total force. However,
+to determine whether or not there is a real advantage, let’s examine the
+difference between rate of turn (GR) and total G. To digress, let’s assume
+that an aircraft is in straight-and-level flight. How many G will show on
+the G-meter? One G. Now, let’s assume that an aircraft is in straight-andlevel flight, but upside down. How many G will show on the G-meter? One
+negative G. Now remembering these relationships, let’s note the total and
+radial G relationships at four points around a loop – the pull-up, the 90°
+point, the 180° point, and the 270° point. For example: let’s assume that the
+aircraft is pulling 4 total G at the pull up as illustrated in figure 10. How
+many radial G is it pulling? Three. Then, in effect, we have added 3 G to
+the 1G needed for straight-and-level flight, to give us 4 total G at pull-up.
+At the 90° point,when pulling 4 total G, we will also be pulling 4 radial G.
+At this point, gravity is 90° from our vertical axis, thereby exerting no pull
+along this axis — instead, it is a drag factor action 180° from the aircraft
+line of flight. At the 180° point, when we are pulling 4 total G, we will have
+5 radial G, thereby giving us a turn rate – at a given airspeed – greater than
+at any other point on the loop. In other words, as compared to the pull-up,
+gravity (1G) acts in the opposite direction, therefore gravity must add to,
+rather than subtract from total G, to provide a greater radial G. At the 270°
+point, once again, total G equals radial G except that gravity acts in the
+same direction as the aircraft line of flight. From the 270° point on, radial
+G diminishes in relation to total G until the pull-up point is reached. At
+this point we again have 1G difference between total and radial G.
+In an overhead attack, to determine the difference between total and
+radial G, we may use the following formula:
+Gt = Gr + Cosθ
+Where
+Gt = Total G
+Gr = Radial G
+Cosθ = Cosine of the angle-off
+It is obvious, from the formula, that the relationship between total and
+radial G is considerably different from that experienced in a high-side pass.
+Example:
+In a Level Pass where Gt = 4,
+Gr = 16 − 1 = 3.87
+
+19
+
+Figure 10
+
+20
+
+In an Overhead Pass at 30° angle-off where Gt = 4
+Gr = Gt - Cosθ or Gr = 4 - .866 = 3.14
+As shown in the example above, if an attacker is force to fire inside an
+opponent’s maximum performance cone – at angles of less than 30° – this
+means that from .866 to 1 more G, above radio G, is necessary to track
+a given target. Thus, as compared to a high-side attack, even though an
+attacker may have an apparent advantage in maintaining higher G, it is
+largely wiped out by the greater difference between radial and total G. The
+important thing to keep in mind here is that the overhead attack offers no
+significant advantages over the high-side attack.
+Underside Attack
+The Underside Attack provides an effect just opposite that illustrated
+in the overhead pass. Here, an attacker generates a radial G higher than
+total G upon his aircraft (you will recall that in the top half of the loop,
+radial G is greater than total G) and may be expressed by the following
+formula:
+Gt = Gr - Cosθ
+If we assume the same attack conditions as illustrated in the overhead pass
+– 30° angle-off, 4 total G – we get the following results:
+Gr = 4 + .866 or
+Gr = 4.866
+In terms of G, this attack seems to provide an apparent advantage, however
+this does not always hold true. For example: If an attacker performed
+an underside attack in an F-100, he would experience a rapid speed
+decay, because of gravity as well as induced drag. As a result, since speed
+determines G available, the attacker would have much less total G. In
+addition, because of airspeed decay, the attacker would diminish the
+fighter-target ratio. As a consequence, the attacker’s max-G point would be
+forced farther out – in angle-off, and range – causing a further reduction in
+both total and radial G. As a result, the F-100 would not gain appreciably
+by this attack, since total G available is reduced sufficiently to cancel out
+the advantage of a higher radial G. However, if this same attack were
+executed in an aircraft with a very high power-to-weight ratio and a lowdrag profile – such as the F-104 – the attack could be invaluable, since high
+speed decay and G bleed-off would not occur.
+
+21
+
+Nose Quarter Attack
+A nose-quarter attack is ineffective for the following two reasons:
+1. We cannot launch the Aim-9B missile from this position, because
+of the missile’s IR limitations.
+2. In a gun attack from a nose-quarter position, we can avoid the
+defensive-fire coverage of a given bomber. However, in this type attack, the
+rate of closure becomes so high that an attacker cannot deliver an effective
+burst and avoid a collision with a target. For these two reasons, we will not
+consider this attack further.
+THE BEST TYPE ATTACK AGAINST A NON-MANEUVERING
+TARGET WITH AIM-9B
+To determine the best type attack to employ with the missile, let’s first
+examine the possible attacks which we may employ with this equipment.
+There are four basic sidewinder attacks which we may employ.
+1. Overhead Attack
+2. The High-side Attack
+3. The Six-O’clock Attack
+4. The Underside Attack
+Overhead Attack
+The Overhead Attack has two basic disadvantages – IR and G. As
+you will recall, IR tone contrast against sunlight-reflective background –
+clouds, and ground – forces us to diminish our effective slant range, until
+we are approximately 6000’ to 8000’ from our target. This IR limitation,
+combined with the 2G limitation, allows an attacker to fire only at low
+angles off. To illustrate, by figure 11, if an attacker pulls 2G inside an
+opponent’s cone of max performance – angular velocity cone – he will
+generate a radial G considerably different than the total G on the G meter.
+For example, at 30° angle-off, applying the formula Gt - Gr + Cosθ, we
+find that the attacker is only able to generate 1.134 Gr.
+
+22
+
+For fighter and target at 35 - 80,000’,
+Vf = .9 Mach = 873’ / second
+Vt = .9 Mach = 873’ / second
+Gt = 2
+θ = 10°, 20°, 30°
+Gr @ 10° = 2 - .985 = 1.015
+Gr @ 20° = 2 - .94 = 1.06
+Gr @ 30° = 2 - .866 = 1.134
+For θ = 10°
+S=
+
+Vf × Vt × Sin θ 23700 × Sin θ 23, 700 × .174
+=
+=
+= 4.060
+32.2Gr
+Gr
+1.015
+
+For θ = 20°
+S=
+
+23, 700 × .342
+= 7.650
+1.06
+
+For θ = 30°
+S=
+
+23, 700 × .5
+= 10.450
+1.134
+Figure 11
+
+At 20° angle-off, applying the same formula, we find that the attacker can generate
+1.06 Gr. At 10° angle-off, he can generate only 1.015 Gr. Now let’s assume that
+the fighter making this attack is going .9 Mach against a .9 Mach target at 35,000’.
+Applying the formula:
+S=
+
+Vf × Vt × Sin θ
+32.2 N
+
+Where
+Vf = .9 Mach or 873’ / S
+Vt = .9 Mach or 873’ / S
+Sine of 30° = .5
+N = 1.134
+we find that, at 30° angle-off, an attacker can get no closer than 10,450’. At 20° angleoff – where Sinθ = .342 and N = 1.06 – we find that an attacker can get no closer
+than 7,650’. At 10° angle off, using the same procedure, we find that an attacker can
+get no closer than 4,060’. Since an attacker cannot receive proper IR discrimination
+at ranges greater than 6000 to 8000 feet, he will be forced to launch his missile inside
+20 degrees angle-off in order to secure a kill. Certainly this poses no great problem,
+as the
+23
+
+attacker will be forced in-trail since the fighter/target ratio is much less
+than 2 to 1. However, despite this aid from a low fighter/target ratio, the
+overhead attack is the poorest possible for employment of AIM-9B. (This
+will become especially apparent when we discuss fighter-versus-fighter
+tactics.)
+High-Side Attack
+In a High-side Attack, IR tone contrast will not be adequate at
+longer missile ranges because of background reflections: however, when
+compared to an overhead attack, IR range is somewhat better. G presents
+no significant limitation, as illustrated by figure 12.
+For fighter and target at 35 - 80,000’,
+Vf = .9 Mach = 873’ / second
+Vt = .9 Mach = 873’ / second
+Gt = 2 Gr = 1.73
+Gt = 1.6 Gr = 1.25
+Vf × Vt × Sin θ 23, 700 × Sin θ
+S=
+=
+32.2Gr
+Gr
+S = 13,700 Sinθ
+Gr = 1.73
+
+10° = 2380
+20° = 4680
+30° = 6840
+
+S = 19,000 Sinθ
+Gr = 1.25
+
+10° = 3300
+20° = 6490
+30° = 9480
+Figure 12
+
+This figure discloses that when below 40,000 feet and pulling 2G, we
+will be generating 1.73 radial G. Applying this figure to our cone of
+max performance (our angular velocity cone) we find that at 30° angleoff, we can close to a range of 6,840 feet and at 10° angle-off, 2,380 feet,
+but the important thing to remember is that we cannot get inside the
+ranges specified at 30°, 20° and 10° angle-off without exceeding the 2-G
+limitation. At 40,000 feet, when we are pulling 1.6 total G, we will be
+generating 1.25 radial G. In terms of distance, we will be at the range
+specified in the figure above. Once again, if we attempt to get inside the
+specified range at a given angle-off, we will exceed our 1.6-G limitation.
+We can see, by comparing the high-side attack with the overhead
+attack, that the high-side is better, because of less limitations in IR and
+G. In other words, we have greater freedom of maneuver to successfully
+launch Sidewinder.
+24
+
+Six-O’clock Attack
+In a six-o’clock attack, IR tone contrast occurs at greater ranges
+because the horizon does not reflect as much background IR radiation.
+Since we are at 0° angle-off, there will be no G or lambda limitation,
+therefore we can fire Sidewinder from any range between maximum and
+minimum. In view of these facts, the six-o’clock attack is the best so far,
+because AIM-9B is not forced to operate near its limiting parameters. In
+addition because of our position in relation to the target, we achieve an
+element of surprise.
+Underside Attack
+The underside or six-o’clock-low attack, is the best possible attack we
+can execute, as we acquire advantages in:
+1. IR
+2. G
+3. Surprise
+4. Aircraft Performance
+IR Tone contrast is maximum against a blue-sky background. Here, the
+lead sulphide cell can discriminate between he hot metal of the jet’s tailpipe
+and the blue sky. At ranges of 20,000 feet and greater, the IR pattern
+becomes longer than the range of the missile. The G limitation, in relation
+to missile range and IR tone contrast, is almost non-existent (see figure 13).
+For fighter and target at 35 - 80,000’,
+Vf = .9 Mach = 873’ / second
+Vt = .9 Mach = 873’ / second
+Gt = 2
+Gr @10° = 2 + .985 = 2.985
+Gr @ 20° = 2 + .94 = 2.94
+Gr @ 30° = 2 + .866 = 2.866
+S=
+
+Vf × Vt × Sin θ 23, 700 × Sin θ
+=
+32.2Gr
+Gr
+
+For θ = 10°,
+23, 700 × .174
+S=
+= 1, 380 '
+2.985
+For θ = 30°,
+23, 700 × .5
+S=
+= 4,130 '
+2.866
+25
+
+For θ = 20°,
+23, 700 × .342
+S=
+= 2, 760 '
+2.94
+
+This figure shows that, as we approach our cone of maximum
+performance, we find that we can generate 2.866 radial G while pulling
+2 total G. Applying this value to the figure above, we find that we can
+launch Sidewinder at a range as near as 4,130 feet at 30° angle-off without
+exceeding our 2-G limitation. At 20° angle-off while generating 2.94 radial
+G, we find that we can launch as near as 2,760 feet without exceeding the
+2-total-G limitation. At 10° angle-off, we can launch at a range as close
+as 1,380 feet. To put it another way, when we launch our missile against a
+target from an underside attack, the missile must turn in the direction of
+gravity to set up its collision course – thus, gravity, acting in the direction
+of the missile’s turn, actually causes the missile to fall toward the target. In
+other words, the missile has a maneuvering advantage, since it generates a
+radial G greater than its total G. This advantage we have already considered
+in the previous illustration. Surprise, the third major advantage, is greatest
+when attacking a target from underneath, or from six-o’clock-low, since
+this is the target’s blind area. Aircraft Performance, the forth major
+advantage, can be understood by referring to figure 14.
+
+UNDERSIDE ATTACK
+Figure 14
+
+26
+
+Here, we are an attacker ready to launch AIM-9B against a target traveling
+.9 Mach at 40,000 feet. Applying a rule-of-thumb for co-airspeed, we see
+that the fighter can launch from a max range of about 13,000’. Now, if the
+attacker sets himself up to launch from 30° angle-off, this means that he
+can launch from a position 6,500 feet below the target. To achieve this
+launch position, an attacker may start his attack at even a lower altitude –
+the distance below dependent upon his airspeed. For example: An F-100 at
+1.1 Mach may start his attack with an altitude differential of at least 10,000
+feet – in this case, at 30,000 feet altitude. From this illustration, we can see
+that AIM-9B gives an attacker an additional performance capability, in that
+the attacker is not required to attain the target’s altitude.
+In summary, since the underside attack provides the greatest
+advantages – IR, G, surprise and performance – we should employ this
+attack whenever possible. As you will see later, this holds true for both
+fighter-versus-bomber and fighter-versus-fighter. When compared with a
+gun attack, AIM-9B is far superior, since the range of the missile allows us
+to get into an effective cone of fire.
+BEST TYPE OF ATTACK AGAINST A NON-MANEUVERING TARGET
+WITH THE 20MM CANNON
+As you will recall, because of the characteristics of the pursuit curve,
+our fire control system limitations, and the capabilities of our opponent’s
+defensive fire, we consider the pursuit curve a poor attack at best, when
+using the 20mm cannon. If does not matter whether we are in an overhead,
+a high-side or an underside attack. The problem now is, how are we going
+to attack a non-maneuvering target if we do not choose to use the pursuit
+curve as illustrated previously. The solution we propose: Plan an attack in
+which we combine the characteristics of the pursuit curve and the collision
+course. To explain: On a collision course attack, the target will be allowed
+to fly right through our bullet stream. The bullet stream itself will have
+no angular velocity as generated in a pursuit curve type attack. A 100foot target with a speed of 800 feet per second, at 30,000 feet will require
+approximately 1 ∕ 8 of a second to fly through our bullet stream. Assuming
+that we can fire 6,000 round per minute – the combined rate of fire of 4
+M-39 cannon – this means we fire at a rate of approximately 100 round per
+second. If the target requires 1 ∕ 8 of a second to pass through our bullet
+stream, we can expect about 12 hits it we set up a perfect attack. This is not
+acceptable. In a pursuit curve attack, we do not have this problem, because
+the angular velocity of our bullet stream matches the angular velocity of
+our target. In other words, our bullet stream is constantly superimposed
+against the target which is being tracked. The only disadvantage of this
+attack is that it forces us into our opponent’s defensive cone of fire. To
+counter the disadvantages of the pursuit curve and the collision course, we
+assume attack conditions against an imaginary target and
+
+27
+
+apply them against a real target. To illustrate: We set up an attack so that
+the angular velocity of our bullet stream matches that of a target going
+slower than .8 Mach – say .5 Mach. This allows us to fire at a higher angleoff, at a given range, because of the slower target. Then we apply this
+imaginary attack – against a .5-Mach target – to the .8-Mach target. To do
+this, we place our reticle in front of the .8-mach target, generating the G
+necessary to track a .5-Mach target which means our real target (.8) closes
+upon our bullet stream (.5) with a delta Mach of .3 which, at 30,000 feet,
+is 300 feet per second. Firing 100 rounds per second, this allows us to put
+approximately 33 holes in the target with a perfect pass, as compared to 12
+in a collision course.
+Our only requirement is to figure the amount of lead necessary, when
+firing. To determine lead, we need to know three components;
+1. Lead for target motion
+2. Lead for gravity drop.
+3. Trajectory shift.
+If we use a fixed sight, we will have to determine all three
+components. If we use radar, or keep the sight pegged at the range from
+which we plan to fire, gravity drop and trajectory shift will be completely
+computed and lead for target motion partially computed. We’ll use pegged
+sight, to simplify our lead problem. Radar is not applicable because the
+overhead needed to set up the attack takes us out of our radar tracking
+cone. To determine the additional lead we need to enable our pegged sight
+to indicate the bullet impact area, we use the following formula:
+Lead =
+
+Vt × Sin θ × 1000
+Vp
+
+Where
+Vt = rate of closure of the target, in feet per second toward the bullet stream
+Sinθ = Sine of the angle-off
+Vp = average projectile velocity (dynamic gravity drop tables)
+Lead = additional lead in mils
+The lead in mils which we acquire from the above formula is placed in the
+sight reticle, so that the outer diamond indicates the bullet impact area as
+the target passes through the reticle. To compute the lead for insertion into
+out sight reticle we use the following formula:
+
+28
+
+WS
+2 × lead in mils
+=
+Firing Range
+1000
+In order to solve for both additional lead and reticle size, we need to know
+the firing range and the angle-off at which we’ll be firing. Assume that we
+attack a target which is traveling .8 Mach (at 35,000 feet) at .9 Mach with 3
+Gr.
+Step I
+To find the firing range and angle-off, we assume a .5-Mach target and
+solve in the following manner:
+At 35,000’,
+Vf = .9 Mach
+VT = .5 Mach
+N=3
+θ = 30°, 25°, 20°
+S=
+
+Vf × Vt × Sin θ 873 × 485 × Sin θ
+=
+= 4380(Sin θ )
+32.2 N
+96.6
+
+At 30°
+S = 4380 (.5) = 2190’
+At 25°
+S = 4380 (.423) = 1850’
+At 20°
+S = 4380 (.342) = 1500’
+Step II
+To find the additional lead (in mils) needed against a .8 Mach target
+we solve in the following manner:
+l=
+
+Vt × (Sin θ ) × 1000
+Vp
+
+At 30°
+291'× (.5) × 1000
+l=
+= 38 mils
+3840
+At 25°
+l=
+
+291'× (.423) × 1000
+= 32 mils
+3880
+29
+
+At 20°
+291 × (.342) × 1000
+l=
+= 25.5 mils
+3920
+Step III
+To determine the additional lead to be incorporated into the sight
+reticle we solve in the following manner:
+At 30° angle-off
+WS
+2 × lead in mils
+=
+Firing Range
+1000
+WS
+76
+=
+2190 1000
+WS = 166
+At 25° angle-off
+WS
+64
+=
+1850 1000
+WS = 118
+At 20° angle-off
+WS
+51
+=
+1500 1000
+WS = 76
+From Step III we can see that it will be impossible to set up the additional
+lead by placing the wingspan lever on 166 since 120 is the maximum
+setting. This means that we can either fire at 1850’, 25° angle-off (steps I
+and II with the wingspan lever at 118) or at 1500’, 20° angle-off with the
+wingspan lever at 76. Since we want to fire at max angle-off, we’ll set the
+wingspan lever at 118 and fire at 1850’, 25° angle-off.
+Now to perform the attack. We do not use the conventional pursuit
+curve approach, as this does not allow us to determine target speed and
+direction, and we need these factors to apply the attack we have just
+computed. To apply this attack correctly, we use a barrel-roll type of attack.
+To set it up, we fly in the same direction as the target and about 3,000 to
+4,000 feet above it. From there we turn about 10° from his line of flight,
+barrel-roll — in the direction of
+
+30
+
+the turn - down to a key point, trying to maintain an almost constant
+angular relationship between us and the target. See figure 15. From here,
+we place the sight reticle well out in front of the target, in line with his
+flight path, and pull the G necessary to track the imaginary target. As we
+close to our firing range and angle-off, the target will move toward our
+sight reticle. As the target starts to cross the outer diamond, we depress the
+gun trigger and hold it down until the tail of the target passes through the
+outer diamond. From there we recover and set up another attack by kicking
+in afterburner and rolling back to the same position on top of the target.
+This attack has definite advantages: It allows the attacker to fire at a
+higher angle-off than in a pure pursuit curve attack. It allows the attacker
+to fly through the target’s defensive cone of fire at a faster rate than is
+possible in a normal pursuit curve attack. Since he is flying a combination
+of a pursuit curve and a collision course, another and probably the most
+important advantage is that the attacker finds it easy to reposition himself
+for consecutive attacks. This is possible because the attacker is alway close
+enough to the target to judge relative positioning. The big disadvantage of
+the barrel-roll attack – as we employ it – is that it provides the attacker less
+time for lethal fire. However, in view of the fact that a fighter can perform
+more consecutive attacks than in a normal pursuit curve, this disadvantage
+does not appear to be too restrictive.
+In summary, we do not advocate the barrel-roll attack as a cure-all
+for fire control problems encountered when firing against bomber-type
+aircraft. Instead, we consider it somewhat of a “Rube Goldberg” affair
+designed to surmount the problems associated with today’s normal
+pursuit curve attack, when using guns as the means for ordnance delivery.
+Although it appears difficult to perform, pilots are able, with just a
+minimum of practice, to set themselves up quite successfully.
+MANEUVERING FOR THE ATTACK
+Success, in air-to-air combat, depends on the ability of a pilot to place
+himself in a position from which he can deliver his fire power. In fighterversus-bomber combat, time is important also and can be considered a
+measurement of success. To illustrate: If we have a bomber attempting
+to destroy a given target, we must not only position ourselves to deliver
+our fire power, but must also expedite our positioning before the bomber
+reaches “bombs away” points. Since timing is so critical, we must use the
+very best method by which we can position ourselves for this attack. As
+we have shown, the best weapon in terms of performance and ease of
+delivery, is AIM-9B. The best attack with this weapon and our aircraft, is
+the underside attack. Positioning for this attack depends upon the space
+relationship between you and the target. Considering this relationship, GCI
+may provide a set-up from three possible positions.
+
+31
+
+Figure 15
+32
+ROLL-SLIDE ATTACK
+
+1. Nose-quarter
+2. Abeam, or 90°
+3. Tail-quarter
+Assuming VFR conditions, it will be the responsibility of each attacker –
+upon visually acquiring the target – to maneuver from any one of these
+set-ups to the firing envelope behind the target. To get into this position
+quickly, an attacker must maneuver in a three-dimensional field to acquire
+the maximum benefits from airspeed and turn. If the attacker does not
+understand three-dimensional maneuvering, he will be little more effective
+than GCI in maneuvering from a setup or approach, to a final firing
+position (GCI will place him in the firing envelope through the use of twodimensional maneuvers).
+The Nose-Quarter Attack: In performing the nose-quarter attack, we
+do not choose to approach our target from a direct head-on position. If we
+do, we will be forced to perform a 180° change of direction by executing
+a level or a climbing turn (high-speed yo-yo) to approach our target from
+a six-o’clock position. The time consumed in a level turn allows the target
+to generate a great amount of longitudinal separation. This allows the
+target aircraft to make considerable penetration of a defense area before
+the attacker can set up a missile attack. The climbing turn or high-speed
+yo-yo allows the attacker to complete his change of direction in less time;
+however, at the end of this maneuver, the attacker will find himself with
+considerable longitudinal separation in relation to the target, since his
+airspeed has decayed considerably below that of the target. Once again,
+the target aircraft will effect considerable penetration before the attacker
+can position himself to launch AIM-9B. If the attacker is directed by GCI
+for a nose-quarter attack, he should request GCI to set him up on an
+anti-parallel course to an offset point 15,000 feet to one side of the target’s
+line of flight. When the attacker visually acquires the target, or when GCI
+indicates that he is ten miles from the target, the attacker should apply full
+afterburner power. At the same time, he should dive to an altitude about
+5,000 feet below the target, so he will be offset in both the vertical and
+horizontal planes. This provides the attacker with maneuvering airspeed
+and a position from which to execute a chandelle followed by a low-speed
+yo-yo (a dive behind and below the target) to the attack cone behind the
+target. See figure 16. Compared to a level turn, this maneuver allows the
+attacker to complete his 180° change of direction more rapidly. In addition,
+since the attacker is turning through both the vertical and horizontal
+planes, his horizontal turning component is reduced. As a result of these
+two factors – fast turn rate and small turn radius – the attacker will be in
+a position much nearer the target’s attack cone. To prevent the target from
+penetrating the defense area excessively, the attacker must dive behind and
+below the target at the completion of 90°
+
+33
+
+Figure 16
+
+34
+NOSE-QUARTER ATTACK
+
+of turn. This will aid the attacker in recouping the speed lost in the
+chandelle. Also, it allows him to turn inside the target’s line of flight,
+because he is able to reduce his horizontal turning component by
+maneuvering through both the vertical and horizontal planes. Result:
+The attacker quickly positions himself – at six-o’clock-low – to launch
+Sidewinder.
+The Beam or 90° Approach: In a beam approach, our problem
+remains essentially the same as that in a nose-quarter attack. That is, we
+must quickly place the attacker in a launch position, to reduce penetration
+time. The best means by which to accomplish this, upon visually acquiring
+the target, is to use afterburner and perform a diving turn, below and
+behind the target’s line of flight. Once again, afterburner, coupled with a
+descending turn, will increase rate of closure, because of rapid acceleration.
+At the same time, since the turn is through both the vertical and horizontal
+planes, a cutoff is easily effected. Result: the attacker is quickly set up for
+a missile attack from six-o’clock-low. If the beam attack starts from a high
+position, the same procedures should still be used. Remember, the attacker
+wants to reduce the target’s penetration time. At the same time, he wants
+to set up for the best possible attack. A diving turn or low-speed yo-yo will
+satisfy both of these conditions. If a beam attack is initiated from a low
+position, the previous procedures still apply, since the attacker is trying
+to reduce target penetration time by rapid closure and a cutoff inside the
+target’s line of flight.
+In a tail-quarter attack, the problem of defense area penetration is
+most critical. To reduce this penetration time and to allow the attacker to
+position himself for the best possible missile attack, he must accomplish a
+dive below and inside his opponent’s line of flight, up to an attack position
+(inside yo-yo). Since penetration time is so critical, the procedure will
+remain the same whether the attack starts from a high or low position.
+FLIGHT TACTICS
+Tactical formation, hence flight tactics, are designed primarily to
+provide maximum mutual support and visual cross cover and retain
+maximum maneuverability for any air-to-air operation. In other words,
+tactical formations must provide both defensive and offensive capabilities.
+To provide these capabilities, a compromise between maximum mutual
+support and maximum maneuverability must be accomplished. The
+extent of the compromise will depend upon the type of mission flown.
+Though our mission – fighter-versus-bomber – emanates from a defensive
+situation, it is offensive in nature, in that the fighter is trying to destroy the
+bomber aircraft and is not primarily interested in providing security for
+himself.
+The present concept of weapons employment (nuclear weapons)
+indicates that a given enemy will employ saturation-type tactics rather than
+a concentration of his force over a given target area. In other
+35
+
+words, we may expect an attack force composed of single bombers
+dispersed over a wide area to strike at many targets. To counter this at all
+points, with four-ship scrambles, is not the answer, for we need a defense
+force numbering four times that of the strike force. We will be providing
+unnecessary security for the attacking fighters, as well as violating the
+dictum, “economy of force!” The problem remains – how shall we tactically
+deploy our fighters? A single fighter against a single bomber may appear
+the obvious answer, however, this is not so. When employing single fighters
+against a saturation-type raid, we would be assuming that each fighter
+would intercept its respective target without exception. There would be no
+ground aborts, air aborts, and/or possible fire control malfunctions. Result:
+some attacking bombers would get through our defenses. To preclude this
+possibility, we recommend a two-ship flight, as the basic unit, in a given
+fighter-versus-bomber intercept. The two-ship flight will be composed of a
+leader and his wingman.
+In patrol position – prior to visually acquiring the bomber –
+the wingman should fly approximately 10 to 20 degrees back and
+approximately 1500 feet out. If he flies in much closer, too much time
+will be spent in flying formation and not enough in covering the leader
+and aiding him in visually acquiring the target. Flying too far out reduces
+maneuverability and may cause the wingman to become separated from
+his leader. When maneuvering, the wingman will play the outside as well
+as the inside of the turn, in a means of maintaining position. To do this
+effectively, he must maneuver through both the horizontal and vertical
+planes. This will allow him to reduce his horizontal turning component
+and thus maintain his relative position more easily. Procedure: When on
+the outside of a turn, the wingman should lower his nose and cross to the
+inside. If on the inside of the turn, and sliding forward, he would cross to
+the outside, slide high and fly in the plane of the leader. In other words, a
+wingman will fly a partial extended-low position, on the inside of the turn,
+and an extended high position – in the plane of the leader’s wing – on the
+outside of the turn. One thing for the wingman to remember: He must
+not cross in front of the leader. Instead, he should always maintain nosetail separation, thus precluding the possibility of getting in the way of his
+leader.
+To reduce the bomber’s defense-area penetration, the flight must
+quickly maneuver from the approach to the best attack position. To do
+this, the flight must maneuver at max performance through both the
+vertical and horizontal planes. Under these circumstances, it would be
+quite difficult for the wingman to maintain the patrol position defined
+above. To enable the wingman to maintain a relative position during
+these maneuvers, we place him in a new position – the fighting position.
+Fighting Position: The wingman will fly within a 60° cone behind the
+leader at a distance of about 1000 feet. See figure 17. While flying in the
+cone, the wingman will maneuver through both the horizontal and
+
+36
+
+Figure 17
+
+37
+FIGHTING POSITION
+
+vertical planes to maintain position. He will slide high when overshooting,
+and drop low to the inside when falling back. In other words, the
+maneuvering technique is basically the same as that of the patrol position.
+If the leader is unable to deliver a successful attack against a bomber
+aircraft, the wingman will take over the lead position and initiate the
+attack. If neither the wingman nor the leader can deliver a successful
+missile attack, they will press in – with afterburner – and zoom above the
+target aircraft. From this position, they can execute coordinated barrel-roll
+attacks against the bomber aircraft. When the leader comes out of his roll,
+and into the firing position, the wingman may start down. When the leader
+slides to a new high position on the target, the wingman will be in the
+firing cone, and the cycle just repeats itself.
+If the bomber is too high to permit successful employment of the
+barrel-roll attack, the fighters have no recourse. They will be forced to
+approach the target from below and from the six-o’clock position. If this
+tactic must be employed, it behooves the fighters to fire at the extreme
+range of the fire control system. Since the bomber is much larger, as
+compared to the fighter, their opportunity to secure a lethal burst is
+certainly as good if not better – than that of the defending bomber. The
+important thing to remember: the bomber must be destroyed, regardless of
+the tactics used, or the weapon employed.
+SUMMARY
+In our discussion of Aerial Attack, we stated that tactics were
+developed according to the performance capabilities or limitations of the
+weapons system used – our weapons as well as the opponent’s. Recognizing
+this we set about to determine the performance parameters of our weapons
+systems – the F-100 equipped with AIM-9B and the 20 mm cannon. Study
+revealed: To successfully employ AIM-9B, it must be launch within a given
+firing envelope. The firing envelope is determined by the radiation pattern
+of the target and the performance envelope of the missile. The parameters
+of this envelope are determined by, (1) the size of the target’s infra-red
+pattern, )2) the range of the missile, (3) G-capability of the missile, and, (4)
+AIM-9B lambda limitation. To successfully employ the 20 mm cannon, the
+pilot must be within the theoretical capability of the fire control system,
+and have control responses precise enough to control this equipment.
+We then applied the information provided by this study – the
+limitations of AIM-9B and the 20mm cannon, to the pursuit curve, to find
+the best attack envelope for each system. We found that the best attack
+envelope for AIM-9B is an underside or a six-o’clock-low attack. For 20mm
+cannon, we found that the best attack would have to be a
+
+38
+
+barrel-roll attack, combining the characteristics of the pursuit curve and
+the collision course. Comparing this information revealed that AIM-9B
+is a far superior weapon for a fighter-versus-bomber intercept, since its
+firing envelope and resultant attack cone is much greater than is possible
+when employing the 20mm cannon. Sidewinder’s main disadvantage, in
+a fighter-versus-bomber intercept, is its inability to discriminate target IR
+radiation from background IR clutter. This disadvantage can easily result
+in the attacker being forced to use the 20mm cannon attack. NOTE: Keep
+in mind that the advantage which AIM-9B enjoys over ordinary armament,
+in a fighter-versus-bomber attack, is not near as great in a fighter-versusfighter situation. (We will elaborate on this in Part II of this manual.)
+Since AIM-9B provides a larger attack cone and a greater capability,
+tactics will be predicated upon this advantage. Whether an attacker
+approaches the target from the nose-quarter, beam or tail-quarter position,
+he will set up to deliver AIM-9B. If conditions preclude missile delivery, he
+will press in and employ 20 mm cannon. Before the attacker reaches this
+weapon delivery point, he must maneuver through both the vertical and
+horizontal planes as it is his responsibility to provide positive guarantee
+that individual bombers in a saturation-type strike will be intercepted.
+Two-ship scrambles will be employed. If more than two aircraft are used,
+the fighter defense is spread too thin. Simply stated, the dictum, “economy
+of force” would be violated with little gain in effective combat potential.
+
+39
+
+40
+
+INTRODUCTION
+In our discussion of fighter-versus-bomber tactics, you will recall, we
+determined the capabilities and limitations of our weapons systems. On
+having learned these parameters, we then developed our fighter-versusbomber tactical doctrine. In our discussion of fighter-versus-fighter tactics,
+we will employ this same procedure. The order of discussion will be as
+follows:
+1. Basic limitations of AIM-9B Against a Maneuvering Target
+2. Fighter Maneuvers
+3. Tactical Formation
+4. Flight Tactics
+When analyzing fighter-versus-fighter tactics, by way of the four major
+phases above, we will employ the case system – a plan whereby we examine
+possible hypothetical situations which the pilot may encounter in fighterversus-fighter combat.
+
+41
+
+CHAPTER I
+BASIC LIMITATIONS OF AIM-9B AGAINST A MANEUVERING
+TARGET
+In discussing the employment of AIM-9B against a non-maneuvering
+target, we indicated that the missile has four basic limitations – IR,
+range, G, and lambda – and that these limitations forced us to deliver the
+missile in a cone 60° wide, emanating from the tail of the target aircraft.
+It was also shown that the length of this cone would vary according to
+altitude and delta Mach. At high altitude, with a positive delta Mach, the
+cone (envelope) will be considerably longer than at low altitude. In our
+discussion of fighter-versus-bomber tactics, we defined this cone in terms
+of angular velocity (max performance cone). By angular velocity cone,
+we mean an envelope in which the attacking fighter may deliver AIM-9B
+without exceeding its maneuvering limitations. We can see, by applying
+this angular velocity cone to any fighter-versus-bomber or fighter-versusfighter situation, that the purpose of any tactics which we develop will be
+to place us in this cone. On the other hand, when in a defensive situation,
+we will attempt to rotate this cone away from a given opponent. By doing
+this, we prevent him from securing a firing position.
+When employing AIM-9B against a maneuvering target, the cone
+not only diminishes in size, it also changes in shape. In other words,
+the geometric shape of the maneuvering envelope will be considerably
+different than a non-maneuvering envelope. To illustrate: When discussing
+the non-maneuvering envelope, we found that its basic shape was
+determine by four factors – IR, range, G and lambda. We noted that these
+envelopes were rather symmetrical in shape. Maneuvering envelopes, on
+the other hand, are not so symmetrical. The lambda and G-limitations
+are primarily responsible for this change in shape. The reason for this:
+Lambda limitation may be exceeded because of a combination of low
+missile velocity and high angle off. If we launch AIM-9B from long range
+– within the effective range of the missile – at a maneuvering target, we
+can expect the target to turn into the attack. His objective is, of course to
+rotate his angular velocity cone away from the launch aircraft. By doing
+this, the defender can force the missile to exceed its lambda limit, because
+the missile is not only slowing down as it approaches the target, but the
+angle-off is increasing, since the defender is turning into the missile’s line
+of flight. In other words, the angular velocity generated by the defender
+forces AIM-9B to turn farther and farther in front of the target to maintain
+its collision course. This, of course, increases the resultant lambda angle.
+In addition, the missile is forced to turn even farther in front of the target,
+because of its continuous decrease in velocity after rocket motor burn-out,
+producing an extremely large lambda angle. If AIM-9B is launched near its
+max-effective range and the target turns into the attack, the combination of
+increasing angle-off and missile deceleration can easily cause the missile to
+exceed its lambda limitation. If
+42
+
+this occurs, the gyro seeker rubs against its mechanical stops, which stops
+the gyro and the missile loses guidance.
+The attacker can do two things to avoid exceeding lambda limitation:
+(1) reduce his range before launch, which results in a higher missile
+velocity in relation to the target, and therefore, a smaller resultant lambda
+angle, and (2) reduce angle off. The smaller the angle off, the lower the
+resulting lambda angle. It is now obvious that the best attack can be
+initiated from the six-o’clock position at a reduced range. It is also obvious
+that lambda is the greatest missile limitation against a maneuvering target.
+To illustrate the magnitude of this limitation, let’s examine figure 18 and
+19.
+
+Figure 18
+
+43
+
+Figure 19
+
+When AIM-9B is launch from a .8 Mach attacker against a .8 Mach
+maneuvering target which is performing a 3-G turn into the attack, we
+note (from figure 18) that effective missile range is somewhat less than that
+available against a non-maneuvering target. We also note that max angle
+off from which Aim-9B may be launched is less than 20°. The reduction in
+range is necessary because of the 25° lambda limit, while the reduced angle
+off is caused by a combination of lambda and G-limitations (G-limitations
+will be discussed later). If the target pulls more than 3 G, the maneuvering
+envelope will become even smaller.
+
+44
+
+At 6G, there will be no point from which the attacker can fire the missile
+and achieve a kill. In other words, there will be no maneuvering envelope
+at all. If AIM-9B is launched from a Mach-1 attacker against a Mach-1
+target, at 35,000 feet, we note the following: When the target performs a
+3-G turn into the attack, at missile launch, the attacker must reduce his
+range by approximately one-third when firing from a six-o’clock position
+(see figure 19). If the attacker launches at 30° angle-off, he must reduce
+his range by approximately one-half – as compared to a non-maneuvering
+target – if he expect to get a kill. Once again, the reason for this reduction
+in range is lambda limitation. The attacker must reduce his range, by
+a greater magnitude, at 30° angle-off because missile lambda angle is
+increase by both high angle-off and increased range. When the angle off
+is increased, range must be reduced to preclude exceeding lambda limit,
+hence the difference in range reduction between a zero-degree angle off
+and a high-angle-off shot against a maneuvering target. Once again, if the
+target increases G, the maneuvering envelope diminishes in size. At 6-G,
+there will be no maneuvering envelope, therefore, the attacker cannot
+achieve a successful launch and kill against a target pulling 6-G.
+In our discussion of the above envelopes, we assume that there has
+been no diminution of target speed in any of his maneuvers. If speed decay
+occurs, the attack conditions will change and the attack will no longer
+be co-speed. As a result, missile velocity will be higher in relation to the
+target, and the resultant lambda angle will be smaller, since velocity varies
+inversely with lambda angle (at a given range and angle-off). This means
+that if the attacker has a positive delta Mach, rather than a co-speed
+relationship, he can launch at a greater range without exceeding lambda
+limitation. On the other hand, if the attacker is forced to launch against
+a maneuvering target which is traveling faster than the attacker, missile
+velocity, in relation to the target, is smaller. Result: The attacker must
+launch at a shorter range to preclude lambda limitation.
+In view of the above relationships, we can see that the best attack is
+one in which the attacker has a positive delta Mach and a low angle-off
+on his initial approach to the target. This will provide greater freedom of
+maneuver and the opportunity to launch at longer ranges. On the other
+hand, the worst possible attack is one in which the attacker has a negative
+delta Mach and a high angle-off. This will restrict his freedom of maneuver
+and force him into a position from which the target can easily defend
+against this attack.
+If AIM-9B is launched from an attack executed in the vertical plane
+overhead or underside attack – the maneuvering target will be forced to
+turn into the attack. Once again, by turning into the plane of the attack, the
+target will generate max angular velocity and force the missile to operate
+near its limiting parameters. In an overhead attack, this means that the
+attacker will not only be concerned with
+
+45
+
+lambda limitation, but also with the same limitations encountered in an
+attack against a non-maneuvering target – IR and G. These limitations
+force the attacker to diminish his range until he can discriminate between
+IR background clutter and target signal and/or avoid exceeding the
+lambda limitation. This means that in a .9 Mach co-speed attack against a
+maneuvering target, the attacker will be forced to fire at less than 20° angleoff, otherwise, he will exceed his 2G limitation (see figure 20). Remember,
+in an overhead attack, the difference between total and radial G is
+considerably less than in the high-side or the underside attack (Gt = Gr +
+Cosθ), therefore, to stay within the 2G limitation, the attacker must launch
+from longer ranges (at a given angle-off). For example, if an attacker
+performs an overhead .9-Mach co-speed attack – to prevent himself from
+exceeding the 2G launch limitation at 30° angle-off – he must launch from
+a range of at least 10,450 feet. Under the same conditions, he can launch
+from a range of 6,840 feet at 30° angle-off in a high-side or level attack. In
+an underside attack, he can launch as near as 4,130 feet at 30° angle-off and
+still be within the 2G launch limitation.
+From the above analysis, it is apparent that the overhead attack is the
+worst possible because of the limitations imposed by IR, G and lambda.
+Unlike an overhead attack against a non-maneuvering target, the attacker
+will find it difficult to acquire the low angle-off necessary for launch.
+Instead, since the target is turning into the attack, the angle-off will
+increase and the opportunity to launch will be lost. On the other hand,
+there is a slight advantage since the target is forced to turn into the attack –
+he will be forced to pull up and will consequently experience speed decay.
+The attacker will have a positive delta Mach and a higher missile velocity
+in relation to the target, and, therefore, a greater range from which he can
+launch AIM-9B before lambda limit is reached. This advantage is not a
+real advantage however, because the attacker can still be forced to exceed
+the IR and G parameters. We know, from our study of AIM-9B, that if we
+force the missile to exceed any one of the four parameters – IR, range, G
+or lambda – a kill will be unlikely. From a tactics standpoint, while on the
+defensive, the attack most easy to defend against is an overhead attack with
+a negative delta Mach. In this situation, we force the attacker to exceed a
+greater number of his limiting parameters than in any other attack.
+The underside, or six-o’clock-low attack is the best possible attack
+which we can execute against a maneuvering target. It was noted in our
+analysis of this attack against a non-maneuvering target that we acquired
+advantage in IR, G, surprise, and performance. When attacking a
+maneuvering target, we retain these advantages, but acquire a disadvantage
+from lambda limitation. The lambda disadvantage is however, overridden
+by the advantages. This is true because the advantages of IR and G allow
+the attacker to launch at relatively shorter ranges at high angles-off,
+without exceeding the 2G launch
+
+46
+
+Figure 20
+
+47
+
+limitation. (Remember, in an underside attack, radial G is greater than
+total G.) In other words, the attacker receives the benefit of 1G gravity, thus
+allowing him to position himself closer to the target at a higher angle-off
+without exceeding his 2G limitation (total G). This means that the attacker
+can reduce his range to stay within the lambda limitation and still be
+within his 2G launch limitation. In effect, the attacker is provided greater
+freedom of maneuver to successfully launch AIM-9B. In an underside
+attack, this freedom of maneuver is greater than in any other attack.
+From the defender’s viewpoint, it is certainly the most difficult attack to
+defend against. In summary we may say: The best attack for AIM-9B is the
+underside attack and the worst attack is the overhead attack – especially if
+the attacker has a negative delta Mach.
+
+48
+
+CHAPTER II
+FIGHTER MANEUVERS
+To acquire an understanding of the science of fighter-versus-fighter
+combat, a complete knowledge of the spatial relationships involved
+in this form of aerial combat, is necessary. Before he can achieve this
+understanding, any tactician must be able to define or imagine a frame
+of reference, within which he must operate. In addition, he must know
+the basic tools which he may employ in this frame of reference. Simply
+stated, this means that the pilot must understand the geometric space
+relationships and how to apply this insight to a given fighter-versus-fighter
+situation. Our purpose, in fighter maneuvers, will be two-fold: (1) To
+define and present geometric relationships needed for fighter-versusfighter combat, and (2) to show how to properly apply these relationships
+in fighter maneuvers.
+In discussing fighter-versus-fighter combat, it is evident that many
+pilots believe there are an infinite number of situations and solutions
+in a given tactical encounter. Such is not the case! The field in which
+a fighter pilot must operate is three-dimensional and finite. The size
+and shape of the field is determined by the pull of 1G gravity and the
+performance limitations of the aircraft and its pilot. We can imagine this
+field to be spherical in shape, with a flattened northern hemisphere and
+an elongated southern hemisphere. See figure 21. The spherical shape
+is generated by a maneuvering fighter’s turn and velocity operating
+through three dimensions. The elongation results from the effect of 1G
+gravity on the fighter in this three-dimensional field of maneuver. Turn,
+speed and the force of gravity determine the operating envelopes and we
+need only understand spatial relationships presented by these factors to
+develop effective fighter maneuvers. To know how to secure an advantage
+over an opponent, an attacker need only visualize turn, velocity and G
+projected onto this spheroid shape. He has no control over the force of
+gravity, of course, but he can exercise complete control over aircraft turn
+and velocity. As a result, he can maneuver in a manner to effectively use
+the pull of gravity in a given tactical situation. Thus in a fighter-versusfighter situation, the pilot can do two things to gain an advantage over an
+opponent: Change turn and/or velocity, in respect to his opponent. He
+can accomplish either or both by maneuvering through both the vertical
+and horizontal planes by employing either a two-dimensional maneuver
+through three-dimensional space, or a three-dimensional maneuver (barrel
+roll).
+
+49
+
+FIELD OF MANEUVER
+Figure 21
+
+50
+
+To apply these principles correctly, we need only recall what we
+determined previously in regard to weapons capability. We determined
+that to successfully employ AIM-9B or the 20mm cannon, we must attain
+a launch or firing position in the angular velocity cone emanating from
+the tail of our opponent. Applying the three-dimensional concept of turn
+and velocity, this means that we must reduce one or both of these factors in
+order to secure an advantage. Employing these spatial relationships against
+a given opponent will provide insight as to the type of maneuver which we
+must employ to defeat him.
+In our discussion of fighter maneuvers, we will keep in mind this
+concept of turn and velocity within a three-dimensional field. As stated
+earlier, we will use the case system to determine not only what maneuver
+to employ, but also how to employ it to acquire maximum benefit. In
+discussing fighter-versus-fighter tactics, our first maneuver for discussion
+will be the defensive turn. We choose to start with this maneuver because
+it is the basic maneuver by which the defender tries to nullify an attacker’s
+advantage. This may cause our approach to appear to be defensive in
+nature, however, we feel that this is necessary since any offensive action is
+directly dependent on the precise maneuver which the defendant chooses
+to execute. If the defender’s knowledge is limited in scope, the attacker’s
+corresponding maneuvers will reflect this limitation.
+Defensive Turn
+The purpose of the defensive turn is to prevent an opponent from
+achieving a launch or firing position. As stated earlier, the objective of this
+maneuver is to rotate our angular velocity cone away from the attacker. The
+best way to achieve this is to turn into the plane of the attack. This means
+that in an overhead attack, we will pull up into the attack; in an underside
+attack, we will dive into the attack; and if the attack is from six-o’clock, we
+will turn in whichever direction provides the greatest tactical advantage.
+Assuming that an attacker armed with an IR missile is approaching our
+angular velocity cone from six-o’clock, how would we defend against
+this attack? First, perform a hard turn with a slight dive. This turn
+should not be a break or maximum performance maneuver. If so, we will
+experience high speed-decay and loss of maneuvering potential, eventually
+diminishing our angular velocity. As a result we will probably successfully
+defend against the missile attack, but our attacker will be in position for
+a follow-up gun attack. If we employ the hard turn and the slight dive,
+we generate enough angular velocity to preclude a missile launch at long
+range, and at the same time we retain future maneuvering potential. As
+range diminishes, the attacker will be looking for an opportunity to launch
+a missile; however, since he is in a pursuit curve attack, his rate of turn
+is a function of target speed, angle-off and range. At long range the rate
+of turn required for the attacker to track is considerably less than ours.
+Consequently, the attacker’s
+51
+
+angle-off and rate of closure will increase. The increase in angle-off
+demands a further reduction in range before the attacker can successfully
+launch without exceeding the lambda limitation. This forces the attacker to
+get closer and, since he is on a curve of pursuit, his angle-off is continuing
+to increase as his range decreases. The rate of turn formula
+W=
+
+Vt × Sin θ
+Range
+
+indicates that rate of turn will increase if angle-off increases (Sinθ) and
+range decreases on an attack against a maneuvering target. Both of these
+conditions occur. This means that the attacker generates a rapid buildup in his rate of turn, and by the time he reaches the point at which he
+can launch without exceeding lambda limit, he exceeds the 2G launch
+limitation. With a .9-Mach co-speed attack at 35,000 feet, this will occur
+at a range of about 7,000 feet from the target. If the attacker gets closer, he
+must forego a missile attack and attempt to set up a 20mm cannon attack.
+This is necessary because when attacking a maneuvering target, once the
+G-limit is exceeded, G cannot be reduced – it will continue to build up as
+range diminishes.
+As a defender, we are now forced to nullify our opponent’s subsequent
+gun attack. To accomplish this, let us once again analyze our relative
+positions: The attacker, noting that he has lost the opportunity to deliver
+a missile, will attempt to reduce his angle-off and slide into our six-o’clock
+position. To prevent this, we must increase G and rotate our angular
+velocity cone away from our opponent. Our concern now is to acquire a
+smaller turn radius than the attacker. This will force him outside our turn
+and prevent him from achieving a tracking solution. To accomplish this
+objective, we must play the turn in respect to the attacker. The moment
+we notice his attempt to diminish angle-off, we increase our G, to prevent
+him from diminishing his angle-off and sliding toward our six-o’clock
+position. If he continues to press the attack, tighten the turn to prevent him
+from staying on the inside of the turn. In effect, we are trying to place him
+on the other side of our angular velocity cone. If we play this maneuver
+correctly, he will be unable to match our turn radius. The formula for turn
+radius:
+Vf 2
+R=
+32.2 N
+Where
+R = Turn radius in feet
+Vf = Fighter velocity in feet/second
+N = Number of radial G
+Indicates that the fighter with the lower velocity and/or greater G has a
+smaller turn radius. In this situation, the attacker’s speed and G are directly
+dependent upon the defender’s action and if we pull a certain number of G,
+the attacker cannot pull the same amount. If he does, his rate of turn will
+equal ours, and, at the end of a
+52
+
+180° turn, the attacker becomes the defender and we the attacker. Of course
+this will not occur, because the attacker will be forced to play his turn in
+respect to our position. This means that his G will be less, and as a result,
+his speed decay will not be as rapid as ours. As is shown by the above
+formula, the attacker will have a greater turn radius for two reasons: (1)
+higher speed, and (2) lower G. As a result if the attacker continues to press
+the attack in the plane of our turn, he must overshoot. This provides the
+attacker little opportunity to track the target and places him, geometrically,
+on the other side of our flight path. Of course, this presupposes that we,
+as the defender, are turning near or at maximum rate. If not, the attacker
+would be able to slide toward 6-o’clock, pull a higher G, diminish airspeed
+and avoid an overshoot. As we will see later, the lateral separation provided
+by this overshoot is a “must” for the defender’s subsequent actions.
+Procedures for the Defensive Turn
+1. Estimate range and angle-off of the attacking aircraft.
+2. Perform a hard turn if the attacker is near AIM-9B launch range.
+This is a planned maneuver to preclude a successful missile launch.
+3. Do not make an instantaneous max-performance turn. This will
+kill off airspeed very rapidly and reduce future angular velocity as well as
+maneuvering potential.
+4. Play the turn to maintain the attacker at a high angle-off. This will
+force him to diminish his range and exceed the 2-G launch limit, at about
+the time when he is within lambda limit.
+5. Increase rate of turn steadily to maximum performance as the
+attacker approaches gun-firing range. This will prevent him from acquiring
+a tracking solution and sliding toward your six-o’clock position.
+Adverse Yaw
+Adverse yaw is defined as the tendency of the aircraft to yaw or roll
+away from the intended turn. In the F-100, this condition is present in
+the sub-sonic speed range, and is especially noticeable in high-angle-ofattack maneuvering. If proper technique is not employed to counteract
+adverse yaw in high-angle-of-attack maneuvers, aircraft maneuverability
+is seriously compromised. In fighter-versus-fighter combat, since
+maneuverability is a key to success, inability to handle adverse yaw will
+produce disastrous results. We can see this upon examining the defensive
+turn. In defending against an AIM-9B attack, the speed and G which we
+were pulling produce a low angle of attack. Defending against a follow-up
+gun attack, however, produced a high
+
+53
+
+angle of attack. If conventional technique is attempted when max
+performance is necessary, the result will not be maximum performance.
+To preclude performance degradation, the pilot must develop two entirely
+different techniques to control the F-100 under low-angle-of-attack and
+high-angle-of-attack conditions.
+In low-angle-of-attack maneuvers, conventional technique will
+be employed. That is, ailerons will be primary control for directional
+change, in either turn or a roll, and rudder will be secondary. It will be
+used to counter the small amount of adverse yaw to keep the turn or roll
+coordinated. Back pressure will be employed to control the rate of turn or
+the intensity of the roll.
+In high-angle-of-attack maneuvers, the following techniques will be
+employed: Rudder will be used to control directional change. Ailerons will
+be moved to the neutral position and back pressure will be employed to
+control the rate of turn or intensity of the roll. In a high-angle-of-attack
+situation, if the pilot employs aileron as primary for directional change,
+he will induce a roll-off in the direction away from the intended turn.
+The more aileron he applies, the faster the roll-away. This is true because,
+in a turn, the induced drag on the inboard wing is less than that on the
+outboard wing. If aileron is employed, the inboard aileron is deflected
+up and the outboard aileron is deflected down. This condition imposes
+an additional increment of drag upon the outboard wing. As a result, the
+aircraft yaws toward the high-drag area, or in a direction away from the
+intended turn. In low-angle-of-attack maneuvers, this yaw can be corrected
+by applying rudder until the ball is centered. In a high-angle-of-attack
+maneuver with the F-100, this technique is not satisfactory. As the angle of
+attack increases, the amount of adverse yaw generated by the induced drag
+and deflected ailerons increases. The yaw increase causes the outboard
+wing to meet the relative wind at a velocity less than the inboard wing.
+The decrease in velocity, plus the downward deflection of the outboard
+aileron, causes the aileron to stall out, consequently, there will be less lift
+over the outboard wing. The aircraft will roll in the direction of the yaw.
+If additional aileron is applied to correct this roll-off, the rate of roll will
+increase and the adverse yaw and stall conditions will be magnified. If
+rudder is employed – along with aileron – the adverse yaw generated may
+be cancelled by the favorable yaw induce by the rudder. However, as the
+angle of attack builds up, the adverse yaw generated by induced drag and
+deflected aileron become greater than the favorable yaw generated by the
+rudder. Thus, a roll-off will still occur, however, at a slightly higher angle
+of attack. On the other hand, if we neutralize aileron and employ rudder as
+primary for directional control, we can generate a maximum performance
+turn without a subsequent roll-off.
+To determine whether we should use conventional techniques or the
+rudder technique, we need only recognize the “feel” of the aircraft. The
+moment the outboard wing appears to be heavy, the pilot should
+54
+
+neutralize aileron and apply rudder to control the turn or roll. Full
+rudder should not be employed, otherwise the pilot will experience a
+loss of directional control. Instead, apply rudder smoothly and as needed
+to maintain directional control. If this is accomplished, the ball will be
+centered and a max-performance maneuver is possible. Do not arbitrarily
+use full rudder and opposite aileron to achieve a max-performance turn. If
+this is accomplished, a large amount of favorable yaw will be generated and
+a snap-roll or spin will probably occur.
+The Scissors Maneuver
+The scissors is a defensive maneuver in which a series of turn
+reversals is executed in an attempt to achieve offensive potential after an
+overshoot by an attacker. To successfully employ the scissors, the defender
+needs an initial turn overshoot. In a defensive turn, if an attacker attempts
+to position himself in his opponent’s angular velocity cone by remaining in
+the plane of his turn, the defender is provided the opportunity to generate
+an overshoot. The overshoot places the attacker on the opposite side of
+the defender’s angular velocity cone. If the defender continues to turn in
+the same direction after the overshoot, the attacker will be presented the
+opportunity to maneuver toward his opponent’s six-o’clock position, simply
+because the defender will be turning away from the attack. To prevent this,
+the defender must initiate a turn reversal as the attacker passes through his
+flight path. The decision as to when to execute this reversal will depend
+upon the attacker’s rate of overshoot and his angle-off. A good “rule-ofthumb” is: rapid turn overshoot, early reversal; slow turn overshoot, late
+reversal. The turn reversal will rotate the defender’s angular velocity cone
+away from the attacker. This will place the attacker at a high angle-off and
+will cause him, once again, to cross the defender’s flight path. See figure 22.
+The defender has now forced the attacker into a scissors maneuver.
+We can see – by geometric inspection – that the aircraft which has
+the shorter turn radius and the lower velocity, will force the other to the
+12-o’clock position. In this maneuver, the defender has the advantage.
+By virtue of forcing the attacker to overshoot, he has lower velocity and
+if he employs the proper technique, he can easily place the attacker at
+12-o’clock. To accomplish this, each turn reversal should be a rudder
+reversal, at max-performance. If aileron is applied, the defender will
+roll off in the wrong direction, or be forced to release back-pressure to
+execute the reversal. This, of course, will increase turn radius. A nose-high
+attitude accomplishes two things: (1) It reduces the defender’s horizontal
+turning component, and (2) It reduces the defender’s vector velocity in the
+horizontal plane. The reduction in the horizontal turning component and
+vector velocity is a result of maneuvering through both the vertical and
+horizontal planes. In other words, we are employing the pull of
+
+55
+
+one-G gravity to provide a greater radial G and a lower velocity. Maximum
+power should be used in this maneuver, because its force vector opposes
+the one-G gravity and is directed toward the inside of the turning circle.
+This provides the defender the opportunity to maneuver through the
+vertical plane, and thereby diminish his horizontal turning component. In
+addition, since power provides a lower stall speed, it allows the defender to
+tighten his turn radius at a given airspeed as well as reduce airspeed to the
+lowest possible point. This means that if the defender performs a nosehigh rudder reversal with power on, he will reduce his turn and velocity
+components to their smallest state and, if the attacker doesn’t counter
+in like manner, he will be quickly forced to the 12-o’clock position. The
+defender now becomes the attacker.
+If the attacker counters effectively, and forces the defender below him,
+the defender should maneuver in phase with the attacker. This provides
+the attacker a visual disadvantage since the defender will be directly
+beneath him. In an attempt to maneuver, in relation to the defender, the
+attacker will be force to roll excessively in one direction or the other. This
+increases his stall speed and forces him forward and down toward his
+opponent’s flight path. The moment the attacker notices this, he probably
+will reduce his bank and maneuver as smoothly as the defender, with a
+resultant standoff. If, and when, this occurs,, the defender must employ
+afterburner, relax G and dive 180° away from his opponent. He should
+initiate this maneuver immediately after the attacker has made his last
+observation, when the attacker does not have visual contact. This affords
+the defender the opportunity to gain considerable longitudinal separation
+and places the attacker in an overhead attack with a negative delta Mach.
+The defender will be out of gun range and the attacker will be provided the
+worst possible situation for a missile launch. (NOTE: Tactical analysis of
+the dive-away will be discussed later.)
+When employing the scissors maneuver, a pilot should attempt to
+secure an advantage as quickly as possible – certainly by the second turn
+reversal. If not, he will lose airspeed rapidly, therefore maneuverability, and
+will be prevented from ever acquiring an advantage. Instead, he will find
+himself in a standoff, with marginal control – an easy set-up for another
+attacker (or his immediate opponent, if the opponent has a superior
+aircraft).
+Procedures for the Scissors Maneuver
+1. Increase rate of turn into the attack until the attacker overshoots or
+moves outside the turn.
+2. Execute a nose-high rudder reversal with power on as the attacker
+passes your tail. Remember the “rule-of-thumb” for turn-reversal: Rapid
+turn overshoot, early reversal; slow turn overshoot, late reversal.
+56
+
+SCISSORS
+Figure 22
+57
+
+3. Repeat a nose-high reversal each time your opponent slides
+through your flight path to the outside of the turn. If you pass nose-high
+above your opponent, he will begin to slide forward.
+4. Perform a roll-off or “S” down to the six-o’clock position, after you
+obtain a position above and behind your opponent.
+5. Place yourself in phase with your opponent if you are underneath
+him; then, at the earliest possible moment, perform the 180° dive-away.
+Countering the Scissors Maneuver
+In our discussion of the scissors maneuver, we stated that it is a
+defensive maneuver designed to take advantage of an attacker’s overshoot.
+We then proceeded to show how the defender would react to gain this
+advantage. The implication is clear – an attacker places himself in a very
+serious position if he misjudges the defender’s turn and overshoots. To
+prevent this, it is suggested that the attacker employ the high-speed yo-yo
+any time he believes his rate of closure may be sufficient to cause a turn
+overshoot. In this manner, the attacker can retain his offensive advantage,
+however, we will still have the problem: What can an attacker do in the
+event he misjudges his opponent’s turn and is force into an overshoot? The
+purpose in discussing maneuvers after a turn overshoot is to point out an
+effective counter to the scissors and, by means of this counter, show that
+the scissors is highly over-rated as an easy method by which to achieve an
+offensive advantage.
+To know how to counter a scissors maneuver, we must first determine
+the attacker’s maneuvering potential in respect to the defender: The
+attacker has a significant disadvantage in terms of velocity; however, this
+disadvantage can be converted to an advantage if the attacker knows
+how to employ it properly. Maneuvering into a nose-high scissors is not
+proper employment, as this will place him forward or above his opponent
+in a stalemate condition. On the other hand, if the attacker employs this
+velocity in the vertical plane, in a zoom maneuver, he can generate a
+significant advantage. How can this advantage be gained? As the attacker
+noes that he is overshooting his opponent’s turn, he should relax G and
+deliberately slide around the outside of the turn. Relaxing G serves a twofold purpose: (1) It reduces induced drag, thereby allowing the attacker to
+maintain an airspeed advantage, and (2) It increases lateral separation on
+the overshoot. This reduces the attacker’s velocity component along the
+axis of his opponent’s flight path, thus allowing the attacker to maintain
+nose-tail separation. The defender, observing the overshoot, will be enticed
+to execute a nose-high reversal in an attempt to gain offensive advantage.
+If the defender continues the turn, the attacker can play the maneuver and,
+once again, slide into the defender’s angular velocity cone. In
+
+58
+
+view of this, a reversal is almost a sure thing. As the defender reverses, the
+attacker rolls wings-level and zooms, at a max-rotation-angle, through
+the vertical plane. See figure 23. The defender will be unable to match
+the attacker’s rotation angle and subsequent zoom because of his airspeed
+disadvantage. This means that the attacker, even though he has a higher
+airspeed, may reduce his horizontal vector velocity to a smaller value than
+that of his opponent. As a result, the attacker will be on top with nosetail separation, and the defender will have dissipated his airspeed, with a
+consequent loss of maneuvering potential. The attacker need only roll off
+to the defender’s six-o’clock position.
+If the defender pulls up into a banked attitude, toward the attacker’s
+rotation, the height of his pull-up will be even less. This is the result of two
+factors: (1) The defender’s pull-up is only a component of a straight pullup – his rotation angle is through both the vertical and horizontal planes.
+Since he is in a banked attitude, this means that his rotation angle in the
+vertical plane must be less than a straight pull-up. (2) The defender’s stall
+speed is higher. In a banked attitude, stall speed increases because less
+lifting surface is available to counter the pull of gravity. Higher stall speed
+causes the rotation component in the vertical plane to be even less. As a
+result of these two factors, the defender’s rotation angle is reduced. This
+means that the height of the zoom in the vertical plane is less and vector
+velocity in the horizontal plane is increased. This forces the defender to
+turn below, in front of and across the attacker’s line of flight. The attacker
+need only roll off in a direction opposite his opponent’s turn and move
+toward the six-o’clock position. The roll-off increases nose-tail separation
+and prevents a possible overshoot by the attacker.
+To maneuver against the attacker’s counter, the defender simply
+cannot refuse to reverse and continue his defensive turn. If he does, the
+attacker will not be obligated to roll wings-level and zoom in the vertical
+plane. The defender will turn away and place his angular velocity cone in
+front of the attacker’s flight path. As a consequence, the attacker will simply
+play his opponent’s turn and maneuver toward the six-o’clock position.
+If the defender cannot pull up and turn into, or away, how then will he
+maneuver against the attacker’s counter? As the attacker overshoots his
+turn, the defender will execute a nose-high reversal. This will force the
+attacker to roll wings-level, rotate through a large angle in the vertical
+plane and zoom for altitude. This action is designed to reduce vector
+velocity in the horizontal plane to a value less than the defender’s velocity.
+If the attacker fails to generate this large rotation, his vector velocity will
+be greater, and he will be force toward the defender’s twelve-o’clock-high
+position. So we see, the attacker has no choice, he must rotate through a
+large vertical angle when the defender executes his nose-high attitude and
+provides considerable vertical displacement in respect to the defender.
+Having placed the attacker in this position, the defender turns 180°
+
+59
+
+Figure 23
+
+60
+
+COUNTERING A SCISSORS MANEUVER
+
+in the vertical plane, relaxes G, lights afterburner and dives for separation.
+(The defender must accomplish his turn before dissipating too much
+airspeed and acquiring an extreme nose-high condition.) Noting the
+dive for separation, the attacker must turn – from an extreme nose-high
+position – 180° in the vertical plane to regain an offensive position at
+six-o’clock. The pull of one-G gravity causes the attacker to dissipate
+considerable airspeed, thus placing him in an overhead attack with a
+negative delta Mach outside of gun range.
+Remember: The counter to the scissors maneuver is nothing more
+than a high-speed yo-yo initiated after a turn overshoot. The only
+difference is that the attacker relaxes G, rolls wings-level and zooms in the
+vertical plane, so that he may regain nose-tail separation.
+Procedures for Countering the Scissors Maneuver
+1. Realize that you are overshooting your opponent’s turn and can no
+longer effect a yo-yo maneuver.
+2. Do not attempt to pull into the target’s radius of turn. This will
+impose high G-loads, and possible buffet or stall will occur. All airspeed
+advantage will be lost.
+3. Relax G, slide around the outside of the turn, and thereby maintain
+an airspeed advantage.
+4. Roll level, and zoom up (wings-level) as your opponent reverses
+into you. When your opponent reverses, he will be unable to match your
+zoom, because he will have killed some of his airspeed on the reversal,
+besides having less airspeed to begin with.
+5. Continue to pull up, wings-level, and force your opponent forward
+and below your line of flight. If he pulls up into a banked attitude, he
+cannot counter your maneuver, since: (a) His stall speed is higher, and (b)
+His pull-up is only a component of a straight pull-up. If your opponent
+pulls up wings-level, he cannot match your rotation, because of your
+airspeed advantage. In any case, your rotation in the vertical plane will be
+greater than your opponent’s. This will place him below and forward of
+your line of flight. You will have nose-tail separation.
+6. Roll off – roll in a direction away from your opponent’s turn if he
+is in a banked attitude – and more into his six-o’clock position. The rolloff will provide additional nose-tail separation and will prevent a possible
+overshoot.

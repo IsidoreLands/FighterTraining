@@ -1,0 +1,351 @@
+TACTICAL FORMATION
+In air-to-air combat, the primary purpose of tactical formation is
+two-fold: (1) To provide security against attacks by enemy fighters, and (2)
+To conduct offensive operations against enemy bombers and/or fighters.
+To gain security, any formation must be able to detect the attack and
+maneuver against it before the attackers achieve a lethal position. This
+means that the formation must be so constructed that attacking fighters
+with air-to-air missiles can be detected before they are within launch
+range. At the same time, this formation must possess characteristics of
+maneuverability and mutual support so that it can counter the attack
+as well as see it. These same characteristics are necessary in conducting
+offensive air-to-air operations.
+To gain maximum lookout security against a rear-hemisphere
+attack, the flight must be so constructed that visual cross-cover is the
+maximum attainable. Two means by which a formation can increase its
+visual cross-cover are: (1) Increase the number of aircraft within the basic
+maneuvering formation, and (2) Place these aircraft line-abreast at definite
+intervals to increase the field of cross-cover. By increasing the number of
+aircraft, we provide more flight members covering the rear hemisphere.
+If we stack the flight line-abreast, we provide greater across-cover, thus
+increasing the probability of detection a rear-hemisphere attack. This
+means that we increase look-out security but at the same time we decrease
+maneuverability. To maximize maneuverability, a flight must consist of
+as few members as possible (a single aircraft is more maneuverable than
+any formation consisting of more than one aircraft) with these members
+stack in-trail. From experience we know that when the number within the
+flight is reduced, it becomes easier for the members to keep track of and
+avoid one another during any maneuvering engagement. Experience also
+indicates it is much easier to maneuver in-trail as opposed to line-abreast
+formation.
+In order to acquire security and maneuverability, we must
+compromise between maximum look-out security and maximum
+maneuverability. The extent of the compromise needed will determine the
+type formation flown in a fighter-versus-fighter engagement. The increase
+range of AIM-9B, as opposed to the 20mm cannon, forces us to construct
+a formation in which the compromise favors look-out security. This means
+that the formation will be flown very nearly line-abreast at a specified
+interval to pick up a missile attack at ranges of greater than 15,000 feet. To
+maintain maneuverability and mutual support, the size of the formation
+must be restricted to no more than four aircraft. If a number greater than
+four is employed, maneuverability and mutual support become difficult
+and complicated. On the other hand, if less than two aircraft are employed,
+the look-out capability is reduced and mutual support becomes impossible.
+Therefore, to provide look-out
+112
+
+security and maneuverability, a formation of two, three or four aircraft
+must be employed.
+The three-ship flight, with a leader and two wingmen, has been
+evaluated many times throughout the history of fighter aviation. In spite
+of many attempts to propose a three-ship flight as a combat formation, it
+has never been extensively employed. The reason is that a tree-ship flight,
+with flanking wingmen, provides excellent look-out capability in the rear
+hemisphere on a combat air patrol; however, when this formation detects
+an attack and maneuvers against it, the result has always been the same
+– chaos. The wingmen cannot keep track of and avoid one another while
+maneuvering in respect to their leader and their attackers. As a result,
+one or the other of the wingmen is forced out of the formation and flight
+integrity is broken. The attackers simply drive in and take the single, then
+maneuver after the element after having destroyed the single or having
+forced him out of the fight. On the attack, where hard combat maneuvering
+is necessary, flight integrity disappears just as it did when maneuvering on
+the defensive.
+As indicated previously, the two-ship formation would be more
+maneuverable than any other type we may employ. Our problem in using
+this type formation is to provide extensive look-out security in order to
+detect a possible missile attack. If we stack the formation line-abreast, we
+must provide sufficient interval so the element can detect a missile attack
+at ranges greater than 15,000 feet. In order that this may be accomplished,
+the flight must spread about 2500 feed apart. A disadvantage of a spread
+of this magnitude is quickly apparent. Initial maneuverability is reduced
+after detecting the attack in the rear hemisphere. When the missile’s
+limitation is known, this maneuverability disadvantage is not as great as
+it appears (remember, to defend against a missile attack at long range,
+we need angular velocity plus airspeed, not a small turn radius and a low
+airspeed). This means that maneuverability is not required to the same
+extent as in gun tactics. With this in mind, we can safely accept an initial
+maneuverability restriction; however, the real disadvantage of the two-ship
+flight concerns look-out security. With only two ships, the leader of this
+formation must spend a great deal of time looking to the rear, rather than
+looking for enemy targets. In terms of look-out capability, this means a
+loss in offensive potential. If this loss can be accepted, along with reduced
+initial maneuverability, the two-ship flight may be employed as a basic
+maneuvering formation.
+To employ the element correctly, without sacrificing maneuverability
+beyond initial maneuverability, the wingman must know how to position
+himself during all maneuvers. On patrol, prior to initial contact, the
+wingman will maintain the position specified above – line-abreast and
+about 2500 feet out. During turns, the wingman will play the outside as
+well as the inside of the turn, in order to maintain position.
+
+113
+
+This will not be too difficult because the maneuvers executed, prior
+to contact, will not be of the maximum-performance variety. To allow the
+wingman to easily maintain his position and to provide adequate rearward
+coverage, the wingman must maneuver through both the horizontal and
+vertical planes. If the leader performs a turn away from the wingman, the
+wingman lowers his nose and cuts to the inside. This procedure allows the
+wingman to reduce his horizontal turning component and, at the same
+time, provides him a rate of closure so he will not be straggling behind his
+leader. As the wingman moves inside and low toward the leader’s lineabreast position, he should play his crossover so that he does not cross
+in front of his leader. He should cross to the outside, slide high and fly in
+the plane of the leader. If this crossover technique is employed during all
+turns, the wingman will describe a circular movement in the plane of the
+leader’s aircraft, see figure 36. On the outside of this circle the wingman
+will lose airspeed and slide to the rear. On the inside, the wingman will
+gain airspeed and move forward. In effect, the wingman is employing the
+low-speed and the high-speed yo-yo as a means of maintaining position,
+and providing sufficient visual cross-coverage. At the same time, this
+maneuver will enable the leader to cover his wingman, whether he be on
+the outside or on the inside of the turn. If the initial turn by the leader is
+toward the wingman, the wingman will be unable to cross over behind and
+underneath his leader. In this situation, the wingman must pull up, play
+the leader’s turn and cross to the outside, above and behind the plane of
+the leader’s aircraft. After the initial crossover, the wingman employs the
+techniques specified above for the remainder of his crossovers.
+When maneuvers approach maximum performance, the wingman
+will be unable to maintain the loose position implied in patrol formation.
+He will be forced into a fighting position, in a narrow cone, behind the
+leader’s aircraft. In order to remain with the leader and, at the same time,
+provide rearward coverage he will be forced to assume a position closer
+to the tail of the leader’s aircraft. As we define it, the fighting position is
+any place within a 60° cone with the wingman approximately 1000 feet
+behind the leader. To maintain position in this cone, the wingman employs
+the same maneuvering techniques which he used in patrol formation.
+(He maneuvers through both the vertical and horizontal planes). During
+max maneuvers, if the wingman attempts to maneuver very much outside
+the confines of this cone, he will find it difficult to maintain position and
+also provide rearward visual coverage. The primary duty of the wingman
+while in fighting position is to provide visual coverage to the rear, while
+the leader is concentrating on maneuvering for an advantage. This is of
+extreme importance if the enemy is equipped with air-to-air missiles.
+Considering all factors, a two-ship is better than a three-ship formation.
+Although a two-ship element has an initial look-out disadvantage, while in
+patrol formation, it has a distinct maneuvering advantage, and a somewhat
+better look-out advantage while fighting as a basic formation.
+
+114
+
+Figure 36
+
+115
+
+MANEUVERING IN THE FIGHTING POSITION
+
+When employed properly, the four-ship flight will give us all-around
+advantages in look-out, maneuverability and mutual support. To acquire
+these advantages without sacrificing one for the other, a flight of four
+must consist of two mutually-supporting elements. When on patrol, the
+elements should fly line-abreast from five to seven thousand feet apart.
+The wingman should maintain a position from line-abreast to no more
+than 20° back, at approximately 1500 feed out from the respective element
+leaders. A formation spread in this manner provides excellent look-out
+capability, because the wingmen can provide mutual crossover at ranges
+in excess of 15,000 feet. Maneuverability in this formation is somewhat
+restricted, When the lead element turns away from the second element,
+the second element will experience considerable difficulty in regaining a
+line-abreast position, unless the turn is held for almost 180°. If the lead
+element turns into the second elements, the second element will be forced
+to pull up and cross above the lead element. If this is not done, the second
+element will be forced to cross in front of the lead. In either case, if the turn
+is less than 90°, the second element will experience considerable difficulty
+in regaining a line-abreast position. To provide more maneuverability and
+flexibility, the second element must be given a greater field of maneuver.
+This field of maneuver should enable the second element to easily position
+itself, no matter what type of turn is performed by the lead element. A
+method of providing this freedom of maneuver is to spread the second
+element in both the vertical and horizontal planes. When this is done, if the
+lead element turns away, the second element can lower its nose, cut across
+the inside and quickly reposition itself, even though the lead element does
+not perform 90° or 180° turns. On turns into the second element, the
+second element can maneuver well above the lead element without fear of
+dragging the wingman through one another (remember wingmen will be
+maneuvering through both the vertical and horizontal planes to maintain
+position not their respective leaders). The freedom of maneuver provided
+the second element leader enables him to devote less time to flying
+formation and more time to looking for prospective kills. At the same time,
+during turns, it allows the wingman to provide better rearward coverage,
+because the elements will not be strung out in extended-train. The only
+real objection to this formation is that, in straight-away flight, the second
+element must look through a greater distance to detect a missile attack
+against the lead element. Although this is true, it can be mathematically
+demonstrated that the additional distance through which both elements
+must look, is insignificant: (Less than 300’ against a six-o’clock attacker
+if the fluid element is stacked vertically less than 3000’ above the lead
+element). If the attack is directed from six-o’clock-low, the additional
+distance through which the second element must look is somewhat greater.
+However, the attackers must get in considerably closer along the horizontal
+plane before initiating a pull-up into an underside attack. This means that
+the second element will be afforded more of a plane view of the attackers,
+thus a large target in perspective even though the additional distance is
+somewhat greater. Another reason cited for not
+116
+
+using the high element is the fact that the aircraft wing covers a
+considerable portion of the highly vulnerable six-o’clock-low attack area.
+This is true for both the high element and the level-stacked element. To
+surmount this difficulty, wingmen simply dip their wings occasionally to
+enable them to cover the vulnerable rear area.
+In view of the maneuverability advantage offered by the fluid-four
+type formation (the formation in which the second element is stacked both
+horizontally and vertically) without significant look-out disadvantage,
+we consider it the best combat patrol formation. In fluid-four, the second
+or fluid element should be line-abreast, 5,000 to 7,000 feet out, and
+approximately 2,000 feet above the lead element. As in a normal tactical
+formation, the wingman will maintain a position from line-abreast to 20°
+back and 1500 feet out to the side opposite the other element see figure 37.
+As indicated in the two-ship flight, the wingman will fly the vertical as well
+as the horizontal plane in order to maintain their respective positions. On
+patrol, the fluid element leader will maintain position on the lead element
+by flying through the vertical and horizontal plane during all turns and
+maneuvers. For a fighting position, the fluid element must operate as
+an independent unit during violent maneuvers in fighter-versus fighter
+engagements (the reason for this will become apparent when we discuss
+flight tactics).
+If the tactical situation indicates that not enough aircraft are available
+for area saturation with four-ship flights do not employ the fluid-four
+formation. Instead, use individual elements as basic patrol formations and
+as basic fighting formations. Although not as decisive as the four-ship
+flight in terms of look-out capability, maneuverability and mutual support,
+the two-ship flight will be much more effective than the three-ship flight.
+The only real advantage which a flight of four has over an element is initial
+look-out capability and initial mutual support. After the engagement is
+entered, the fluid-four, or the four-ship flight will become nothing more
+than individual fighting elements. If suitable tail-warning radar devices
+were available, four-ship flights would enjoy very little advantage over
+individual fighting elements in terms of combat capability. The dictum,
+“economy of force” would most certainly prevail. Tactical formation in
+fighter-versus-fighter engagements would probably be dominated by the
+element or even possibly the single ship. Without this needed radar gear, a
+four-ship flight is the best all-around tactical formation.
+Three factors to consider when employing either the fluid-four or the
+element in combat or on a combat patrol are: (1) look-out capability, (2)
+maneuverability, and (3) fuel management. In the era of missile-equipped
+supersonic fighters with afterburner, these factors determine the best
+altitude for patrol in order to enter a given flight-versus-flight engagement.
+If the patrol is conducted at extreme altitudes (40,000 feet or above) the
+look-out problem becomes a liability which increases as altitude increases.
+The advantage of
+117
+
+Figure 37
+
+118
+FLUID FOUR FORMATION
+
+firing an air-to-air missile at greater range against a given defender
+is nullified by the possibility of an enemy attacker enjoying the same
+advantage. In addition, extreme altitude provides a maneuverability
+disadvantage in terms of indicated maneuvering airspeed. At extreme
+altitude, fuel management may be an advantage in some aircraft while in
+others (F-100) it can be a disadvantage. If the patrol is conducted at very
+low altitudes (10,000 feet or below) the look-out problem is considerably
+reduced and maneuverability, in terms of maneuvering airspeed, is
+certainly increased. However, this maneuverability is nullified somewhat
+by the fact that maneuvering becomes more restricted to the horizontal
+plane as opposed to the vertical plane. At very low altitudes, good fuel
+management is not possible with present-day jet engines and afterburners.
+The optimum altitudes, considering all three factors – look-out capability,
+maneuverability and fuel management – for patrolling and entering
+a fighter-versus-fighter engagement are the middle altitudes between
+25,000 and 35,000 feet (even this is open for argument if one considers the
+possibility of surface-to-air missiles). The exact altitudes will depend upon
+look-out capability and maneuverability of the fighters employed. In the
+F-100, the best all-around altitude seems to be approximately 30,000 feet.
+At this altitude, maneuverability and fuel management are excellent. At the
+same time the look-out problem can be easily handled by a flight of four
+and handled adequately by an element. If the tactical situation dictates that
+elements must be employed, an altitude somewhere between 25,000 and
+30,000 feet might be more appropriate to reduce the look-out problem. In
+any case, the medium altitudes provide a position from which an attack
+may be launch against aircraft at very high or very low altitudes.
+Procedures for Flying Element Formation
+1. Flying the Position of Wingman in Patrol Formation.
+a. Maintain a patrol position off the leader’s wing by flying lineabreast at approximately 2,500 feet out when in straight-and-level flight. If
+you fly closer, look-out capability will be sacrificed. If you fly further out,
+initial maneuverability as well as final maneuverability will be sacrificed
+after initial contact with the enemy.
+b. Play the outside as well as the inside of the turn for mutual
+coverage. If an attempt is made to stay on the inside of the turn without a
+crossover, you will only fall back when the leader rolls out of his turn.
+c. Maneuver through both the vertical and horizontal planes in order
+to fly a relative position off the leader. While on the inside of the turn, you
+will be in an extended-low position. On the outside of the turn, you will be
+in an extended-high position in the plane of the leader’s aircraft.
+
+119
+
+d. Lower your nose and cross to the inside if you are on the outside
+of the turn. If you are on the inside, sliding forward, cross to the outside
+then slide high and fly in the plane of the leader. If the initial turn is into
+you, pull up, cross over and behind your leader, then cross from outside
+to inside and vice versa in the manner just discussed. This technique will
+cause you to describe a circular movement in the plane of the leader’s
+aircraft. You will be moving forward in the bottom half of the circle and
+backward in the top half. This will enable you to easily maintain position
+and provide mutual coverage during the entire turn.
+e. Do not cross in front of your leader. Always maintain nose-tail
+separation.
+2. Flying the Fighting Position as a Wingman in Element Formation
+a. Fly in a 60° cone, in a fighting position, about 1,000 feet back.
+b. Maneuver through both the horizontal and vertical planes to
+maintain position. Slide high when overshooting and drop low when
+falling back, in order to maintain position on the leader.
+c. Attempt to keep your fuselage aligned with your leader’s during
+all maneuvers. This will enable you to match your leader’s maximum
+performance and will prevent you from becoming separated.
+d. Attempt to stay out of the in-trail position as much as possible. By
+doing this, the leader may cover you more adequately.
+Procedures for Flying the Fluid-Four Patrol
+1. Flying Position of Fluid Element Leader
+a. Position the element, line-abreast, about 5,000 to 7,000 feet out and
+approximately 2,000 feet above the lead element.
+b. Maintain a relative position to your leader during turns. If you are
+on the outside of the turn, drop your nose and cross to the other side when
+you find yourself losing out and falling back. When being turned into, and
+you find yourself creeping forward, slide high and/or cross to the outside
+of the turn to maintain position. In other words, play the vertical as well as
+the horizontal plane in order to maintain supporting position.
+c. Lower your nose to gain airspeed and position when you find
+yourself too far back after rolling out of a turn. When you regain your
+forward position you may pull back to the original fluid position.
+
+120
+
+d. Pull your nose up and kill off airspeed if you find yourself too far
+forward after rolling out of a turn. You may also retard throttle, however
+this is not advised when at altitude. When you regain your correct relative
+position, lower the nose to maintain proper vertical separation. All
+maneuvers must be smooth to prevent over-correction.
+e. Bank from side to side and look below when crossing from the
+inside high to the outside of the lead element. This will prevent you from
+losing the lead element during crossovers.
+f. Cover the forward hemisphere, along with the flight leader, as
+primary responsibility in an effort to visually acquire a target so that an
+attack may be launched against it. As a secondary responsibility, cover
+the rear hemisphere behind the lead element in order to detect a possible
+missile attack.
+2. Flying Position of Wingman in Fluid-Four Patrol
+a. Maintain a position from line-abreast to 20° back and 1500 feet out
+on the side opposite the element.
+b. Maneuver through both the horizontal and vertical planes to
+maintain position during turns. Fly high when overshooting and drop low
+to the inside when falling back.
+c. Cover the rear hemisphere, behind the other element, at all times.
+This is your responsibility and your coverage is necessary to detect any
+possible missile attacks. Your opposite number in the other element, will be
+providing you the same coverage.
+
+121
