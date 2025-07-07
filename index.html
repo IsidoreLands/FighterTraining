@@ -72,7 +72,7 @@
 
         let lastTime = 0;
         function gameLoop(currentTime) {
-            if (!gameRunning) return; // Stop the loop if game is not running
+            if (!gameRunning) { return; }
             const dt = (currentTime - lastTime) / 1000 || 0.016;
             lastTime = currentTime;
             handleInput(); simpleAI(enemy, player); player.update(dt, keys.ArrowUp); enemy.update(dt, true); checkGameState(dt);
@@ -85,7 +85,7 @@
         
         function handleStart() {
             window.removeEventListener("keydown", keydownHandler);
-            document.getElementById("startup-overlay").querySelectorAll("p, code").forEach(el => el.style.display = "none");
+            document.getElementById("startup-overlay").querySelectorAll("p, .equation").forEach(el => el.style.display = "none");
             let count = 3;
             countdownDisplay.textContent = count;
             const interval = setInterval(() => {
@@ -96,14 +96,15 @@
                     clearInterval(interval);
                     startupOverlay.classList.add("hidden");
                     gameRunning = true;
-                    resetGame(); 
-                    requestAnimationFrame(gameLoop); // This is the single, definitive start of the loop
+                    lastTime = performance.now(); // Initialize timer for first frame
+                    requestAnimationFrame(gameLoop); 
                 }
             }, 1000);
         }
 
         function keydownHandler(e) { if (e.key === "Enter") { handleStart(); } }
         window.addEventListener("keydown", keydownHandler);
+        // Initial call removed to prevent autostart
     </script>
 </body>
 </html>
