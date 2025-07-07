@@ -17,6 +17,7 @@
 </head>
 <body>
     <canvas id="gameCanvas"></canvas>
+
     <div id="startup-overlay">
         <h1>Aerial Attack Study</h1>
         <p>[↑] Afterburner | [↓] Brake | [←] Turn Left | [→] Turn Right</p>
@@ -39,26 +40,186 @@
         canvas.height = window.innerHeight;
 
         let gameRunning = false;
-        // ... (rest of the full game script from the previous correct version)
-        
-        // --- Game Management ---
-        function handleStart() {
-            window.removeEventListener("keydown", keydownHandler); // Remove listener to prevent re-triggering
+        let targetScore = 0;
+        const WIN_SCORE = 20;
+
+        class Fighter {
+            constructor(x, y, type, imageSrc, scale) {
+                this.type = type;
+                this.properties = AIRCRAFT_PROPERTIES[type];
+                this.image = new Image(); this.image.src = imageSrc;
+                this.scale = scale;
+                this.baseTurnSpeed = 0.06;
+                this.weapons = [];
+                this.x = x;
+                this.y = y;
+                this.baseSpeed = 3.0;
+                this.reset();
+            }
+
+            reset() {
+                this.v = this.baseSpeed;
+                this.angle = -Math.PI / 2;
+                this.rotation = 0;
+                this.health = 100; // Retained for potential future use
+                this.fuel = this.properties.maxFuel;
+                this.Ps = 0;
+            }
             
+            equipDefaultLoadout() {
+                this.weapons = [];
+                const loadout = DEFAULT_LOADOUTS[this.type];
+                if (loadout) {
+                    loadout.forEach(weaponName => {
+                        if (WEAPONS[weaponName]) { this.weapons.push(WEAPONS[weaponName]); }
+                    });
+                }
+                this.weapons.sort((a, b) => b.range - a.range);
+            }
+
+            draw() {
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                ctx.rotate(this.angle); 
+                this.weapons.forEach(weapon => {
+                    ctx.beginPath();
+                    ctx.moveTo(0, 0);
+                    ctx.arc(0, 0, weapon.range, -weapon.angle / 2, weapon.angle / 2);
+                    ctx.closePath();
+                    ctx.fillStyle = weapon.color;
+                    ctx.fill();
+                });
+                ctx.rotate(Math.PI / 2); 
+                if (this.image.complete) {
+                    const width = this.image.width * this.scale;
+                    const height = this.image.height * this.scale;
+                    ctx.drawImage(this.image, -width / 2, -height / 2, width, height);
+                }
+                ctx.restore();
+            }
+
+            update(dt, isThrusting) {
+                const thrust = (isThrusting && this.fuel > 0 ? this.properties.afterburnerThrust : this.properties.militaryThrust);
+                const drag = this.properties.dragCoefficient * (this.v * this.v) + Math.abs(this.rotation) * 60000;
+                const weight = this.properties.baseWeight + this.fuel;
+                
+                this.Ps = ((thrust - drag) / weight) * this.v;
+                this.v += this.Ps * 0.0001 * dt;
+
+                const burnRate = isThrusting ? this.properties.afterburnerBurn : this.properties.militaryBurn;
+                this.fuel -= burnRate * dt;
+                this.fuel = Math.max(0, this.fuel);
+
+                const weightFactor = (this.properties.baseWeight + this.fuel) / 30000;
+                this.turnSpeed = this.baseTurnSpeed / weightFactor;
+                
+                this.angle += this.rotation;
+                this.x += Math.cos(this.angle) * this.v;
+                this.y += Math.sin(this.angle) * this.v;
+
+                if (this.x < 0) this.x = canvas.width; if (this.x > canvas.width) this.x = 0;
+                if (this.y < 0) this.y = canvas.height; if (this.y > canvas.height) this.y = 0;
+            }
+        }
+
+        const player = new Fighter(0, 0, 'F-16', 'F16_2D.svg', 0.14);
+        const enemy = new Fighter(0, 0, 'MiG-25', 'MiG25_2D.svg', 0.185);
+
+        const keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false };
+        window.addEventListener('keydown', (e) => { if (e.key in keys) { e.preventDefault(); keys[e.key] = true; }});
+        window.addEventListener('keyup', (e) => { if (e.key in keys) keys[e.key] = false; });
+
+        function handleInput() {
+            player.rotation = 0;
+            if (keys.ArrowLeft) player.rotation = -player.turnSpeed;
+            if (keys.ArrowRight) player.rotation = player.turnSpeed;
+        }
+        
+        function simpleAI(ai, target) {
+            const dx = target.x - ai.x;
+            const dy = target.y - ai.y;
+            const angleToTarget = Math.atan2(dy, dx);
+            let angleDiff = angleToTarget - ai.angle;
+            while (angleDiff > Math.PI) angleDiff -= 2 * Math.PI;
+            while (angleDiff < -Math.PI) angleDiff += 2 * Math.PI;
+            ai.rotation = Math.sign(angleDiff) * ai.turnSpeed;
+        }
+
+        function resetGame() {
+            targetScore = 0;
+            player.reset();
+            player.x = canvas.width / 2; player.y = canvas.height * 0.75;
+            enemy.reset();
+            enemy.x = canvas.width / 2; enemy.y = canvas.height * 0.25; enemy.angle = Math.PI / 2;
+            player.equipDefaultLoadout();
+            enemy.equipDefaultLoadout();
+        }
+
+        function checkGameState(dt) {
+            const checkConeTargeting = (attacker, defender, weapon) => {
+                const dx = defender.x - attacker.x;
+                const dy = defender.y - attacker.y;
+                if (Math.sqrt(dx * dx + dy * dy) < weapon.range) {
+                    const angleToTarget = Math.atan2(dy, dx);
+                    let angleDiff = angleToTarget - attacker.angle;
+                    while (angleDiff > Math.PI) angleDiff -= 2 * Math.PI;
+                    while (angleDiff < -Math.PI) angleDiff += 2 * Math.PI;
+                    if (Math.abs(angleDiff) < weapon.angle / 2) return true;
+                }
+                return false;
+            };
+            
+            let scoreThisFrame = 0;
+            for (const weapon of player.weapons) {
+                if (checkConeTargeting(player, enemy, weapon)) {
+                    scoreThisFrame = Math.max(scoreThisFrame, weapon.scoreValue);
+                }
+            }
+            targetScore += scoreThisFrame * dt;
+            
+            if (targetScore >= WIN_SCORE) {
+                alert("VICTORY!");
+                resetGame();
+            } else if (player.fuel <= 0) {
+                alert("DEFEAT - OUT OF FUEL");
+                resetGame();
+            }
+        }
+
+        let lastTime = 0;
+        function gameLoop(currentTime) {
+            if (!gameRunning) {
+                requestAnimationFrame(gameLoop); // Keep loop alive but do nothing
+                return;
+            }
+            const dt = (currentTime - lastTime) / 1000 || 0.016;
+            lastTime = currentTime;
+            handleInput();
+            simpleAI(enemy, player);
+            player.update(dt, keys.ArrowUp);
+            enemy.update(dt, true); 
+            checkGameState(dt);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            player.draw();
+            enemy.draw();
+            if (typeof drawHUD1 === 'function') drawHUD1(ctx, canvas, player);
+            if (typeof drawHUD2 === 'function') drawHUD2(ctx, canvas, player);
+            requestAnimationFrame(gameLoop);
+        }
+        
+        function handleStart() {
+            window.removeEventListener("keydown", keydownHandler);
+            countdownDisplay.textContent = "3";
             let count = 3;
-            countdownDisplay.textContent = count;
             const interval = setInterval(() => {
                 count--;
                 if (count > 0) {
                     countdownDisplay.textContent = count;
-                } else if (count === 0) {
-                    countdownDisplay.textContent = "FIGHT!";
                 } else {
                     clearInterval(interval);
                     startupOverlay.classList.add("hidden");
                     gameRunning = true;
-                    resetGame(); // Assuming resetGame initializes everything
-                    requestAnimationFrame(gameLoop);
+                    resetGame(); 
                 }
             }, 1000);
         }
@@ -70,10 +231,8 @@
         }
         
         window.addEventListener("keydown", keydownHandler);
-        
-        // --- Placeholder for the rest of your full game code ---
-        // (The full Fighter class, AI, handleInput, resetGame, checkGameState, gameLoop, etc. goes here)
-        
+        requestAnimationFrame(gameLoop); // Start the passive loop
+
     </script>
 </body>
 </html>
