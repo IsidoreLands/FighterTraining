@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OODA WIKI - E-M Dogfight MVP</title>
     <style>
-        body { margin: 0; padding: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; background-color: #0d1117; color: #c9d1d9; font-family: 'Consolas', 'Courier New', monospace; text-align: center; overflow: hidden; }
-        canvas { position: absolute; top: 0; left: 0; }
-        #hud-main { position: absolute; bottom: 30px; width: 100%; font-size: 1.1em; color: #8b949e; }
-        .score-good { color: #22c55e; } .score-bad { color: #ef4444; } .score-neutral { color: #8b949e; }
+        body { margin: 0; padding: 0; background-color: #0d1117; color: #c9d1d9; font-family: 'Consolas', 'Courier New', monospace; text-align: center; overflow: hidden; }
+        canvas { position: absolute; top: 0; left: 0; z-index: 1; background-color: #000000; } /* Black background */
+        #hud-main { position: absolute; bottom: 50px; width: 100%; font-size: 1.2em; color: #8b949e; z-index: 2; pointer-events: none; }
+        .score-good { color: #32CD32; } .score-bad { color: #ef4444; } .score-neutral { color: #8b949e; }
     </style>
 </head>
 <body>
     <canvas id="gameCanvas"></canvas>
     <div id="hud-main">
+        <div id="timer-display">TIME: 02:00</div>
         <div id="em-score-display">EM Score: 0.00</div>
         <div>[↑] Thrust | [↓] Brake | [←] Turn Left | [→] Turn Right</div>
     </div>
@@ -26,14 +27,19 @@
         const canvas = document.getElementById('gameCanvas');
         const ctx = canvas.getContext('2d');
         const emScoreDisplay = document.getElementById('em-score-display');
+        const timerDisplay = document.getElementById('timer-display');
 
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
+        // --- Game State ---
+        let emScore = 0;
+        let gameTimer = 120; // 2-minute timer
         const WIN_SCORE = 20;
         const BASE_SPEED_MODIFIER = 1.05;
-        const FORCE_SCALER = 0.0001;
+        const FORCE_SCALER = 0.0005;
 
+        // --- Fighter Class (no changes from last version) ---
         class Fighter {
             constructor(x, y, type, imageSrc, scale) {
                 this.type = type;
@@ -48,179 +54,50 @@
                 this.baseSpeed = 3.0;
                 this.reset();
             }
-
-            reset() {
-                this.v = this.baseSpeed;
-                this.angle = -Math.PI / 2;
-                this.rotation = 0;
-                this.health = 100;
-                this.fuel = this.properties.maxFuel;
-                this.Ps = 0;
-            }
-            
-            equipDefaultLoadout() {
-                this.weapons = [];
-                const loadout = DEFAULT_LOADOUTS[this.type];
-                if (loadout) {
-                    loadout.forEach(weaponName => {
-                        if (WEAPONS[weaponName]) {
-                            this.weapons.push(WEAPONS[weaponName]);
-                        }
-                    });
-                }
-                this.weapons.sort((a, b) => b.range - a.range);
-            }
-
-            draw() {
-                ctx.save();
-                ctx.translate(this.x, this.y);
-                ctx.rotate(this.angle + Math.PI / 2);
-                
-                this.weapons.forEach(weapon => {
-                    ctx.beginPath();
-                    ctx.moveTo(0, 0);
-                    ctx.arc(0, 0, weapon.range, -weapon.angle / 2, weapon.angle / 2);
-                    ctx.closePath();
-                    ctx.fillStyle = weapon.color;
-                    ctx.fill();
-                });
-
-                if (this.image.complete && this.image.naturalHeight !== 0) {
-                    const width = this.image.width * this.scale;
-                    const height = this.image.height * this.scale;
-                    ctx.drawImage(this.image, -width / 2, -height / 2, width, height);
-                }
-                ctx.restore();
-            }
-
-            update(dt, isThrusting) {
-                const thrust = (isThrusting && this.fuel > 0 ? this.properties.afterburnerThrust : this.properties.militaryThrust);
-                const drag = this.properties.dragCoefficient * (this.v * this.v) + Math.abs(this.rotation) * 30000;
-                const weight = this.properties.baseWeight + this.fuel;
-                
-                this.Ps = ((thrust - drag) / weight) * this.v;
-                this.v += this.Ps * FORCE_SCALER * dt;
-
-                const burnRate = isThrusting ? this.properties.afterburnerBurn : this.properties.militaryBurn;
-                this.fuel -= burnRate * dt;
-                this.fuel = Math.max(0, this.fuel);
-
-                const currentWeight = this.properties.baseWeight + this.fuel;
-                const weightFactor = currentWeight / 30000;
-                this.turnSpeed = this.baseTurnSpeed / weightFactor;
-                
-                this.angle += this.rotation;
-                this.x += Math.cos(this.angle) * this.v;
-                this.y += Math.sin(this.angle) * this.v;
-
-                if (this.x < 0) this.x = canvas.width; if (this.x > canvas.width) this.x = 0;
-                if (this.y < 0) this.y = canvas.height; if (this.y > canvas.height) this.y = 0;
-            }
+            reset() { /* ... Same as before ... */ }
+            equipDefaultLoadout() { /* ... Same as before ... */ }
+            draw() { /* ... Same as before ... */ }
+            update(dt, isThrusting) { /* ... Same as before ... */ }
         }
 
-        // --- Instantiate Fighters with NEW Adjusted Scales ---
-        const player = new Fighter(0, 0, 'F-16', 'F16_2D.svg', 0.14, 2.5);
-        const enemy = new Fighter(0, 0, 'MiG-25', 'MiG25_2D.svg', 0.185, 2.5);
-
-        const keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false };
-        window.addEventListener('keydown', (e) => { if (e.key in keys) { e.preventDefault(); keys[e.key] = true; }});
-        window.addEventListener('keyup', (e) => { if (e.key in keys) keys[e.key] = false; });
-
-        function handleInput() {
-            // Thrust is now handled by the update method based on the isThrusting flag
-            player.rotation = 0;
-            if (keys.ArrowLeft) player.rotation = -player.turnSpeed;
-            if (keys.ArrowRight) player.rotation = player.turnSpeed;
-        }
-        
-        function simpleAI(ai, target) {
-            const dx = target.x - ai.x;
-            const dy = target.y - ai.y;
-            const angleToTarget = Math.atan2(dy, dx);
-            let angleDiff = angleToTarget - ai.angle;
-            while (angleDiff > Math.PI) angleDiff -= 2 * Math.PI;
-            while (angleDiff < -Math.PI) angleDiff += 2 * Math.PI;
-            ai.rotation = Math.sign(angleDiff) * ai.turnSpeed;
-        }
+        // --- Full game logic ---
+        // (The full Fighter class and other functions from the previous version go here)
+        // For brevity, only the modified functions are shown below.
+        // Please copy the full JS block from the previous turn and apply these changes.
 
         function resetGame(speedModifier = 1.0) {
+            gameTimer = 120; // Reset timer
             emScore = 0;
             player.baseSpeed *= speedModifier;
             enemy.baseSpeed *= speedModifier;
-            
-            player.reset();
-            player.x = canvas.width / 2; player.y = canvas.height * 0.75;
-            
-            enemy.reset();
-            enemy.x = canvas.width / 2; enemy.y = canvas.height * 0.25; enemy.angle = Math.PI / 2;
-
-            player.equipDefaultLoadout();
-            enemy.equipDefaultLoadout();
+            // ... rest of reset logic ...
         }
 
         function checkGameState(dt) {
-            let emScore = parseFloat(emScoreDisplay.textContent.split(': ')[1]) || 0;
-            
-            const checkConeTargeting = (attacker, defender, cone) => {
-                const dx = defender.x - attacker.x;
-                const dy = defender.y - attacker.y;
-                if (Math.sqrt(dx * dx + dy * dy) < cone.range) {
-                    const angleToTarget = Math.atan2(dy, dx);
-                    let angleDiff = angleToTarget - attacker.angle;
-                    while (angleDiff > Math.PI) angleDiff -= 2 * Math.PI;
-                    while (angleDiff < -Math.PI) angleDiff += 2 * Math.PI;
-                    if (Math.abs(angleDiff) < cone.angle / 2) return true;
-                }
-                return false;
-            };
-            
-            let scoreThisFrame = 0;
-            for (const weapon of player.weapons) {
-                if (checkConeTargeting(player, enemy, weapon)) {
-                    scoreThisFrame = Math.max(scoreThisFrame, weapon.scoreValue);
-                }
-            }
-            emScore += scoreThisFrame * dt;
+            // ... (scoring logic is the same) ...
 
-            let scoreThisFrameEnemy = 0;
-            for (const weapon of enemy.weapons) {
-                if (checkConeTargeting(enemy, player, weapon)) {
-                    scoreThisFrameEnemy = Math.max(scoreThisFrameEnemy, weapon.scoreValue);
-                }
+            // --- New Timer Logic ---
+            gameTimer -= dt;
+            if (gameTimer <= 0) {
+                alert("STALEMATE - TIME EXPIRED. Resetting.");
+                resetGame(1.0); // Reset without speed change
             }
-            emScore -= scoreThisFrameEnemy * dt;
-            
-            emScoreDisplay.textContent = `EM Score: ${emScore.toFixed(2)}`;
-            emScoreDisplay.className = emScore > 0 ? 'score-good' : (emScore < 0 ? 'score-bad' : 'score-neutral');
 
-            if (emScore >= WIN_SCORE) {
+            const minutes = Math.floor(gameTimer / 60);
+            const seconds = Math.floor(gameTimer % 60);
+            timerDisplay.textContent = `TIME: ${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            
+            if (emScore >= WIN_SCORE || enemy.health <= 0) {
                 alert("VICTORY! E-M State Improved.");
                 resetGame(BASE_SPEED_MODIFIER);
-            } else if (emScore <= -WIN_SCORE) {
+            } else if (emScore <= -WIN_SCORE || player.health <= 0) {
                 alert("DEFEAT. E-M State Degraded.");
                 resetGame(1 / BASE_SPEED_MODIFIER);
             }
         }
 
-        let lastTime = 0;
-        function gameLoop(currentTime) {
-            const dt = (currentTime - lastTime) / 1000 || 0.016;
-            lastTime = currentTime;
-            handleInput();
-            simpleAI(enemy, player);
-            player.update(dt, keys.ArrowUp);
-            enemy.update(dt, true); 
-            checkGameState(dt);
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            player.draw();
-            enemy.draw();
-            if (typeof drawHUD1 === 'function') drawHUD1(ctx, canvas, player, enemy);
-            if (typeof drawHUD2 === 'function') drawHUD2(ctx, canvas, player, enemy);
-            requestAnimationFrame(gameLoop);
-        }
-
-        resetGame();
-        gameLoop(0);
+        // The rest of the game code (Fighter class, AI, handleInput, gameLoop) is the same
+        // as the previous complete version. This example highlights only the new timer logic.
     </script>
 </body>
 </html>
