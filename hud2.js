@@ -1,43 +1,51 @@
-// HUD 2: Fuel and Health Bars (Bottom Strips)
-// Placeholder variables (to be replaced with game mechanics)
-let fuel = 100; // Max fuel is 100
-let health = 100; // Max health is 100
-const fuelThreshold = 20; // Fuel bar turns red below 20%
+function drawHUD2(ctx, canvas, player, enemy) {
+    const barHeight = 15;
+    const barY = canvas.height - barHeight - 5; // Position bars just above the bottom
 
-function drawHUD2(ctx, canvas) {
-    const barHeight = 20;
-    const barMargin = 5;
-    const fuelBarY = canvas.height - 2 * barHeight - barMargin; // Fuel bar above health bar
-    const healthBarY = canvas.height - barHeight; // Health bar at bottom
+    // --- Player Bars (Left Side) ---
+    const playerBarWidth = canvas.width / 2 - 20;
+    
+    // Player Fuel
+    ctx.fillStyle = 'rgba(0, 255, 255, 0.3)';
+    ctx.fillRect(10, barY, playerBarWidth, barHeight);
+    const playerFuelWidth = (player.fuel / 100) * playerBarWidth;
+    ctx.fillStyle = player.fuel > 20 ? 'rgba(0, 255, 255, 0.8)' : 'rgba(255, 100, 0, 0.8)';
+    ctx.fillRect(10, barY, playerFuelWidth, barHeight);
 
-    // Fuel Bar
-    ctx.globalAlpha = 0.5; // Background transparency
-    ctx.fillStyle = '#004400'; // Dark green background
-    ctx.fillRect(0, fuelBarY, canvas.width, barHeight); // Full bar background
-    ctx.globalAlpha = 0.8; // Filled portion transparency
-    ctx.fillStyle = fuel < fuelThreshold ? '#FF0000' : '#00FF00'; // Red if low, else green
-    const fuelWidth = (fuel / 100) * canvas.width; // Proportional width
-    ctx.fillRect(0, fuelBarY, fuelWidth, barHeight); // Filled portion
-    ctx.fillStyle = '#00FF00';
-    ctx.fillText("Fuel", 10, fuelBarY - 5); // Label above bar
+    // Player Health
+    ctx.fillStyle = 'rgba(0, 255, 0, 0.3)';
+    ctx.fillRect(10, barY - barHeight - 5, playerBarWidth, barHeight);
+    const playerHealthWidth = (player.health / 100) * playerBarWidth;
+    ctx.fillStyle = 'rgba(0, 255, 0, 0.8)';
+    ctx.fillRect(10, barY - barHeight - 5, playerHealthWidth, barHeight);
+    
+    // Labels
+    ctx.fillStyle = '#c9d1d9';
+    ctx.font = 'bold 12px "Courier New", monospace';
+    ctx.fillText("HLTH", 15, barY - barHeight - 8);
+    ctx.fillText("FUEL", 15, barY - 8);
 
-    // Health Bar
-    ctx.globalAlpha = 0.5;
-    ctx.fillStyle = '#004400'; // Dark green background
-    ctx.fillRect(0, healthBarY, canvas.width, barHeight);
-    ctx.globalAlpha = 0.8;
-    ctx.fillStyle = checkTargeting(enemy, player) ? '#FF0000' : '#00FF00'; // Red if vulnerable
-    const healthWidth = (health / 100) * canvas.width;
-    ctx.fillRect(0, healthBarY, healthWidth, barHeight);
-    ctx.fillStyle = '#00FF00';
-    ctx.fillText("Health", 10, healthBarY - 5); // Label above bar
+    // --- Enemy Bars (Right Side) ---
+    const enemyBarX = canvas.width / 2 + 10;
+    const enemyBarWidth = canvas.width / 2 - 20;
 
-    ctx.globalAlpha = 1.0; // Reset transparency
+    // Enemy Health
+    ctx.fillStyle = 'rgba(0, 255, 0, 0.3)';
+    ctx.fillRect(enemyBarX, barY - barHeight - 5, enemyBarWidth, barHeight);
+    const enemyHealthWidth = (enemy.health / 100) * enemyBarWidth;
+    ctx.fillStyle = 'rgba(0, 255, 0, 0.8)';
+    ctx.fillRect(enemyBarX + enemyBarWidth - enemyHealthWidth, barY - barHeight - 5, enemyHealthWidth, barHeight);
+
+    // Enemy Fuel
+    ctx.fillStyle = 'rgba(0, 255, 255, 0.3)';
+    ctx.fillRect(enemyBarX, barY, enemyBarWidth, barHeight);
+    const enemyFuelWidth = (enemy.fuel / 100) * enemyBarWidth;
+    ctx.fillStyle = 'rgba(0, 255, 255, 0.8)';
+    ctx.fillRect(enemyBarX + enemyBarWidth - enemyFuelWidth, barY, enemyFuelWidth, barHeight);
+
+    // Labels
+    ctx.textAlign = 'right';
+    ctx.fillText("HLTH", canvas.width - 15, barY - barHeight - 8);
+    ctx.fillText("FUEL", canvas.width - 15, barY - 8);
+    ctx.textAlign = 'left';
 }
-
-// Function to update fuel and health (placeholder, replace with game logic)
-function updateHUD2Values(newFuel, newHealth) {
-    fuel = Math.max(0, Math.min(100, newFuel)); // Clamp between 0 and 100
-    health = Math.max(0, Math.min(100, newHealth)); // Clamp between 0 and 100
-}
-(function() { console.log("HUD2 loaded with debug at", performance.now()); })();
