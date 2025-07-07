@@ -27,14 +27,12 @@
         const ctx = canvas.getContext('2d');
         const emScoreDisplay = document.getElementById('em-score-display');
 
-        // --- Fullscreen Canvas ---
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
-        // --- Game Constants ---
         const WIN_SCORE = 20;
         const BASE_SPEED_MODIFIER = 1.05;
-        const FORCE_SCALER = 0.0001; // Scales down Thrust/Drag/Weight for playable acceleration
+        const FORCE_SCALER = 0.0001;
 
         class Fighter {
             constructor(x, y, type, imageSrc, scale) {
@@ -47,7 +45,7 @@
                 this.weapons = [];
                 this.x = x;
                 this.y = y;
-                this.baseSpeed = 3.0; // Starting game speed
+                this.baseSpeed = 3.0;
                 this.reset();
             }
 
@@ -60,29 +58,54 @@
                 this.Ps = 0;
             }
             
-            equipDefaultLoadout() { /* ... (Same as before) ... */ }
-            draw() { /* ... (Same as before) ... */ }
+            equipDefaultLoadout() {
+                this.weapons = [];
+                const loadout = DEFAULT_LOADOUTS[this.type];
+                if (loadout) {
+                    loadout.forEach(weaponName => {
+                        if (WEAPONS[weaponName]) {
+                            this.weapons.push(WEAPONS[weaponName]);
+                        }
+                    });
+                }
+                this.weapons.sort((a, b) => b.range - a.range);
+            }
 
-            update(dt, isThrusting, isBraking) {
-                // E-M Calculation
-                const thrust = (isThrusting ? this.properties.afterburnerThrust : this.properties.militaryThrust);
+            draw() {
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                ctx.rotate(this.angle + Math.PI / 2);
+                
+                this.weapons.forEach(weapon => {
+                    ctx.beginPath();
+                    ctx.moveTo(0, 0);
+                    ctx.arc(0, 0, weapon.range, -weapon.angle / 2, weapon.angle / 2);
+                    ctx.closePath();
+                    ctx.fillStyle = weapon.color;
+                    ctx.fill();
+                });
+
+                if (this.image.complete && this.image.naturalHeight !== 0) {
+                    const width = this.image.width * this.scale;
+                    const height = this.image.height * this.scale;
+                    ctx.drawImage(this.image, -width / 2, -height / 2, width, height);
+                }
+                ctx.restore();
+            }
+
+            update(dt, isThrusting) {
+                const thrust = (isThrusting && this.fuel > 0 ? this.properties.afterburnerThrust : this.properties.militaryThrust);
                 const drag = this.properties.dragCoefficient * (this.v * this.v) + Math.abs(this.rotation) * 30000;
                 const weight = this.properties.baseWeight + this.fuel;
                 
-                // Calculate Specific Excess Power (Ps)
                 this.Ps = ((thrust - drag) / weight) * this.v;
-                
-                // Apply Ps to velocity
                 this.v += this.Ps * FORCE_SCALER * dt;
 
-                // Fuel Consumption
                 const burnRate = isThrusting ? this.properties.afterburnerBurn : this.properties.militaryBurn;
                 this.fuel -= burnRate * dt;
                 this.fuel = Math.max(0, this.fuel);
 
-                // E-M Link: Weight affects turning
                 const currentWeight = this.properties.baseWeight + this.fuel;
-                // Normalize weight against a standard to get a factor
                 const weightFactor = currentWeight / 30000;
                 this.turnSpeed = this.baseTurnSpeed / weightFactor;
                 
@@ -90,50 +113,114 @@
                 this.x += Math.cos(this.angle) * this.v;
                 this.y += Math.sin(this.angle) * this.v;
 
-                // Screen wrapping
                 if (this.x < 0) this.x = canvas.width; if (this.x > canvas.width) this.x = 0;
                 if (this.y < 0) this.y = canvas.height; if (this.y > canvas.height) this.y = 0;
             }
         }
-        // NOTE: The rest of the JS code (Fighter instantiation, event listeners, AI, game loop, etc.)
-        // remains largely the same as the previous version, but with the `update` method call changed to:
-        // player.update(dt, keys.ArrowUp, keys.ArrowDown);
-        // And the handleInput function now only sets flags, it doesn't directly change velocity.
-        
-        // This is a simplified placeholder for the full index.html script logic which you can
-        // integrate with the new Fighter.update method. The key changes are in aircraft.js
-        // and the Fighter class's new update logic.
-        
-        // --- Placeholder for the rest of the game logic ---
-        // You would integrate the full game loop here. For brevity, I am omitting the 
-        // full duplicate code from the previous turn. The critical change is how the 
-        // Fighter.update() method now works based on the E-M model.
-        
-        // --- Simplified Game Loop for Demonstration ---
-        const player = new Fighter(canvas.width / 2, canvas.height / 2, 'F-16', 'F16_2D.svg', 0.2);
+
+        // --- Instantiate Fighters with NEW Adjusted Scales ---
+        const player = new Fighter(0, 0, 'F-16', 'F16_2D.svg', 0.14, 2.5);
+        const enemy = new Fighter(0, 0, 'MiG-25', 'MiG25_2D.svg', 0.185, 2.5);
+
         const keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false };
         window.addEventListener('keydown', (e) => { if (e.key in keys) { e.preventDefault(); keys[e.key] = true; }});
         window.addEventListener('keyup', (e) => { if (e.key in keys) keys[e.key] = false; });
-        
+
         function handleInput() {
-             player.rotation = 0;
-             if (keys.ArrowLeft) player.rotation = -player.turnSpeed;
-             if (keys.ArrowRight) player.rotation = player.turnSpeed;
+            // Thrust is now handled by the update method based on the isThrusting flag
+            player.rotation = 0;
+            if (keys.ArrowLeft) player.rotation = -player.turnSpeed;
+            if (keys.ArrowRight) player.rotation = player.turnSpeed;
+        }
+        
+        function simpleAI(ai, target) {
+            const dx = target.x - ai.x;
+            const dy = target.y - ai.y;
+            const angleToTarget = Math.atan2(dy, dx);
+            let angleDiff = angleToTarget - ai.angle;
+            while (angleDiff > Math.PI) angleDiff -= 2 * Math.PI;
+            while (angleDiff < -Math.PI) angleDiff += 2 * Math.PI;
+            ai.rotation = Math.sign(angleDiff) * ai.turnSpeed;
         }
 
-        function gameLoop(currentTime) {
-            const dt = 0.016; // simplified delta time
-            handleInput();
-            player.update(dt, keys.ArrowUp, keys.ArrowDown);
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            player.draw(); // Simplified draw for this example
-             if (typeof drawHUD1 === 'function') drawHUD1(ctx, canvas, player, {}); // Pass empty enemy for now
-             if (typeof drawHUD2 === 'function') drawHUD2(ctx, canvas, player, {});
+        function resetGame(speedModifier = 1.0) {
+            emScore = 0;
+            player.baseSpeed *= speedModifier;
+            enemy.baseSpeed *= speedModifier;
+            
+            player.reset();
+            player.x = canvas.width / 2; player.y = canvas.height * 0.75;
+            
+            enemy.reset();
+            enemy.x = canvas.width / 2; enemy.y = canvas.height * 0.25; enemy.angle = Math.PI / 2;
 
+            player.equipDefaultLoadout();
+            enemy.equipDefaultLoadout();
+        }
+
+        function checkGameState(dt) {
+            let emScore = parseFloat(emScoreDisplay.textContent.split(': ')[1]) || 0;
+            
+            const checkConeTargeting = (attacker, defender, cone) => {
+                const dx = defender.x - attacker.x;
+                const dy = defender.y - attacker.y;
+                if (Math.sqrt(dx * dx + dy * dy) < cone.range) {
+                    const angleToTarget = Math.atan2(dy, dx);
+                    let angleDiff = angleToTarget - attacker.angle;
+                    while (angleDiff > Math.PI) angleDiff -= 2 * Math.PI;
+                    while (angleDiff < -Math.PI) angleDiff += 2 * Math.PI;
+                    if (Math.abs(angleDiff) < cone.angle / 2) return true;
+                }
+                return false;
+            };
+            
+            let scoreThisFrame = 0;
+            for (const weapon of player.weapons) {
+                if (checkConeTargeting(player, enemy, weapon)) {
+                    scoreThisFrame = Math.max(scoreThisFrame, weapon.scoreValue);
+                }
+            }
+            emScore += scoreThisFrame * dt;
+
+            let scoreThisFrameEnemy = 0;
+            for (const weapon of enemy.weapons) {
+                if (checkConeTargeting(enemy, player, weapon)) {
+                    scoreThisFrameEnemy = Math.max(scoreThisFrameEnemy, weapon.scoreValue);
+                }
+            }
+            emScore -= scoreThisFrameEnemy * dt;
+            
+            emScoreDisplay.textContent = `EM Score: ${emScore.toFixed(2)}`;
+            emScoreDisplay.className = emScore > 0 ? 'score-good' : (emScore < 0 ? 'score-bad' : 'score-neutral');
+
+            if (emScore >= WIN_SCORE) {
+                alert("VICTORY! E-M State Improved.");
+                resetGame(BASE_SPEED_MODIFIER);
+            } else if (emScore <= -WIN_SCORE) {
+                alert("DEFEAT. E-M State Degraded.");
+                resetGame(1 / BASE_SPEED_MODIFIER);
+            }
+        }
+
+        let lastTime = 0;
+        function gameLoop(currentTime) {
+            const dt = (currentTime - lastTime) / 1000 || 0.016;
+            lastTime = currentTime;
+            handleInput();
+            simpleAI(enemy, player);
+            player.update(dt, keys.ArrowUp);
+            enemy.update(dt, true); 
+            checkGameState(dt);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            player.draw();
+            enemy.draw();
+            if (typeof drawHUD1 === 'function') drawHUD1(ctx, canvas, player, enemy);
+            if (typeof drawHUD2 === 'function') drawHUD2(ctx, canvas, player, enemy);
             requestAnimationFrame(gameLoop);
         }
-        gameLoop();
 
+        resetGame();
+        gameLoop(0);
     </script>
 </body>
 </html>
