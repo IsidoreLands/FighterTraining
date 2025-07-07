@@ -4,9 +4,8 @@ const AIRCRAFT_PROPERTIES = {
         maxFuel: 7000,
         militaryThrust: 10000,
         afterburnerThrust: 28600,
-        // UPDATED: Burn rates are now per-second for a ~2 minute game
-        militaryBurn: 50,
-        afterburnerBurn: 375,
+        militaryBurn: 7.78, // Adjusted for ~2 min AB exhaustion
+        afterburnerBurn: 58.33, // 7000 fuel / 120 seconds
         dragCoefficient: 0.85
     },
     "MiG-25": {
@@ -14,8 +13,7 @@ const AIRCRAFT_PROPERTIES = {
         maxFuel: 31900,
         militaryThrust: 20000,
         afterburnerThrust: 45000,
-        // UPDATED: Burn rates are now per-second
-        militaryBurn: 375,
+        militaryBurn: 245, // Proportional adjustment
         afterburnerBurn: 1837,
         dragCoefficient: 1.25 
     }
