@@ -31,6 +31,7 @@
     <p>G-Force: <span id="g-force">0</span> g</p>
     <p>Fuel Flow: <span id="fuel-flow">0</span> kg/s</p>
   </div>
+  <script src="/FighterTraining/js/energy_maneuverability.js"></script>
   <script>
     console.log("Loading index.html");
     let em;
@@ -42,16 +43,22 @@
     }
     const canvas = document.getElementById("gameCanvas");
     const ctx = canvas.getContext("2d");
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight - 40;
+    canvas.width = 800;
+    canvas.height = 600;
     const keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false, KeyH: false };
     let aircraft = { x: canvas.width / 2, y: canvas.height / 2, angle: 0 };
 
-    window.addEventListener("keydown", (e) => { if (e.key in keys) keys[e.key] = true; });
-    window.addEventListener("keyup", (e) => { if (e.key in keys) keys[e.key] = false; });
+    window.addEventListener("keydown", (e) => {
+      console.log("Key down:", e.key);
+      if (e.key in keys) keys[e.key] = true;
+    });
+    window.addEventListener("keyup", (e) => {
+      console.log("Key up:", e.key);
+      if (e.key in keys) keys[e.key] = false;
+    });
 
     function drawAircraft() {
-      console.log("Drawing aircraft at", aircraft.x, aircraft.y);
+      console.log("Drawing aircraft at", aircraft.x, aircraft.y, "with velocity", em.velocity);
       ctx.save();
       ctx.translate(aircraft.x, aircraft.y);
       ctx.rotate(aircraft.angle);
@@ -66,15 +73,15 @@
     }
 
     function gameLoop(time) {
-      console.log("Game loop running");
+      console.log("Game loop running, fuel:", em.fuel);
       const dt = 1 / 60;
       em.update(dt, {
         isAfterburning: keys.ArrowUp,
         isBraking: keys.ArrowDown,
         isTurning: keys.ArrowLeft || keys.ArrowRight
       });
-      aircraft.x += Math.cos(aircraft.angle) * em.velocity * dt;
-      aircraft.y += Math.sin(aircraft.angle) * em.velocity * dt;
+      aircraft.x += Math.cos(aircraft.angle) * (em.velocity / 1.8); // Scale to ~5s crossing
+      aircraft.y += Math.sin(aircraft.angle) * (em.velocity / 1.8);
       aircraft.angle += (keys.ArrowLeft ? -em.turnSpeed : 0) + (keys.ArrowRight ? em.turnSpeed : 0);
       if (aircraft.x < 0) aircraft.x = canvas.width;
       if (aircraft.x > canvas.width) aircraft.x = 0;
