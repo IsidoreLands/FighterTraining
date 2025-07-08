@@ -1,1 +1,70 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>FighterTraining MVP</title></head><body><canvas id="gameCanvas"></canvas><script>const canvas = document.getElementById("gameCanvas"); const ctx = canvas.getContext("2d"); canvas.width = window.innerWidth; canvas.height = window.innerHeight; function gameLoop() { ctx.clearRect(0, 0, canvas.width, canvas.height); requestAnimationFrame(gameLoop); } gameLoop();</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FighterTraining MVP - Platonic Test</title>
+  <style>
+    body { margin: 0; background: #000; }
+    canvas { width: 100%; height: 100vh; }
+    #ps-bar { position: absolute; top: 0; left: 0; width: 100%; height: 20px; background: #222; }
+    #ps-bar-inner { height: 100%; background: #0f0; width: 50%; transition: width 0.1s; }
+    #fuel-bar { position: absolute; bottom: 0; left: 0; width: 100%; height: 20px; background: #222; }
+    #fuel-bar-inner { height: 100%; background: #0f0; width: 100%; transition: width 0.1s; }
+  </style>
+</head>
+<body>
+  <div id="ps-bar"><div id="ps-bar-inner"></div></div>
+  <canvas id="gameCanvas"></canvas>
+  <div id="fuel-bar"><div id="fuel-bar-inner"></div></div>
+  <script src="js/energy_maneuverability.js"></script>
+  <script>
+    const canvas = document.getElementById("gameCanvas");
+    const ctx = canvas.getContext("2d");
+    canvas.width = 800;
+    canvas.height = 600;
+    const em = new EnergyManeuverability(60000, 5000, 1000, 160, 60, 60, 0.1, 0.5, 0.85, 0.06);
+    const keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false };
+    let aircraft = { x: canvas.width / 2, y: canvas.height / 2, angle: 0 };
+
+    window.addEventListener("keydown", (e) => { if (e.key in keys) keys[e.key] = true; });
+    window.addEventListener("keyup", (e) => { if (e.key in keys) keys[e.key] = false; });
+
+    function drawAircraft() {
+      ctx.save();
+      ctx.translate(aircraft.x, aircraft.y);
+      ctx.rotate(aircraft.angle);
+      ctx.fillStyle = "#0f0";
+      ctx.beginPath();
+      ctx.moveTo(20, 0);
+      ctx.lineTo(-10, 10);
+      ctx.lineTo(-10, -10);
+      ctx.closePath();
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function gameLoop() {
+      const dt = 1 / 60;
+      em.update(dt, {
+        isAfterburning: keys.ArrowUp,
+        isBraking: keys.ArrowDown,
+        isTurning: keys.ArrowLeft || keys.ArrowRight
+      });
+      aircraft.x += Math.cos(aircraft.angle) * em.velocity * dt;
+      aircraft.y += Math.sin(aircraft.angle) * em.velocity * dt;
+      aircraft.angle += (keys.ArrowLeft ? -em.turnSpeed : 0) + (keys.ArrowRight ? em.turnSpeed : 0);
+      if (aircraft.x < 0) aircraft.x = canvas.width;
+      if (aircraft.x > canvas.width) aircraft.x = 0;
+      if (aircraft.y < 0) aircraft.y = canvas.height;
+      if (aircraft.y > canvas.height) aircraft.y = 0;
+      document.getElementById("ps-bar-inner").style.width = `${Math.min(100, (em.calculatePs() / 100) * 100)}%`;
+      document.getElementById("fuel-bar-inner").style.width = `${(em.fuel / em.maxFuel) * 100}%`;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      drawAircraft();
+      requestAnimationFrame(gameLoop);
+    }
+    gameLoop();
+  </script>
+</body>
+</html>
