@@ -83,4 +83,4 @@ function startGame() {
   console.log("Starting game loop");
   requestAnimationFrame(gameLoop);
 }
-startGame();```
+window.onload = startGame;
