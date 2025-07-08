@@ -36,7 +36,7 @@ class EnergyManeuverability {
     this.thrust = this.isAfterburning ? this.thrust * 2 : this.thrust;
     const acceleration = (this.thrust - this.drag) / this.weight;
     this.velocity += acceleration * deltaTime;
-    this.velocity = Math.max(50, Math.min(300, this.velocity));
+    this.velocity = Math.max(50, Math.min(160, this.velocity)); // Cap at 160 pixels/s
   }
   update(deltaTime, inputs) {
     this.isAfterburning = inputs.isAfterburning || false;
