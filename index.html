@@ -32,7 +32,9 @@
     <p>G-Force: <span id="g-force">0</span> g</p>
     <p>Fuel Flow: <span id="fuel-flow">0</span> kg/s</p>
   </div>
-  <script src="js/energy_maneuverability.js"></script>
-  <script src="js/game.js"></script>
+  <script type="module">
+    import { startGame } from './js/game.js';
+    startGame();
+  </script>
 </body>
 </html>
