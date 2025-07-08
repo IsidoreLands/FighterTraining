@@ -6,11 +6,15 @@
   <title>FighterTraining MVP - Platonic Test</title>
   <style>
     body { margin: 0; background: #000; }
-    canvas { width: 100%; height: 100vh; }
+    canvas { width: 100%; height: calc(100vh - 40px); position: absolute; top: 20px; }
     #ps-bar { position: absolute; top: 0; left: 0; width: 100%; height: 20px; background: #222; }
     #ps-bar-inner { height: 100%; background: #0f0; width: 50%; transition: width 0.1s; }
     #fuel-bar { position: absolute; bottom: 0; left: 0; width: 100%; height: 20px; background: #222; }
     #fuel-bar-inner { height: 100%; background: #0f0; width: 100%; transition: width 0.1s; }
+    @media (max-width: 600px) {
+      #ps-bar, #fuel-bar { height: 15px; }
+      canvas { height: calc(100vh - 30px); top: 15px; }
+    }
   </style>
 </head>
 <body>
@@ -45,7 +49,7 @@
     }
 
     function gameLoop() {
-      const dt = 1 / 60;
+      const dt = 1 / 60; // 60 FPS
       em.update(dt, {
         isAfterburning: keys.ArrowUp,
         isBraking: keys.ArrowDown,
@@ -60,6 +64,7 @@
       if (aircraft.y > canvas.height) aircraft.y = 0;
       document.getElementById("ps-bar-inner").style.width = `${Math.min(100, (em.calculatePs() / 100) * 100)}%`;
       document.getElementById("fuel-bar-inner").style.width = `${(em.fuel / em.maxFuel) * 100}%`;
+      if (em.fuel <= 12) document.getElementById("fuel-bar-inner").style.background = "#f00";
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       drawAircraft();
       requestAnimationFrame(gameLoop);
