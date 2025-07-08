@@ -1,6 +1,101 @@
-nano /home/isidore-admin/FighterTraining/index.html
-nano /home/isidore-admin/FighterTraining/transition.html
-cd /home/isidore-admin/FighterTraining
-git add index.html transition.html
-git commit -m "Fix index.html rendering and transition.html redirect with debug logging"
-git push origin main
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FighterTraining MVP - Platonic Test</title>
+  <style>
+    body { margin: 0; background: #000; }
+    canvas { width: 100%; height: calc(100vh - 40px); position: absolute; top: 20px; }
+    #ps-bar { position: absolute; top: 0; left: 0; width: 100%; height: 20px; background: #222; }
+    #ps-bar-inner { height: 100%; background: #0f0; width: 50%; transition: width 0.1s; }
+    #fuel-bar { position: absolute; bottom: 0; left: 0; width: 100%; height: 20px; background: #222; }
+    #fuel-bar-inner { height: 100%; background: #0f0; width: 100%; transition: width 0.1s; }
+    #hud-toggle { position: absolute; top: 20px; left: 10px; background: #333; padding: 10px; display: none; color: #0f0; font-family: monospace; }
+    @media (max-width: 600px) {
+      #ps-bar, #fuel-bar { height: 15px; }
+      canvas { height: calc(100vh - 30px); top: 15px; }
+      #hud-toggle { font-size: 12px; padding: 5px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="ps-bar"><div id="ps-bar-inner"></div></div>
+  <canvas id="gameCanvas"></canvas>
+  <div id="fuel-bar"><div id="fuel-bar-inner"></div></div>
+  <div id="hud-toggle">
+    <p>Velo: <span id="velo">0</span> pixels/s</p>
+    <p>Drag: <span id="drag">0</span> N</p>
+    <p>Thrust: <span id="thrust">0</span> N</p>
+    <p>Weight: <span id="weight">0</span> kg</p>
+    <p>G-Force: <span id="g-force">0</span> g</p>
+    <p>Fuel Flow: <span id="fuel-flow">0</span> kg/s</p>
+  </div>
+  <script>
+    console.log("Loading index.html");
+    let em;
+    try {
+      em = new EnergyManeuverability(60000, 5000, 1000, 160, 60, 60, 0.1, 0.5, 0.85, 0.06);
+      console.log("EM initialized:", em);
+    } catch (e) {
+      console.error("Failed to load energy_maneuverability.js:", e);
+    }
+    const canvas = document.getElementById("gameCanvas");
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight - 40;
+    const keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false, KeyH: false };
+    let aircraft = { x: canvas.width / 2, y: canvas.height / 2, angle: 0 };
+
+    window.addEventListener("keydown", (e) => { if (e.key in keys) keys[e.key] = true; });
+    window.addEventListener("keyup", (e) => { if (e.key in keys) keys[e.key] = false; });
+
+    function drawAircraft() {
+      console.log("Drawing aircraft at", aircraft.x, aircraft.y);
+      ctx.save();
+      ctx.translate(aircraft.x, aircraft.y);
+      ctx.rotate(aircraft.angle);
+      ctx.fillStyle = "#0f0";
+      ctx.beginPath();
+      ctx.moveTo(20, 0);
+      ctx.lineTo(-10, 10);
+      ctx.lineTo(-10, -10);
+      ctx.closePath();
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function gameLoop(time) {
+      console.log("Game loop running");
+      const dt = 1 / 60;
+      em.update(dt, {
+        isAfterburning: keys.ArrowUp,
+        isBraking: keys.ArrowDown,
+        isTurning: keys.ArrowLeft || keys.ArrowRight
+      });
+      aircraft.x += Math.cos(aircraft.angle) * em.velocity * dt;
+      aircraft.y += Math.sin(aircraft.angle) * em.velocity * dt;
+      aircraft.angle += (keys.ArrowLeft ? -em.turnSpeed : 0) + (keys.ArrowRight ? em.turnSpeed : 0);
+      if (aircraft.x < 0) aircraft.x = canvas.width;
+      if (aircraft.x > canvas.width) aircraft.x = 0;
+      if (aircraft.y < 0) aircraft.y = canvas.height;
+      if (aircraft.y > canvas.height) aircraft.y = 0;
+      document.getElementById("ps-bar-inner").style.width = `${Math.min(100, (em.calculatePs() / 100) * 100)}%`;
+      document.getElementById("fuel-bar-inner").style.width = `${(em.fuel / em.maxFuel) * 100}%`;
+      if (em.fuel <= 12) document.getElementById("fuel-bar-inner").style.background = "#f00";
+      document.getElementById("hud-toggle").style.display = keys.KeyH ? "block" : "none";
+      document.getElementById("velo").textContent = em.velocity.toFixed(1);
+      document.getElementById("drag").textContent = em.drag.toFixed(0);
+      document.getElementById("thrust").textContent = em.thrust.toFixed(0);
+      document.getElementById("weight").textContent = em.weight.toFixed(0);
+      document.getElementById("g-force").textContent = em.gForce.toFixed(1);
+      document.getElementById("fuel-flow").textContent = (keys.ArrowUp ? em.afterburnerBurn : em.militaryBurn).toFixed(2);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      drawAircraft();
+      requestAnimationFrame(gameLoop);
+    }
+    console.log("Starting game loop");
+    requestAnimationFrame(gameLoop);
+  </script>
+</body>
+</html>
