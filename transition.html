@@ -6,7 +6,9 @@
   <title>FighterTraining - Transition</title>
   <style>
     body { margin: 0; background: #000; color: #0f0; font-family: monospace; display: flex; justify-content: center; align-items: center; height: 100vh; }
-    #countdown { font-size: 3em; }
+    #countdown { font-size: 3em; animation: pulse 1s infinite alternate; }
+    @keyframes pulse { 0% { opacity: 1; } 100% { opacity: 0.5; } }
+    @media (max-width: 600px) { #countdown { font-size: 2em; } }
   </style>
 </head>
 <body>
@@ -15,6 +17,7 @@
     const countdownDisplay = document.getElementById("countdown");
     window.addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
+        console.log("Starting countdown");
         let count = 3;
         countdownDisplay.textContent = count;
         const interval = setInterval(() => {
@@ -23,6 +26,7 @@
           else if (count === 0) countdownDisplay.textContent = "FIGHT!";
           else {
             clearInterval(interval);
+            console.log("Redirecting to index.html");
             window.location.href = "index.html";
           }
         }, 1000);
