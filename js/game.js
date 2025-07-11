@@ -94,6 +94,7 @@ function startGame() {
     if (activeHud === 0) hud.update(em);
     else if (activeHud === 1) expandedHud.update(em);
     else fuelHud.update(em);
+    requestAnimationFrame(gameLoop);
   }
   console.log("Starting game loop");
   requestAnimationFrame(gameLoop);
