@@ -30,20 +30,21 @@ function startGame() {
     console.log("Key down:", e.key);
     if (e.key in keys) {
       keys[e.key] = true;
-      e.preventDefault(); // Prevent scrolling
+      e.preventDefault();
     }
     if (e.key === "KeyH") {
       activeHud = (activeHud + 1) % 3;
+      console.log("Switching to HUD:", activeHud);
       document.getElementById("ps-hud").style.display = activeHud === 0 ? "block" : "none";
       document.getElementById("expanded-hud").style.display = activeHud === 1 ? "block" : "none";
-      document.getElementById("fuel-hud").style.display = activeHud === 2 ? "block" : "block";
+      document.getElementById("fuel-hud").style.display = activeHud === 2 ? "block" : "none";
     }
   });
   window.addEventListener("keyup", (e) => {
     console.log("Key up:", e.key);
     if (e.key in keys) {
       keys[e.key] = false;
-      e.preventDefault(); // Prevent scrolling
+      e.preventDefault();
     }
   });
 
@@ -77,7 +78,7 @@ function startGame() {
     if (!lastTime) lastTime = time;
     const dt = Math.min((time - lastTime) / 1000, 0.033);
     lastTime = time;
-    console.log("Game loop running, dt:", dt, "fuel:", em.fuel);
+    console.log("Game loop running, dt:", dt, "fuel:", em.fuel, "velocity:", em.velocity);
     em.update(dt, {
       isAfterburning: keys.ArrowUp,
       isBraking: keys.ArrowDown,
@@ -97,9 +98,13 @@ function startGame() {
     if (aircraft.y > canvas.height) aircraft.y = 0;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawAircraft();
-    if (activeHud === 0) hud.update(em);
-    else if (activeHud === 1) expandedHud.update(em);
-    else fuelHud.update(em);
+    try {
+      if (activeHud === 0) hud.update(em);
+      else if (activeHud === 1) expandedHud.update(em);
+      else fuelHud.update(em);
+    } catch (e) {
+      console.error("HUD update error:", e);
+    }
     requestAnimationFrame(gameLoop);
   }
   console.log("Starting game loop");

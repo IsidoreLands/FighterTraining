@@ -18,6 +18,11 @@ function HudEmBarExpanded() {
   const maxFuelFlow = 0.5; // kg/s
 
   this.update = function (em) {
+    console.log("Updating expanded HUD, Ps:", em.calculatePs(), "Fuel:", em.fuel);
+    if (!psBar || !neutralMarker || !thrustBar || !dragBar || !speedBar || !weightBar || !fuelBar || !gBar || !fuelFlowBar) {
+      console.error("HUD elements missing");
+      return;
+    }
     // Ps bar: -100% to +100% relative to initial Ps
     const ps = em.calculatePs() / 10;
     const psDelta = (ps - initialPs) / initialPs * 100;
