@@ -18,7 +18,8 @@
     .pulsing { animation: pulse 0.5s infinite alternate; }
     @keyframes pulse { 0% { opacity: 1; } 100% { opacity: 0.5; } }
     .label { font-size: 12px; margin-bottom: 5px; text-align: center; }
-    #expanded-hud, #fuel-hud { display: none; }
+    #expanded-hud { display: none; position: absolute; top: 60px; left: 10px; background: rgba(0,0,0,0.7); padding: 10px; border: 1px solid #0f0; }
+    #fuel-hud { display: none; }
     @media (max-width: 600px) {
       .bar-container { width: 200px; height: 15px; }
       .label { font-size: 10px; }
@@ -29,7 +30,7 @@
 <body>
   <div class="hud-container">
     <div id="ps-hud">
-      <div class="label">Energy (Ps)</div>
+      <div class="label">Energy (Ps: Excess Power ft/s)</div>
       <div class="bar-container">
         <div class="center-line"></div>
         <div class="threshold-line" style="left: 35%;"></div>
