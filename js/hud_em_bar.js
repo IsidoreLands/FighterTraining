@@ -5,6 +5,11 @@ function HudEmBar() {
   const initialPs = ((60000 - 5000) * 160) / 1000 / 10; // Baseline Ps
 
   this.update = function (em) {
+    if (!psBar || !neutralMarker) {
+      console.error("Ps bar or neutral marker not found");
+      return;
+    }
+    console.log("Updating Ps HUD, Ps:", em.calculatePs());
     const ps = em.calculatePs() / 10;
     const psDelta = (ps - initialPs) / initialPs * 100;
     const clampedPsDelta = Math.max(-100, Math.min(100, psDelta));

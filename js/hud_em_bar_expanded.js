@@ -20,7 +20,7 @@ function HudEmBarExpanded() {
   this.update = function (em) {
     console.log("Updating expanded HUD, Ps:", em.calculatePs(), "Fuel:", em.fuel);
     if (!psBar || !neutralMarker || !thrustBar || !dragBar || !speedBar || !weightBar || !fuelBar || !gBar || !fuelFlowBar) {
-      console.error("HUD elements missing");
+      console.error("Expanded HUD elements missing");
       return;
     }
     // Ps bar: -100% to +100% relative to initial Ps

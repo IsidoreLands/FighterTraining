@@ -1,5 +1,5 @@
 // game.js - Game loop for FighterTraining
-function startGame() {
+function startGame(hud, expandedHud, fuelHud) {
   console.log("Loading game.js");
   let em;
   try {
@@ -21,9 +21,6 @@ function startGame() {
   let aircraft = { x: canvas.width / 2, y: canvas.height / 2, angle: 0 };
   let lastTime = 0;
   let gameOver = false;
-  let hud = new HudEmBar();
-  let expandedHud = new HudEmBarExpanded();
-  let fuelHud = new HudFuel();
   let activeHud = 0; // 0: Ps, 1: Expanded, 2: Fuel
 
   window.addEventListener("keydown", (e) => {
@@ -110,4 +107,3 @@ function startGame() {
   console.log("Starting game loop");
   requestAnimationFrame(gameLoop);
 }
-startGame();
