@@ -19,7 +19,7 @@
     @keyframes pulse { 0% { opacity: 1; } 100% { opacity: 0.5; } }
     .label { font-size: 12px; margin-bottom: 5px; text-align: center; }
     #expanded-hud { display: none; position: absolute; top: 60px; left: 10px; background: rgba(0,0,0,0.7); padding: 10px; border: 1px solid #0f0; }
-    #fuel-hud { display: block; position: absolute; bottom: 10px; left: 10px; }
+    #fuel-hud { display: block; position: absolute; bottom: 10px; left: 10px; z-index: 10; }
     @media (max-width: 600px) {
       .bar-container { width: 200px; height: 15px; }
       .label { font-size: 10px; }
@@ -37,12 +37,6 @@
         <div class="threshold-line" style="left: 65%;"></div>
         <div class="bar ps-bar" id="ps-bar"></div>
         <div class="neutral-marker" id="neutral-marker"></div>
-      </div>
-    </div>
-    <div id="fuel-hud">
-      <div class="label">Fuel</div>
-      <div class="bar-container">
-        <div class="bar vertical-bar" id="fuel-bar"></div>
       </div>
     </div>
     <div id="expanded-hud">
@@ -82,6 +76,12 @@
           <div class="bar vertical-bar" id="fuel-flow-bar"></div>
         </div>
       </div>
+    </div>
+  </div>
+  <div id="fuel-hud">
+    <div class="label">Fuel</div>
+    <div class="bar-container">
+      <div class="bar vertical-bar" id="fuel-bar"></div>
     </div>
   </div>
   <canvas id="gameCanvas"></canvas>
