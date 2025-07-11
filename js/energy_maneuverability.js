@@ -33,19 +33,19 @@ class EnergyManeuverability {
     if (this.isTurning) this.drag += 15000;
   }
   updateVelocity(deltaTime) {
-    this.thrust = this.isAfterburning ? this.thrust * 2 : this.thrust;
     const acceleration = (this.thrust - this.drag) / this.weight;
     this.velocity += acceleration * deltaTime;
+    if (this.isAfterburning) this.velocity += 10 * deltaTime; // Direct boost for visibility
+    if (this.isBraking) this.velocity -= 10 * deltaTime; // Direct penalty for visibility
     this.velocity = Math.max(50, Math.min(160, this.velocity)); // Cap at 160 pixels/s
   }
   update(deltaTime, inputs) {
     this.isAfterburning = inputs.isAfterburning || false;
     this.isBraking = inputs.isBraking || false;
     this.isTurning = inputs.isTurning || false;
+    this.thrust = this.isAfterburning ? this.thrust * 2 : this.thrust;
     this.burnFuel(deltaTime);
     this.updateVelocity(deltaTime);
     this.gForce = this.calculateGForce();
   }
 }
-// Platonic aircraft for testing
-// const platonic = new EnergyManeuverability(60000, 5000, 1000, 160, 60, 60, 0.1, 0.5, 0.85, 0.06);
