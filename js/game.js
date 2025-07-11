@@ -34,7 +34,7 @@ function startGame(hud, expandedHud, fuelHud) {
       console.log("Switching to HUD:", activeHud);
       document.getElementById("ps-hud").style.display = activeHud === 0 ? "block" : "none";
       document.getElementById("expanded-hud").style.display = activeHud === 1 ? "block" : "none";
-      document.getElementById("fuel-hud").style.display = activeHud === 2 ? "block" : "none";
+      // Fuel always visible, but toggle others
     }
   });
   window.addEventListener("keyup", (e) => {
@@ -98,7 +98,7 @@ function startGame(hud, expandedHud, fuelHud) {
     try {
       if (activeHud === 0) hud.update(em);
       else if (activeHud === 1) expandedHud.update(em);
-      else if (activeHud === 2) fuelHud.update(em);
+      fuelHud.update(em); // Always update fuel HUD
     } catch (e) {
       console.error("HUD update error:", e);
     }
