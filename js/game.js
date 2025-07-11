@@ -28,17 +28,23 @@ function startGame() {
 
   window.addEventListener("keydown", (e) => {
     console.log("Key down:", e.key);
-    if (e.key in keys) keys[e.key] = true;
+    if (e.key in keys) {
+      keys[e.key] = true;
+      e.preventDefault(); // Prevent scrolling
+    }
     if (e.key === "KeyH") {
       activeHud = (activeHud + 1) % 3;
       document.getElementById("ps-hud").style.display = activeHud === 0 ? "block" : "none";
       document.getElementById("expanded-hud").style.display = activeHud === 1 ? "block" : "none";
-      document.getElementById("fuel-hud").style.display = activeHud === 2 ? "block" : "none";
+      document.getElementById("fuel-hud").style.display = activeHud === 2 ? "block" : "block";
     }
   });
   window.addEventListener("keyup", (e) => {
     console.log("Key up:", e.key);
-    if (e.key in keys) keys[e.key] = false;
+    if (e.key in keys) {
+      keys[e.key] = false;
+      e.preventDefault(); // Prevent scrolling
+    }
   });
 
   function drawAircraft() {

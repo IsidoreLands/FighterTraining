@@ -4,6 +4,10 @@ function HudFuel() {
   const initialFuel = 60; // kg
 
   this.update = function (em) {
+    if (!fuelBar) {
+      console.error("Fuel bar element not found");
+      return;
+    }
     const fuelPercent = (em.fuel / initialFuel) * 100;
     fuelBar.style.width = `${fuelPercent}%`;
     fuelBar.style.background = fuelPercent > 20 ? "#0f0" : "#f00";
