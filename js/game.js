@@ -1,5 +1,5 @@
 // game.js - Game loop for FighterTraining
-function startGame(hud) {
+function startGame() {
   console.log("Loading game.js");
   let em;
   try {
@@ -17,14 +17,18 @@ function startGame(hud) {
   }
   canvas.width = 800;
   canvas.height = 600;
-  const keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false };
+  const keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false, KeyH: false };
   let aircraft = { x: canvas.width / 2, y: canvas.height / 2, angle: 0 };
   let lastTime = 0;
   let gameOver = false;
+  let hud = new HudEmBar();
+  let expandedHud = new HudEmBarExpanded();
+  let useExpandedHud = false;
 
   window.addEventListener("keydown", (e) => {
     console.log("Key down:", e.key);
     if (e.key in keys) keys[e.key] = true;
+    if (e.key === "KeyH") useExpandedHud = !useExpandedHud;
   });
   window.addEventListener("keyup", (e) => {
     console.log("Key up:", e.key);
@@ -59,7 +63,7 @@ function startGame(hud) {
       return;
     }
     if (!lastTime) lastTime = time;
-    const dt = Math.min((time - lastTime) / 1000, 0.033); // Cap dt at 30 FPS
+    const dt = Math.min((time - lastTime) / 1000, 0.033);
     lastTime = time;
     console.log("Game loop running, dt:", dt, "fuel:", em.fuel);
     em.update(dt, {
@@ -81,9 +85,9 @@ function startGame(hud) {
     if (aircraft.y > canvas.height) aircraft.y = 0;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawAircraft();
-    hud.update(em);
-    requestAnimationFrame(gameLoop);
+    (useExpandedHud ? expandedHud : hud).update(em);
   }
   console.log("Starting game loop");
   requestAnimationFrame(gameLoop);
 }
+startGame();
