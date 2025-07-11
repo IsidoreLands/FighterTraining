@@ -2,7 +2,7 @@
 function HudEmBar() {
   const psBar = document.getElementById("ps-bar");
   const neutralMarker = document.getElementById("neutral-marker");
-  const initialPs = ((60000 - 5000) * 160) / 1000 / 10; // Baseline Ps
+  const initialPs = ((60000 - 5000) * 160) / 1000; // Baseline Ps without /10 scaling
 
   this.update = function (em) {
     if (!psBar || !neutralMarker) {
@@ -10,7 +10,7 @@ function HudEmBar() {
       return;
     }
     console.log("Updating Ps HUD, Ps:", em.calculatePs());
-    const ps = em.calculatePs() / 10;
+    const ps = em.calculatePs();
     const psDelta = (ps - initialPs) / initialPs * 100;
     const clampedPsDelta = Math.max(-100, Math.min(100, psDelta));
     psBar.style.width = `${Math.abs(clampedPsDelta)}%`;
@@ -18,7 +18,7 @@ function HudEmBar() {
     psBar.style.transform = clampedPsDelta >= 0 ? "translateX(-50%)" : "translateX(0)";
     psBar.style.background = clampedPsDelta >= 0 ? "#0f0" : "#f00";
     psBar.classList.toggle("pulsing", Math.abs(clampedPsDelta) >= 15);
-    const neutralPs = ((60000 - 5000) * em.velocity) / em.weight / 10;
+    const neutralPs = em.calculateNeutralPs();
     const neutralDelta = (neutralPs - initialPs) / initialPs * 100;
     const clampedNeutralDelta = Math.max(-100, Math.min(100, neutralDelta));
     neutralMarker.style.left = clampedNeutralDelta >= 0 ? `${50 + clampedNeutralDelta / 2}%` : `${50 - Math.abs(clampedNeutralDelta) / 2}%`;

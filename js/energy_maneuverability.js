@@ -1,8 +1,10 @@
 // energy_maneuverability.js - EM calculations for FighterTraining
 class EnergyManeuverability {
   constructor(thrust, drag, weight, velocity, fuel, maxFuel, militaryBurn, afterburnerBurn, dragCoefficient, turnSpeed) {
-    this.thrust = thrust; // Newtons
-    this.drag = drag; // Newtons
+    this.baseThrust = thrust; // Base thrust without afterburner
+    this.thrust = thrust; // Current thrust
+    this.baseDrag = drag; // Base drag
+    this.drag = drag; // Current drag
     this.weight = weight; // kg
     this.velocity = velocity; // pixels/s (scaled for gameplay)
     this.fuel = fuel; // kg
@@ -18,6 +20,10 @@ class EnergyManeuverability {
   }
   calculatePs() {
     return ((this.thrust - this.drag) * this.velocity) / this.weight; // pixels/s^2
+  }
+  calculateNeutralPs() {
+    // No inputs: base thrust, base drag (no added turn/brake), current velocity/weight
+    return ((this.baseThrust - this.baseDrag) * this.velocity) / this.weight;
   }
   calculateGForce() {
     return (this.drag / (9.81 * this.weight)) + 1; // g-force from drag + baseline
@@ -43,7 +49,7 @@ class EnergyManeuverability {
     this.isAfterburning = inputs.isAfterburning || false;
     this.isBraking = inputs.isBraking || false;
     this.isTurning = inputs.isTurning || false;
-    this.thrust = this.isAfterburning ? this.thrust * 2 : this.thrust;
+    this.thrust = this.isAfterburning ? this.baseThrust * 2 : this.baseThrust;
     this.burnFuel(deltaTime);
     this.updateVelocity(deltaTime);
     this.gForce = this.calculateGForce();
