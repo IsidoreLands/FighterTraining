@@ -18,7 +18,7 @@
     .pulsing { animation: pulse 0.5s infinite alternate; }
     @keyframes pulse { 0% { opacity: 1; } 100% { opacity: 0.5; } }
     .label { font-size: 12px; margin-bottom: 5px; text-align: center; }
-    #expanded-hud { display: none; }
+    #expanded-hud, #fuel-hud { display: none; }
     @media (max-width: 600px) {
       .bar-container { width: 200px; height: 15px; }
       .label { font-size: 10px; }
@@ -35,6 +35,12 @@
         <div class="threshold-line" style="left: 65%;"></div>
         <div class="bar ps-bar" id="ps-bar"></div>
         <div class="neutral-marker" id="neutral-marker"></div>
+      </div>
+    </div>
+    <div id="fuel-hud">
+      <div class="label">Fuel</div>
+      <div class="bar-container">
+        <div class="bar vertical-bar" id="fuel-bar"></div>
       </div>
     </div>
     <div id="expanded-hud">
@@ -62,12 +68,6 @@
           <div class="bar vertical-bar" id="weight-bar"></div>
         </div>
       </div>
-      <div id="fuel-hud">
-        <div class="label">Fuel</div>
-        <div class="bar-container">
-          <div class="bar vertical-bar" id="fuel-bar"></div>
-        </div>
-      </div>
       <div id="g-hud">
         <div class="label">G-Force</div>
         <div class="bar-container">
@@ -86,6 +86,7 @@
   <script src="js/energy_maneuverability.js"></script>
   <script src="js/hud_em_bar.js"></script>
   <script src="js/hud_em_bar_expanded.js"></script>
+  <script src="js/hud_fuel.js"></script>
   <script src="js/game.js"></script>
 </body>
 </html>

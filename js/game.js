@@ -23,12 +23,18 @@ function startGame() {
   let gameOver = false;
   let hud = new HudEmBar();
   let expandedHud = new HudEmBarExpanded();
-  let useExpandedHud = false;
+  let fuelHud = new HudFuel();
+  let activeHud = 0; // 0: Ps, 1: Expanded, 2: Fuel
 
   window.addEventListener("keydown", (e) => {
     console.log("Key down:", e.key);
     if (e.key in keys) keys[e.key] = true;
-    if (e.key === "KeyH") useExpandedHud = !useExpandedHud;
+    if (e.key === "KeyH") {
+      activeHud = (activeHud + 1) % 3;
+      document.getElementById("ps-hud").style.display = activeHud === 0 ? "block" : "none";
+      document.getElementById("expanded-hud").style.display = activeHud === 1 ? "block" : "none";
+      document.getElementById("fuel-hud").style.display = activeHud === 2 ? "block" : "none";
+    }
   });
   window.addEventListener("keyup", (e) => {
     console.log("Key up:", e.key);
@@ -85,7 +91,9 @@ function startGame() {
     if (aircraft.y > canvas.height) aircraft.y = 0;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawAircraft();
-    (useExpandedHud ? expandedHud : hud).update(em);
+    if (activeHud === 0) hud.update(em);
+    else if (activeHud === 1) expandedHud.update(em);
+    else fuelHud.update(em);
   }
   console.log("Starting game loop");
   requestAnimationFrame(gameLoop);
