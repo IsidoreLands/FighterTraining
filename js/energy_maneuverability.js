@@ -36,12 +36,12 @@ class EnergyManeuverability {
     this.weight = Math.max(this.maxFuel * 0.5, this.weight);
     this.drag = this.dragCoefficient * this.velocity * this.velocity;
     if (this.isBraking) this.drag += 10000;
-    if (this.isTurning) this.drag += 15000;
+    if (this.isTurning) this.drag += 20000; // Increased for more Ps drop
   }
   updateVelocity(deltaTime) {
     const acceleration = (this.thrust - this.drag) / this.weight;
     this.velocity += acceleration * deltaTime;
-    if (this.isAfterburning) this.velocity += 10 * deltaTime; // Direct boost for visibility
+    if (this.isAfterburning) this.velocity += 20 * deltaTime; // Increased boost for visibility
     if (this.isBraking) this.velocity -= 10 * deltaTime; // Direct penalty for visibility
     this.velocity = Math.max(50, Math.min(160, this.velocity)); // Cap at 160 pixels/s
   }

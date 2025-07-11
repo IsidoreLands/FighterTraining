@@ -15,13 +15,22 @@ function startGame(hud, expandedHud, fuelHud) {
     console.error("Canvas context not found");
     return;
   }
-  canvas.width = 800;
-  canvas.height = 600;
+
+  function resizeCanvas() {
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = window.innerWidth * dpr;
+    canvas.height = (window.innerHeight - 60) * dpr; // Minus HUD space
+    ctx.scale(dpr, dpr);
+    console.log("Canvas resized to", canvas.width / dpr, "x", canvas.height / dpr);
+  }
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+
   const keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false, KeyH: false };
-  let aircraft = { x: canvas.width / 2, y: canvas.height / 2, angle: 0 };
+  let aircraft = { x: window.innerWidth / 2, y: (window.innerHeight - 60) / 2, angle: 0 };
   let lastTime = 0;
   let gameOver = false;
-  let activeHud = 0; // 0: Ps, 1: Expanded, 2: Fuel
+  let activeHud = 0; // 0: Ps, 1: Expanded, 2: Fuel (but fuel always on)
 
   window.addEventListener("keydown", (e) => {
     console.log("Key down:", e.key);
@@ -34,7 +43,6 @@ function startGame(hud, expandedHud, fuelHud) {
       console.log("Switching to HUD:", activeHud);
       document.getElementById("ps-hud").style.display = activeHud === 0 ? "block" : "none";
       document.getElementById("expanded-hud").style.display = activeHud === 1 ? "block" : "none";
-      // Fuel always visible, but toggle others
     }
   });
   window.addEventListener("keyup", (e) => {
@@ -64,7 +72,7 @@ function startGame(hud, expandedHud, fuelHud) {
     ctx.fillStyle = "#f00";
     ctx.font = "48px monospace";
     ctx.textAlign = "center";
-    ctx.fillText("GAME OVER", canvas.width / 2, canvas.height / 2);
+    ctx.fillText("GAME OVER", window.innerWidth / 2, (window.innerHeight - 60) / 2);
   }
 
   function gameLoop(time) {
@@ -89,16 +97,16 @@ function startGame(hud, expandedHud, fuelHud) {
     aircraft.x += Math.cos(aircraft.angle) * em.velocity * dt;
     aircraft.y += Math.sin(aircraft.angle) * em.velocity * dt;
     aircraft.angle += (keys.ArrowLeft ? -em.turnSpeed : 0) + (keys.ArrowRight ? em.turnSpeed : 0);
-    if (aircraft.x < 0) aircraft.x = canvas.width;
-    if (aircraft.x > canvas.width) aircraft.x = 0;
-    if (aircraft.y < 0) aircraft.y = canvas.height;
-    if (aircraft.y > canvas.height) aircraft.y = 0;
+    if (aircraft.x < 0) aircraft.x = window.innerWidth;
+    if (aircraft.x > window.innerWidth) aircraft.x = 0;
+    if (aircraft.y < 0) aircraft.y = window.innerHeight - 60;
+    if (aircraft.y > window.innerHeight - 60) aircraft.y = 0;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawAircraft();
     try {
       if (activeHud === 0) hud.update(em);
       else if (activeHud === 1) expandedHud.update(em);
-      fuelHud.update(em); // Always update fuel HUD
+      fuelHud.update(em);
     } catch (e) {
       console.error("HUD update error:", e);
     }
