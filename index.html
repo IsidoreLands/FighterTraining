@@ -6,12 +6,38 @@
   <title>FighterTraining MVP - Platonic Test</title>
   <style>
     body { margin: 0; background: #000; }
-    canvas { width: 100%; height: 100vh; }
+    canvas { width: 100%; height: calc(100vh - 20px); position: absolute; top: 20px; }
+    #ps-hud { position: absolute; top: 0; left: 0; width: 100%; padding: 5px; text-align: center; }
+    .bar-container { width: 300px; height: 20px; background: #222; border: 1px solid #0f0; position: relative; margin: 0 auto; }
+    .bar { height: 100%; background: #0f0; position: absolute; transition: all 0.1s; }
+    .ps-bar { left: 50%; transform: translateX(-50%); }
+    .center-line { position: absolute; left: 50%; width: 2px; height: 100%; background: #f00; }
+    .threshold-line { position: absolute; width: 2px; height: 100%; background: #ff0; }
+    .neutral-marker { position: absolute; top: -5px; width: 8px; height: 8px; background: #fff; transform: rotate(45deg); transition: all 0.1s; }
+    .pulsing { animation: pulse 0.5s infinite alternate; }
+    @keyframes pulse { 0% { opacity: 1; } 100% { opacity: 0.5; } }
+    @media (max-width: 600px) {
+      .bar-container { width: 200px; height: 15px; }
+    }
   </style>
 </head>
 <body>
+  <div id="ps-hud">
+    <div class="bar-container">
+      <div class="center-line"></div>
+      <div class="threshold-line" style="left: 35%;"></div>
+      <div class="threshold-line" style="left: 65%;"></div>
+      <div class="bar ps-bar" id="ps-bar"></div>
+      <div class="neutral-marker" id="neutral-marker"></div>
+    </div>
+  </div>
   <canvas id="gameCanvas"></canvas>
   <script src="js/energy_maneuverability.js"></script>
+  <script src="js/hud_em_bar.js"></script>
   <script src="js/game.js"></script>
+  <script>
+    const hud = new HudEmBar();
+    startGame(hud);
+  </script>
 </body>
 </html>

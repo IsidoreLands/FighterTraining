@@ -1,5 +1,5 @@
 // game.js - Game loop for FighterTraining
-function startGame() {
+function startGame(hud) {
   console.log("Loading game.js");
   let em;
   try {
@@ -20,6 +20,7 @@ function startGame() {
   const keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false };
   let aircraft = { x: canvas.width / 2, y: canvas.height / 2, angle: 0 };
   let lastTime = 0;
+  let gameOver = false;
 
   window.addEventListener("keydown", (e) => {
     console.log("Key down:", e.key);
@@ -45,9 +46,20 @@ function startGame() {
     ctx.restore();
   }
 
+  function drawGameOver() {
+    ctx.fillStyle = "#f00";
+    ctx.font = "48px monospace";
+    ctx.textAlign = "center";
+    ctx.fillText("GAME OVER", canvas.width / 2, canvas.height / 2);
+  }
+
   function gameLoop(time) {
+    if (gameOver) {
+      drawGameOver();
+      return;
+    }
     if (!lastTime) lastTime = time;
-    const dt = (time - lastTime) / 1000;
+    const dt = Math.min((time - lastTime) / 1000, 0.033); // Cap dt at 30 FPS
     lastTime = time;
     console.log("Game loop running, dt:", dt, "fuel:", em.fuel);
     em.update(dt, {
@@ -55,8 +67,13 @@ function startGame() {
       isBraking: keys.ArrowDown,
       isTurning: keys.ArrowLeft || keys.ArrowRight
     });
-    aircraft.x += Math.cos(aircraft.angle) * em.velocity;
-    aircraft.y += Math.sin(aircraft.angle) * em.velocity;
+    if (em.fuel <= 0) {
+      gameOver = true;
+      console.log("Fuel depleted, game over");
+      return;
+    }
+    aircraft.x += Math.cos(aircraft.angle) * em.velocity * dt;
+    aircraft.y += Math.sin(aircraft.angle) * em.velocity * dt;
     aircraft.angle += (keys.ArrowLeft ? -em.turnSpeed : 0) + (keys.ArrowRight ? em.turnSpeed : 0);
     if (aircraft.x < 0) aircraft.x = canvas.width;
     if (aircraft.x > canvas.width) aircraft.x = 0;
@@ -64,9 +81,9 @@ function startGame() {
     if (aircraft.y > canvas.height) aircraft.y = 0;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawAircraft();
+    hud.update(em);
     requestAnimationFrame(gameLoop);
   }
   console.log("Starting game loop");
   requestAnimationFrame(gameLoop);
 }
-startGame();
