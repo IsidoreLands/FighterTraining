@@ -97,6 +97,8 @@ function startGame(hud, expandedHud, fuelHud) {
     ctx.closePath();
     ctx.fill();
     ctx.restore();
+    drawAfterburner(ctx, aircraft, em); // Call from afterburner.js
+    drawAirbrake(ctx, aircraft, em); // Call from airbrake.js
   }
 
   function drawGameOver() {
