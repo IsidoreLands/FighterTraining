@@ -8,6 +8,8 @@ class EnergyManeuverability {
     this.baseDrag = params.baseDrag;
     this.drag = params.baseDrag;
     this.dragCoefficient = params.dragCoefficient;
+    this.brakeDragAdd = params.brakeDragAdd;
+    this.turnDragAdd = params.turnDragAdd;
     this.weight = params.weight;
     this.velocity = params.velocity;
     this.fuel = params.fuel;
@@ -16,6 +18,8 @@ class EnergyManeuverability {
     this.afterburnerBurn = params.afterburnerBurn;
     this.baseTurnSpeed = params.baseTurnSpeed;
     this.turnSpeed = params.baseTurnSpeed;
+    this.turnSpeedABFactor = params.turnSpeedABFactor;
+    this.turnSpeedBrakeFactor = params.turnSpeedBrakeFactor;
     this.gForce = 1;
     this.isAfterburning = false;
     this.isBraking = false;
@@ -38,11 +42,11 @@ class EnergyManeuverability {
     this.fuel = Math.max(0, this.fuel);
     this.weight = Math.max(this.maxFuel * 0.5, this.weight);
     this.drag = this.dragCoefficient * this.velocity * this.velocity;
-    if (this.brakeLevel > 0) this.drag += params.brakeDragAdd * this.brakeLevel;
-    if (this.isTurning) this.drag += params.turnDragAdd;
+    if (this.brakeLevel > 0) this.drag += this.brakeDragAdd * this.brakeLevel;
+    if (this.isTurning) this.drag += this.turnDragAdd;
   }
   updateVelocity(deltaTime) {
-    const acceleration = (this.thrust - this.drag) / this.weight;
+    const acceleration = (this.thrust - this.drag) / this.weight * 10; // Amplified for visibility
     this.velocity += acceleration * deltaTime;
     if (this.afterburnerLevel > 0) this.velocity += 20 * this.afterburnerLevel * deltaTime;
     if (this.brakeLevel > 0) this.velocity -= 10 * this.brakeLevel * deltaTime;
@@ -51,8 +55,8 @@ class EnergyManeuverability {
   }
   updateTurnSpeed() {
     this.turnSpeed = this.baseTurnSpeed;
-    if (this.afterburnerLevel > 0) this.turnSpeed *= params.turnSpeedABFactor; // Tighter radius
-    if (this.brakeLevel > 0) this.turnSpeed *= params.turnSpeedBrakeFactor; // Wider radius
+    if (this.afterburnerLevel > 0) this.turnSpeed *= this.turnSpeedABFactor; // Tighter radius
+    if (this.brakeLevel > 0) this.turnSpeed *= this.turnSpeedBrakeFactor; // Wider radius
   }
   update(deltaTime, inputs) {
     this.isAfterburning = inputs.isAfterburning;
