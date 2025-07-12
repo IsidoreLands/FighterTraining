@@ -15,7 +15,6 @@ function startGame(hud, expandedHud, fuelHud) {
     console.error("Canvas context not found");
     return;
   }
-  let aircraft = { x: window.innerWidth / 2, y: (window.innerHeight - 60) / 2, angle: 0 }; // Moved early
 
   function resizeCanvas() {
     const dpr = window.devicePixelRatio || 1;
@@ -30,6 +29,7 @@ function startGame(hud, expandedHud, fuelHud) {
   window.addEventListener('resize', resizeCanvas);
 
   const keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false, KeyH: false };
+  let aircraft = { x: window.innerWidth / 2, y: (window.innerHeight - 60) / 2, angle: 0 };
   let lastTime = 0;
   let gameOver = false;
   let activeHud = 1; // Start with expanded visible for testing
@@ -48,6 +48,41 @@ function startGame(hud, expandedHud, fuelHud) {
       e.preventDefault();
     }
   });
+
+  let particles = []; // For afterburner effects
+
+  function createParticles(num) {
+    for (let i = 0; i num; i++) {
+      particles.push({
+        x: aircraft.x - Math.cos(aircraft.angle) * 20, // Behind aircraft
+        y: aircraft.y - Math.sin(aircraft.angle) * 20,
+        vx: (Math.random() - 0.5) * 2 - Math.cos(aircraft.angle) * em.velocity * 0.05,
+        vy: (Math.random() - 0.5) * 2 - Math.sin(aircraft.angle) * em.velocity * 0.05,
+        life: Math.random() * 0.5 + 0.5, // 0.5 to 1 second life
+        color: `rgb(255, ${Math.floor(Math.random() * 150 + 100)}, 0)`
+      });
+    }
+  }
+
+  function updateParticles(dt) {
+    particles = particles.filter(p => {
+      p.x += p.vx * dt;
+      p.y += p.vy * dt;
+      p.life -= dt;
+      return p.life > 0;
+    });
+  }
+
+  function drawParticles() {
+    particles.forEach(p => {
+      ctx.fillStyle = p.color;
+      ctx.globalAlpha = p.life;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, 2 * p.life, 0, 2 * Math.PI);
+      ctx.fill();
+    });
+    ctx.globalAlpha = 1;
+  }
 
   function drawAircraft() {
     console.log("Drawing aircraft at", aircraft.x, aircraft.y, "with velocity", em.velocity);
@@ -98,6 +133,7 @@ function startGame(hud, expandedHud, fuelHud) {
     if (aircraft.y < 0) aircraft.y = window.innerHeight - 60;
     if (aircraft.y > window.innerHeight - 60) aircraft.y = 0;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawParticles();
     drawAircraft();
     try {
       hud.update(em); // Ps always for base
@@ -106,6 +142,10 @@ function startGame(hud, expandedHud, fuelHud) {
     } catch (e) {
       console.error("HUD update error:", e);
     }
+    if (em.afterburnerLevel > 0) {
+      createParticles(5 * em.afterburnerLevel); // Particles based on level
+    }
+    updateParticles(dt);
     requestAnimationFrame(gameLoop);
   }
   console.log("Starting game loop");

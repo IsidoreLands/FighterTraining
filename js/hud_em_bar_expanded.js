@@ -1,5 +1,6 @@
 // hud_em_bar_expanded.js - Expanded HUD for FighterTraining
 function HudEmBarExpanded() {
+  const thrustLabel = document.getElementById("thrust-label"); // Assume added in HTML
   const thrustBar = document.getElementById("thrust-bar");
   const dragBar = document.getElementById("drag-bar");
   const speedBar = document.getElementById("speed-bar");
@@ -7,8 +8,8 @@ function HudEmBarExpanded() {
   const gBar = document.getElementById("g-bar");
   const fuelFlowBar = document.getElementById("fuel-flow-bar");
   const initialWeight = 1000; // kg
-  const maxDrag = 40000; // Increased to prevent overflow
-  const referenceVelocity = 200; // Increased for overflow fix
+  const maxDrag = 40000; // N
+  const referenceVelocity = 160; // pixels/s
   const maxG = 9; // g
   const maxFuelFlow = 0.5; // kg/s
 
@@ -18,8 +19,9 @@ function HudEmBarExpanded() {
       console.error("Expanded HUD elements missing");
       return;
     }
-    // Thrust bar: 0-100% (base to max afterburner level)
+    // Thrust: Digital % and bar
     const thrustPercent = em.afterburnerLevel * 100;
+    if (thrustLabel) thrustLabel.textContent = `${Math.round(thrustPercent)}%`; // Digital readout
     thrustBar.style.width = `${thrustPercent}%`;
     thrustBar.classList.toggle("pulsing", em.afterburnerLevel > 0.5);
 

@@ -38,11 +38,11 @@ class EnergyManeuverability {
     this.fuel = Math.max(0, this.fuel);
     this.weight = Math.max(this.maxFuel * 0.5, this.weight);
     this.drag = this.dragCoefficient * this.velocity * this.velocity;
-    if (this.brakeLevel > 0) this.drag += 10000 * this.brakeLevel;
-    if (this.isTurning) this.drag += 20000;
+    if (this.brakeLevel > 0) this.drag += params.brakeDragAdd * this.brakeLevel;
+    if (this.isTurning) this.drag += params.turnDragAdd;
   }
   updateVelocity(deltaTime) {
-    const acceleration = (this.thrust - this.drag) / this.weight * 10; // Amplified for visibility
+    const acceleration = (this.thrust - this.drag) / this.weight;
     this.velocity += acceleration * deltaTime;
     if (this.afterburnerLevel > 0) this.velocity += 20 * this.afterburnerLevel * deltaTime;
     if (this.brakeLevel > 0) this.velocity -= 10 * this.brakeLevel * deltaTime;
@@ -51,8 +51,8 @@ class EnergyManeuverability {
   }
   updateTurnSpeed() {
     this.turnSpeed = this.baseTurnSpeed;
-    if (this.afterburnerLevel > 0) this.turnSpeed *= 0.8; // Tighter radius
-    if (this.brakeLevel > 0) this.turnSpeed *= 1.2; // Wider radius
+    if (this.afterburnerLevel > 0) this.turnSpeed *= params.turnSpeedABFactor; // Tighter radius
+    if (this.brakeLevel > 0) this.turnSpeed *= params.turnSpeedBrakeFactor; // Wider radius
   }
   update(deltaTime, inputs) {
     this.isAfterburning = inputs.isAfterburning;
