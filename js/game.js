@@ -24,7 +24,8 @@ function startGame(hud, expandedHud, fuelHud) {
     ctx.scale(dpr, dpr);
     aircraft.x = window.innerWidth / 2;
     aircraft.y = (window.innerHeight - 60) / 2;
-    console.log("Canvas resized to", window.innerWidth, "x", window.innerHeight - 60);
+    em.velocity = window.innerWidth / 5; // Dynamic for exact 5s cruise cross
+    console.log("Canvas resized to", window.innerWidth, "x", window.innerHeight - 60, "velocity reset to", em.velocity);
   }
   resizeCanvas();
   window.addEventListener('resize', resizeCanvas);
@@ -116,12 +117,12 @@ function startGame(hud, expandedHud, fuelHud) {
     if (!lastTime) lastTime = time;
     const dt = Math.min((time - lastTime) / 1000, 0.033);
     lastTime = time;
-    console.log("Game loop running, dt:", dt, "fuel:", em.fuel, "velocity:", em.velocity);
     em.update(dt, {
       isAfterburning: keys.ArrowUp,
       isBraking: keys.ArrowDown,
       isTurning: keys.ArrowLeft || keys.ArrowRight
     });
+    console.log(`Telemetry: dt=${dt.toFixed(4)}, velocity=${em.velocity.toFixed(2)}, thrust=${em.thrust.toFixed(2)}, drag=${em.drag.toFixed(2)}, Ps=${em.calculatePs().toFixed(2)}, fuel=${em.fuel.toFixed(2)}`); // Telemetry log
     if (em.fuel <= 0) {
       gameOver = true;
       console.log("Fuel depleted, game over");

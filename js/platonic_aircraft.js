@@ -7,7 +7,7 @@ const platonicParams = {
   brakeDragAdd: 10000,
   turnDragAdd: 20000,
   weight: 1000,
-  velocity: 160, // Baseline; dynamically adjusted in game.js for 5s cross
+  velocity: 164.8, // Baseline for 5s on 824px; dynamic in game.js
   fuel: 60,
   maxFuel: 60,
   militaryBurn: 0.1,
