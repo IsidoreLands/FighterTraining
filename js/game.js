@@ -15,21 +15,21 @@ function startGame(hud, expandedHud, fuelHud) {
     console.error("Canvas context not found");
     return;
   }
-  const logicalWidth = 800; // Fixed logical width for consistent gameplay
-  const logicalHeight = 400; // Fixed for horizontal mobile/desktop
-  let scale = 1; // Dynamic scale factor
-  let offsetX = 0, offsetY = 0; // For letterboxing
-  let aircraft = { x: logicalWidth / 2, y: logicalHeight / 2, angle: 0 }; // Center origin in logical units
+  const logicalWidth = 800; // Fixed logical width
+  const logicalHeight = 400; // Fixed for horizontal
+  let scale = 1;
+  let offsetX = 0, offsetY = 0;
+  let aircraft = { x: logicalWidth / 2, y: logicalHeight / 2, angle: 0 };
 
   function resizeCanvas() {
     const dpr = window.devicePixelRatio || 1;
     canvas.width = window.innerWidth * dpr;
-    canvas.height = (window.innerHeight - 60) * dpr; // Minus HUD space
+    canvas.height = (window.innerHeight - 60) * dpr;
     scale = Math.min(canvas.width / logicalWidth, canvas.height / logicalHeight);
     offsetX = (canvas.width - logicalWidth * scale) / 2;
     offsetY = (canvas.height - logicalHeight * scale) / 2;
-    em.velocity = logicalWidth / 5; // Fixed 5s cross in logical units
-    console.log("Canvas resized to", window.innerWidth, "x", window.innerHeight - 60, "logical", logicalWidth, "x", logicalHeight, "scale", scale.toFixed(2), "velocity", em.velocity.toFixed(2));
+    em.velocity = logicalWidth / 5; // Fixed 5s cross
+    console.log("Canvas resized to", window.innerWidth, "x", window.innerHeight - 60, "scale", scale.toFixed(2), "velocity", em.velocity.toFixed(2));
   }
   resizeCanvas();
   window.addEventListener('resize', resizeCanvas);
@@ -54,16 +54,16 @@ function startGame(hud, expandedHud, fuelHud) {
     }
   });
 
-  let particles = []; // For afterburner effects (logical units)
+  let particles = [];
 
   function createParticles(num) {
     for (let i = 0; i < num; i++) {
       particles.push({
-        x: aircraft.x - Math.cos(aircraft.angle) * 20, // Behind aircraft
+        x: aircraft.x - Math.cos(aircraft.angle) * 20,
         y: aircraft.y - Math.sin(aircraft.angle) * 20,
         vx: (Math.random() - 0.5) * 2 - Math.cos(aircraft.angle) * em.velocity * 0.05,
         vy: (Math.random() - 0.5) * 2 - Math.sin(aircraft.angle) * em.velocity * 0.05,
-        life: Math.random() * 0.5 + 0.5, // 0.5 to 1 second life
+        life: Math.random() * 0.5 + 0.5,
         color: `rgb(255, ${Math.floor(Math.random() * 150 + 100)}, 0)`
       });
     }
@@ -102,8 +102,8 @@ function startGame(hud, expandedHud, fuelHud) {
     ctx.closePath();
     ctx.fill();
     ctx.restore();
-    drawAfterburner(ctx, aircraft, em, scale, offsetX, offsetY); // Adjusted for scale
-    drawAirbrake(ctx, aircraft, em, scale, offsetX, offsetY); // Adjusted for scale
+    drawAfterburner(ctx, aircraft, em, scale, offsetX, offsetY);
+    drawAirbrake(ctx, aircraft, em, scale, offsetX, offsetY);
   }
 
   function drawGameOver() {
