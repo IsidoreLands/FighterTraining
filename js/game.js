@@ -15,17 +15,21 @@ function startGame(hud, expandedHud, fuelHud) {
     console.error("Canvas context not found");
     return;
   }
-  let aircraft = { x: window.innerWidth / 2, y: (window.innerHeight - 60) / 2, angle: 0 }; // Moved early
+  const logicalWidth = 800; // Fixed logical width for consistent gameplay
+  const logicalHeight = 400; // Fixed for horizontal mobile/desktop
+  let scale = 1; // Dynamic scale factor
+  let offsetX = 0, offsetY = 0; // For letterboxing
+  let aircraft = { x: logicalWidth / 2, y: logicalHeight / 2, angle: 0 }; // Center origin in logical units
 
   function resizeCanvas() {
     const dpr = window.devicePixelRatio || 1;
     canvas.width = window.innerWidth * dpr;
     canvas.height = (window.innerHeight - 60) * dpr; // Minus HUD space
-    ctx.scale(dpr, dpr);
-    aircraft.x = window.innerWidth / 2;
-    aircraft.y = (window.innerHeight - 60) / 2;
-    em.velocity = window.innerWidth / 5; // Dynamic for exact 5s cruise cross
-    console.log("Canvas resized to", window.innerWidth, "x", window.innerHeight - 60, "velocity reset to", em.velocity);
+    scale = Math.min(canvas.width / logicalWidth, canvas.height / logicalHeight);
+    offsetX = (canvas.width - logicalWidth * scale) / 2;
+    offsetY = (canvas.height - logicalHeight * scale) / 2;
+    em.velocity = logicalWidth / 5; // Fixed 5s cross in logical units
+    console.log("Canvas resized to", window.innerWidth, "x", window.innerHeight - 60, "logical", logicalWidth, "x", logicalHeight, "scale", scale.toFixed(2), "velocity", em.velocity.toFixed(2));
   }
   resizeCanvas();
   window.addEventListener('resize', resizeCanvas);
@@ -50,7 +54,7 @@ function startGame(hud, expandedHud, fuelHud) {
     }
   });
 
-  let particles = []; // For afterburner effects
+  let particles = []; // For afterburner effects (logical units)
 
   function createParticles(num) {
     for (let i = 0; i < num; i++) {
@@ -79,34 +83,34 @@ function startGame(hud, expandedHud, fuelHud) {
       ctx.fillStyle = p.color;
       ctx.globalAlpha = p.life;
       ctx.beginPath();
-      ctx.arc(p.x, p.y, 2 * p.life, 0, 2 * Math.PI);
+      ctx.arc(p.x * scale + offsetX, p.y * scale + offsetY, 2 * p.life * scale, 0, 2 * Math.PI);
       ctx.fill();
     });
     ctx.globalAlpha = 1;
   }
 
   function drawAircraft() {
-    console.log("Drawing aircraft at", aircraft.x, aircraft.y, "with velocity", em.velocity);
+    console.log("Drawing aircraft at logical", aircraft.x, aircraft.y, "with velocity", em.velocity);
     ctx.save();
-    ctx.translate(aircraft.x, aircraft.y);
+    ctx.translate(aircraft.x * scale + offsetX, aircraft.y * scale + offsetY);
     ctx.rotate(aircraft.angle);
     ctx.fillStyle = "#0f0";
     ctx.beginPath();
-    ctx.moveTo(20, 0);
-    ctx.lineTo(-10, 10);
-    ctx.lineTo(-10, -10);
+    ctx.moveTo(20 * scale, 0);
+    ctx.lineTo(-10 * scale, 10 * scale);
+    ctx.lineTo(-10 * scale, -10 * scale);
     ctx.closePath();
     ctx.fill();
     ctx.restore();
-    drawAfterburner(ctx, aircraft, em); // Call from afterburner.js
-    drawAirbrake(ctx, aircraft, em); // Call from airbrake.js
+    drawAfterburner(ctx, aircraft, em, scale, offsetX, offsetY); // Adjusted for scale
+    drawAirbrake(ctx, aircraft, em, scale, offsetX, offsetY); // Adjusted for scale
   }
 
   function drawGameOver() {
     ctx.fillStyle = "#f00";
     ctx.font = "48px monospace";
     ctx.textAlign = "center";
-    ctx.fillText("GAME OVER", window.innerWidth / 2, (window.innerHeight - 60) / 2);
+    ctx.fillText("GAME OVER", canvas.width / 2, canvas.height / 2);
   }
 
   function gameLoop(time) {
@@ -131,10 +135,11 @@ function startGame(hud, expandedHud, fuelHud) {
     aircraft.x += Math.cos(aircraft.angle) * em.velocity * dt;
     aircraft.y += Math.sin(aircraft.angle) * em.velocity * dt;
     aircraft.angle += (keys.ArrowLeft ? -em.turnSpeed : 0) + (keys.ArrowRight ? em.turnSpeed : 0);
-    if (aircraft.x < 0) aircraft.x = window.innerWidth;
-    if (aircraft.x > window.innerWidth) aircraft.x = 0;
-    if (aircraft.y < 0) aircraft.y = window.innerHeight - 60;
-    if (aircraft.y > window.innerHeight - 60) aircraft.y = 0;
+    // Wrap in logical units
+    if (aircraft.x < 0) aircraft.x += logicalWidth;
+    if (aircraft.x > logicalWidth) aircraft.x -= logicalWidth;
+    if (aircraft.y < 0) aircraft.y += logicalHeight;
+    if (aircraft.y > logicalHeight) aircraft.y -= logicalHeight;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawParticles();
     drawAircraft();
