@@ -18,20 +18,20 @@ function HudEmBarExpanded() {
       console.error("Expanded HUD elements missing");
       return;
     }
-    // Thrust bar: 0-100% (base to 2x base)
-    const thrustPercent = ((em.thrust - em.baseThrust) / em.baseThrust) * 100;
+    // Thrust bar: 0-100% (60000 N to 120000 N)
+    const thrustPercent = ((em.thrust - 60000) / (120000 - 60000)) * 100;
     thrustBar.style.width = `${thrustPercent}%`;
     thrustBar.classList.toggle("pulsing", em.isAfterburning);
 
     // Drag bar: 0-100% of max drag
     const dragPercent = (em.drag / maxDrag) * 100;
     dragBar.style.width = `${dragPercent}%`;
-    dragBar.style.background = em.drag > em.baseDrag ? "#f00" : "#0f0";
-    dragBar.classList.toggle("pulsing", em.isTurning || em.isBraking);
+    dragBar.style.background = em.drag > 5000 ? "#f00" : "#0f0";
+    dragBar.classList.toggle("pulsing", em.drag > 5000);
 
-    // Airspeed bar: 0-100% of reference velocity
+    // Airspeed bar: 0-200% of reference velocity
     const speedPercent = (em.velocity / referenceVelocity) * 100;
-    speedBar.style.width = `${speedPercent}%`;
+    speedBar.style.width = `${Math.min(200, speedPercent)}%`;
 
     // Weight bar: 50-100% of initial weight
     const weightPercent = ((em.weight - 500) / (initialWeight - 500)) * 100;
@@ -43,8 +43,8 @@ function HudEmBarExpanded() {
     gBar.style.background = em.gForce > 3 ? "#f00" : "#0f0";
     gBar.classList.toggle("pulsing", em.gForce > 3);
 
-    // Fuel Flow bar: 0-100% (military to afterburner)
-    const fuelFlowPercent = ((em.isAfterburning ? em.afterburnerBurn : em.militaryBurn) / maxFuelFlow) * 100;
+    // Fuel Flow bar: 0-100% (0.1 to 0.5 kg/s)
+    const fuelFlowPercent = ((em.isAfterburning ? em.afterburnerBurn : em.militaryBurn) - 0.1) / (maxFuelFlow - 0.1) * 100;
     fuelFlowBar.style.width = `${fuelFlowPercent}%`;
     fuelFlowBar.classList.toggle("pulsing", em.isAfterburning);
   };

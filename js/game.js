@@ -3,8 +3,8 @@ function startGame(hud, expandedHud, fuelHud) {
   console.log("Loading game.js");
   let em;
   try {
-    em = new EnergyManeuverability(platonicParams);
-    console.log("EM initialized with platonic params:", em);
+    em = new EnergyManeuverability(60000, 5000, 1000, 160, 60, 60, 0.1, 0.5, 0.85, 0.06);
+    console.log("EM initialized:", em);
   } catch (e) {
     console.error("Failed to load energy_maneuverability.js:", e);
     return;
@@ -15,24 +15,13 @@ function startGame(hud, expandedHud, fuelHud) {
     console.error("Canvas context not found");
     return;
   }
-
-  function resizeCanvas() {
-    const dpr = window.devicePixelRatio || 1;
-    canvas.width = window.innerWidth * dpr;
-    canvas.height = (window.innerHeight - 60) * dpr; // Minus HUD space
-    ctx.scale(dpr, dpr);
-    aircraft.x = window.innerWidth / 2;
-    aircraft.y = (window.innerHeight - 60) / 2;
-    console.log("Canvas resized to", window.innerWidth, "x", window.innerHeight - 60);
-  }
-  resizeCanvas();
-  window.addEventListener('resize', resizeCanvas);
-
+  canvas.width = 800;
+  canvas.height = 600;
   const keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false, KeyH: false };
-  let aircraft = { x: window.innerWidth / 2, y: (window.innerHeight - 60) / 2, angle: 0 };
+  let aircraft = { x: canvas.width / 2, y: canvas.height / 2, angle: 0 };
   let lastTime = 0;
   let gameOver = false;
-  let activeHud = 0; // 0: Ps, 1: Expanded, 2: Fuel (fuel always on)
+  let activeHud = 0; // 0: Ps, 1: Expanded, 2: Fuel
 
   window.addEventListener("keydown", (e) => {
     console.log("Key down:", e.key);
@@ -45,6 +34,7 @@ function startGame(hud, expandedHud, fuelHud) {
       console.log("Switching to HUD:", activeHud);
       document.getElementById("ps-hud").style.display = activeHud === 0 ? "block" : "none";
       document.getElementById("expanded-hud").style.display = activeHud === 1 ? "block" : "none";
+      // Fuel always visible, but toggle others
     }
   });
   window.addEventListener("keyup", (e) => {
@@ -74,7 +64,7 @@ function startGame(hud, expandedHud, fuelHud) {
     ctx.fillStyle = "#f00";
     ctx.font = "48px monospace";
     ctx.textAlign = "center";
-    ctx.fillText("GAME OVER", window.innerWidth / 2, (window.innerHeight - 60) / 2);
+    ctx.fillText("GAME OVER", canvas.width / 2, canvas.height / 2);
   }
 
   function gameLoop(time) {
@@ -99,16 +89,16 @@ function startGame(hud, expandedHud, fuelHud) {
     aircraft.x += Math.cos(aircraft.angle) * em.velocity * dt;
     aircraft.y += Math.sin(aircraft.angle) * em.velocity * dt;
     aircraft.angle += (keys.ArrowLeft ? -em.turnSpeed : 0) + (keys.ArrowRight ? em.turnSpeed : 0);
-    if (aircraft.x < 0) aircraft.x = window.innerWidth;
-    if (aircraft.x > window.innerWidth) aircraft.x = 0;
-    if (aircraft.y < 0) aircraft.y = window.innerHeight - 60;
-    if (aircraft.y > window.innerHeight - 60) aircraft.y = 0;
+    if (aircraft.x < 0) aircraft.x = canvas.width;
+    if (aircraft.x > canvas.width) aircraft.x = 0;
+    if (aircraft.y < 0) aircraft.y = canvas.height;
+    if (aircraft.y > canvas.height) aircraft.y = 0;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawAircraft();
     try {
       if (activeHud === 0) hud.update(em);
       else if (activeHud === 1) expandedHud.update(em);
-      fuelHud.update(em);
+      fuelHud.update(em); // Always update fuel HUD
     } catch (e) {
       console.error("HUD update error:", e);
     }
