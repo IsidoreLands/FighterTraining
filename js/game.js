@@ -93,17 +93,31 @@ function startGame(hud, expandedHud, fuelHud) {
     return "quit"; // Expand for win/loss in future
   }
 
-  function exportTelemetry() {
+  async function exportTelemetry() {
     const endTime = Date.now();
     const name = `telemetry_platonic_v1_g1_p${getPlayerHash()}_o_none_${Math.floor(startTime/1000)}_${Math.floor(endTime/1000)}_${getOutcome()}.json`;
-    const blob = new Blob([JSON.stringify(telemetryLog, null, 2)], {type: "application/json"});
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = name;
-    a.click();
-    URL.revokeObjectURL(url);
-    console.log("Telemetry exported as", name);
+    const data = JSON.stringify(telemetryLog, null, 2);
+    // Optional local download
+    // const blob = new Blob([data], {type: "application/json"});
+    // const url = URL.createObjectURL(blob);
+    // const a = document.createElement("a");
+    // a.href = url;
+    // a.download = name;
+    // a.click();
+    // URL.revokeObjectURL(url);
+    // console.log("Telemetry exported locally as", name);
+    // Upload to droplet
+    try {
+      const response = await fetch('http://159.65.246.113:5000/upload', { // Droplet IP
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({filename: name, content: data})
+      });
+      if (response.ok) console.log("Telemetry uploaded to droplet");
+      else console.error("Upload failed");
+    } catch (e) {
+      console.error("Upload error:", e);
+    }
     telemetryLog = []; // Clear after export
     startTime = Date.now(); // Reset for next run
   }
