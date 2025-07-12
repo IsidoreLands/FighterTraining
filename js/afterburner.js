@@ -1,16 +1,17 @@
-// js/airbrake.js - Visuals for airbrake
-function drawAirbrake(ctx, aircraft, em) {
-  if (em.brakeLevel > 0) {
+// js/afterburner.js - Visuals for afterburner
+function drawAfterburner(ctx, aircraft, em) {
+  if (em.afterburnerLevel > 0) {
     ctx.save();
     ctx.translate(aircraft.x, aircraft.y);
     ctx.rotate(aircraft.angle);
-    ctx.strokeStyle = 'red';
-    ctx.lineWidth = 2;
-    ctx.globalAlpha = em.brakeLevel * 0.8;
+    ctx.fillStyle = 'orange';
+    ctx.globalAlpha = em.afterburnerLevel * 0.8;
     ctx.beginPath();
-    ctx.moveTo(-10, -10);
-    ctx.lineTo(-10, 10);
-    ctx.stroke();
+    ctx.moveTo(-15, -5);
+    ctx.lineTo(-35, 0);
+    ctx.lineTo(-15, 5);
+    ctx.closePath();
+    ctx.fill();
     ctx.restore();
   }
 }

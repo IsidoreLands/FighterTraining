@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>FighterTraining MVP - Platonic Test</title>
+  <style>
+    body { margin: 0; background: #000; font-family: monospace; color: #0f0; }
+    canvas { width: 100vw; height: calc(100vh - 60px); position: absolute; top: 60px; left: 0; }
+    .hud-container { position: absolute; top: 0; left: 0; width: 100%; padding: 5px; display: flex; flex-direction: column; align-items: center; }
+    .bar-container { width: 300px; height: 20px; background: #222; border: 1px solid #0f0; position: relative; margin: 5px auto; }
+    .bar { height: 100%; background: #0f0; position: absolute; transition: all 0.1s; }
+    .ps-bar { left: 50%; transform: translateX(-50%); }
+    .vertical-bar { left: 0; }
+    .center-line { position: absolute; left: 50%; width: 2px; height: 100%; background: #f00; }
+    .threshold-line { position: absolute; width: 2px; height: 100%; background: #ff0; }
+    .neutral-marker { position: absolute; top: -5px; width: 8px; height: 8px; background: #fff; transform: rotate(45deg); transition: all 0.1s; }
+    .pulsing { animation: pulse 0.5s infinite alternate; }
+    @keyframes pulse { 0% { opacity: 1; } 100% { opacity: 0.5; } }
+    .label { font-size: 12px; margin-bottom: 5px; text-align: center; }
+    #expanded-hud { display: block; position: absolute; top: 60px; left: 10px; background: rgba(0,0,0,0.7); padding: 10px; border: 1px solid #0f0; z-index: 10; }
+    #fuel-hud { display: block; position: absolute; bottom: 10px; left: 10px; z-index: 10; }
+    @media (max-width: 600px) {
+      .bar-container { width: 200px; height: 15px; }
+      .label { font-size: 10px; }
+      canvas { height: calc(100vh - 45px); top: 45px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hud-container">
+    <div id="ps-hud">
+      <div class="label">Energy (Ps: Excess Power ft/s)</div>
+      <div class="bar-container">
+        <div class="center-line"></div>
+        <div class="threshold-line" style="left: 35%;"></div>
+        <div class="threshold-line" style="left: 65%;"></div>
+        <div class="bar ps-bar" id="ps-bar"></div>
+        <div class="neutral-marker" id="neutral-marker"></div>
+      </div>
+    </div>
+    <div id="expanded-hud">
+      <div id="thrust-hud">
+        <div class="label">Thrust</div>
+        <div class="bar-container">
+          <div class="bar vertical-bar" id="thrust-bar"></div>
+        </div>
+      </div>
+      <div id="drag-hud">
+        <div class="label">Drag</div>
+        <div class="bar-container">
+          <div class="bar vertical-bar" id="drag-bar"></div>
+        </div>
+      </div>
+      <div id="speed-hud">
+        <div class="label">Airspeed</div>
+        <div class="bar-container">
+          <div class="bar vertical-bar" id="speed-bar"></div>
+        </div>
+      </div>
+      <div id="weight-hud">
+        <div class="label">Weight</div>
+        <div class="bar-container">
+          <div class="bar vertical-bar" id="weight-bar"></div>
+        </div>
+      </div>
+      <div id="g-hud">
+        <div class="label">G-Force</div>
+        <div class="bar-container">
+          <div class="bar vertical-bar" id="g-bar"></div>
+        </div>
+      </div>
+      <div id="fuel-flow-hud">
+        <div class="label">Fuel Flow</div>
+        <div class="bar-container">
+          <div class="bar vertical-bar" id="fuel-flow-bar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="fuel-hud">
+    <div class="label">Fuel</div>
+    <div class="bar-container">
+      <div class="bar vertical-bar" id="fuel-bar"></div>
+    </div>
+  </div>
+  <canvas id="gameCanvas"></canvas>
+  <script src="js/platonic_aircraft.js"></script>
+  <script src="js/energy_maneuverability.js"></script>
+  <script src="js/afterburner.js"></script>
+  <script src="js/airbrake.js"></script>
+  <script src="js/hud_em_bar.js"></script>
+  <script src="js/hud_em_bar_expanded.js"></script>
+  <script src="js/hud_fuel.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/init.js"></script>
+</body>
+</html>
