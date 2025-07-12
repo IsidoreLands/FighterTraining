@@ -4,10 +4,10 @@ const platonicParams = {
   afterburnerMultiplier: 2,
   baseDrag: 5000,
   dragCoefficient: 0.85,
-  brakeDragAdd: 10000,
+  brakeDragAdd: 20000, // Increased for stronger brake
   turnDragAdd: 20000,
   weight: 1000,
-  velocity: 160,
+  velocity: 160, // Adjusted if needed for 5s cross (based on canvas.width ~800 / 160 = 5s)
   fuel: 60,
   maxFuel: 60,
   militaryBurn: 0.1,
