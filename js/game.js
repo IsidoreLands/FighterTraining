@@ -52,7 +52,7 @@ function startGame(hud, expandedHud, fuelHud) {
   let particles = []; // For afterburner effects
 
   function createParticles(num) {
-    for (let i = 0; i num; i++) {
+    for (let i = 0; i < num; i++) {
       particles.push({
         x: aircraft.x - Math.cos(aircraft.angle) * 20, // Behind aircraft
         y: aircraft.y - Math.sin(aircraft.angle) * 20,
