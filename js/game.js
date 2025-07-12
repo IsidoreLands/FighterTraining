@@ -34,7 +34,7 @@ function startGame(hud, expandedHud, fuelHud) {
   resizeCanvas();
   window.addEventListener('resize', resizeCanvas);
 
-  const keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false, KeyH: false, KeyL: false };
+  const keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false, KeyH: false };
   let lastTime = 0;
   let gameOver = false;
   let activeHud = 1; // Start with expanded visible for testing
@@ -45,7 +45,10 @@ function startGame(hud, expandedHud, fuelHud) {
       keys[e.key] = true;
       e.preventDefault();
     }
-    if (e.key === "KeyL") exportTelemetry(); // Export on 'L'
+    if (e.key.toUpperCase() === "L") {
+      e.preventDefault();
+      exportTelemetry();
+    }
   });
   window.addEventListener("keyup", (e) => {
     console.log("Key up:", e.key);
