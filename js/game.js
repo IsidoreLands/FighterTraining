@@ -34,10 +34,11 @@ function startGame(hud, expandedHud, fuelHud) {
   resizeCanvas();
   window.addEventListener('resize', resizeCanvas);
 
-  const keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false, KeyH: false };
+  const keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false, KeyH: false, KeyL: false, KeyQ: false };
   let lastTime = 0;
   let gameOver = false;
   let activeHud = 1; // Start with expanded visible for testing
+  let startTime = Date.now(); // For filename
 
   window.addEventListener("keydown", (e) => {
     console.log("Key down:", e.key);
@@ -48,6 +49,11 @@ function startGame(hud, expandedHud, fuelHud) {
     if (e.key.toUpperCase() === "L") {
       e.preventDefault();
       exportTelemetry();
+    }
+    if (e.key.toUpperCase() === "Q") {
+      e.preventDefault();
+      gameOver = true;
+      exportTelemetry(); // Auto-export on quit
     }
   });
   window.addEventListener("keyup", (e) => {
@@ -61,6 +67,10 @@ function startGame(hud, expandedHud, fuelHud) {
   let telemetryLog = []; // Buffer for telemetry
   let lastLogTime = 0; // For interval logging
 
+  function getCurrentKeys() {
+    return Object.keys(keys).filter(k => keys[k]).join(",");
+  }
+
   function logTelemetry(dt) {
     telemetryLog.push({
       timestamp: Date.now(),
@@ -69,20 +79,33 @@ function startGame(hud, expandedHud, fuelHud) {
       thrust: em.thrust.toFixed(2),
       drag: em.drag.toFixed(2),
       Ps: em.calculatePs().toFixed(2),
-      fuel: em.fuel.toFixed(2)
+      fuel: em.fuel.toFixed(2),
+      keys: getCurrentKeys()
     });
   }
 
+  function getPlayerHash() {
+    return Math.random().toString(36).substring(2, 10); // 8-char random for anonymous
+  }
+
+  function getOutcome() {
+    if (em.fuel <= 0) return "fuel_out";
+    return "quit"; // Expand for win/loss in future
+  }
+
   function exportTelemetry() {
+    const endTime = Date.now();
+    const name = `telemetry_platonic_v1_g1_p${getPlayerHash()}_o_none_${Math.floor(startTime/1000)}_${Math.floor(endTime/1000)}_${getOutcome()}.json`;
     const blob = new Blob([JSON.stringify(telemetryLog, null, 2)], {type: "application/json"});
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "telemetry_log.json";
+    a.download = name;
     a.click();
     URL.revokeObjectURL(url);
-    console.log("Telemetry exported as JSON");
+    console.log("Telemetry exported as", name);
     telemetryLog = []; // Clear after export
+    startTime = Date.now(); // Reset for next run
   }
 
   let particles = [];
@@ -147,6 +170,7 @@ function startGame(hud, expandedHud, fuelHud) {
   function gameLoop(time) {
     if (gameOver) {
       drawGameOver();
+      exportTelemetry(); // Auto-export on game over
       return;
     }
     if (!lastTime) lastTime = time;
