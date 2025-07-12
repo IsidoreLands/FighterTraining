@@ -32,19 +32,13 @@ function startGame(hud, expandedHud, fuelHud) {
   let aircraft = { x: window.innerWidth / 2, y: (window.innerHeight - 60) / 2, angle: 0 };
   let lastTime = 0;
   let gameOver = false;
-  let activeHud = 0; // 0: Ps, 1: Expanded, 2: Fuel (fuel always on)
+  let activeHud = 1; // Start with expanded visible for testing
 
   window.addEventListener("keydown", (e) => {
     console.log("Key down:", e.key);
     if (e.key in keys) {
       keys[e.key] = true;
       e.preventDefault();
-    }
-    if (e.key === "KeyH") {
-      activeHud = (activeHud + 1) % 3;
-      console.log("Switching to HUD:", activeHud);
-      document.getElementById("ps-hud").style.display = activeHud === 0 ? "block" : "none";
-      document.getElementById("expanded-hud").style.display = activeHud === 1 ? "block" : "none";
     }
   });
   window.addEventListener("keyup", (e) => {
@@ -106,8 +100,8 @@ function startGame(hud, expandedHud, fuelHud) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawAircraft();
     try {
-      if (activeHud === 0) hud.update(em);
-      else if (activeHud === 1) expandedHud.update(em);
+      hud.update(em); // Ps always for base
+      expandedHud.update(em); // Expanded always for testing
       fuelHud.update(em);
     } catch (e) {
       console.error("HUD update error:", e);

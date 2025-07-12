@@ -2,7 +2,7 @@
 function HudEmBar() {
   const psBar = document.getElementById("ps-bar");
   const neutralMarker = document.getElementById("neutral-marker");
-  const initialPs = ((60000 - 5000) * 160) / 1000; // Baseline Ps without /10 scaling
+  const initialPs = ((60000 - 5000) * 160) / 1000; // Baseline Ps
 
   this.update = function (em) {
     if (!psBar || !neutralMarker) {
