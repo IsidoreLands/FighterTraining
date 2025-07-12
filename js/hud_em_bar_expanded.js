@@ -16,19 +16,19 @@ function HudEmBarExpanded() {
   function drawGauge(percent) {
     if (!gaugeCtx) return;
     gaugeCtx.clearRect(0, 0, thrustGauge.width, thrustGauge.height);
-    gaugeCtx.lineWidth = 10;
+    gaugeCtx.lineWidth = 8;
     gaugeCtx.strokeStyle = '#000';
     gaugeCtx.beginPath();
-    gaugeCtx.arc(50, 50, 40, Math.PI, 0);
+    gaugeCtx.arc(40, 40, 30, Math.PI, 0);
     gaugeCtx.stroke();
     gaugeCtx.strokeStyle = '#0f0';
     gaugeCtx.beginPath();
-    gaugeCtx.arc(50, 50, 40, Math.PI, Math.PI + (Math.PI * percent / 100));
+    gaugeCtx.arc(40, 40, 30, Math.PI, Math.PI + (Math.PI * percent / 100));
     gaugeCtx.stroke();
     gaugeCtx.fillStyle = '#0f0';
-    gaugeCtx.font = "14px monospace";
+    gaugeCtx.font = "12px monospace";
     gaugeCtx.textAlign = "center";
-    gaugeCtx.fillText(`${percent}% RPM`, 50, 60);
+    gaugeCtx.fillText(`${percent}% RPM`, 40, 50);
   }
 
   this.update = function (em) {
