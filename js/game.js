@@ -15,6 +15,7 @@ function startGame(hud, expandedHud, fuelHud) {
     console.error("Canvas context not found");
     return;
   }
+  let aircraft = { x: window.innerWidth / 2, y: (window.innerHeight - 60) / 2, angle: 0 }; // Moved early
 
   function resizeCanvas() {
     const dpr = window.devicePixelRatio || 1;
@@ -29,7 +30,6 @@ function startGame(hud, expandedHud, fuelHud) {
   window.addEventListener('resize', resizeCanvas);
 
   const keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false, KeyH: false };
-  let aircraft = { x: window.innerWidth / 2, y: (window.innerHeight - 60) / 2, angle: 0 };
   let lastTime = 0;
   let gameOver = false;
   let activeHud = 1; // Start with expanded visible for testing
