@@ -42,11 +42,12 @@ class EnergyManeuverability {
     if (this.isTurning) this.drag += 20000;
   }
   updateVelocity(deltaTime) {
-    const acceleration = (this.thrust - this.drag) / this.weight;
+    const acceleration = (this.thrust - this.drag) / this.weight * 10; // Amplified for visibility
     this.velocity += acceleration * deltaTime;
-    if (this.afterburnerLevel > 0) this.velocity += 20 * this.afterburnerLevel * deltaTime; // Increased boost for visibility
-    if (this.brakeLevel > 0) this.velocity -= 10 * this.brakeLevel * deltaTime; // Direct penalty for visibility
+    if (this.afterburnerLevel > 0) this.velocity += 20 * this.afterburnerLevel * deltaTime;
+    if (this.brakeLevel > 0) this.velocity -= 10 * this.brakeLevel * deltaTime;
     this.velocity = Math.max(50, Math.min(160, this.velocity)); // Cap at 160 pixels/s
+    console.log("Velocity updated to", this.velocity, "with accel", acceleration);
   }
   updateTurnSpeed() {
     this.turnSpeed = this.baseTurnSpeed;
