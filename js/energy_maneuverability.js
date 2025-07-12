@@ -48,9 +48,9 @@ class EnergyManeuverability {
   updateVelocity(deltaTime) {
     const acceleration = (this.thrust - this.drag) / this.weight * 10; // Amplified for visibility
     this.velocity += acceleration * deltaTime;
-    if (this.afterburnerLevel > 0) this.velocity += 50 * this.afterburnerLevel * deltaTime; // Increased for speed up
-    if (this.brakeLevel > 0) this.velocity -= 50 * this.brakeLevel * deltaTime; // Increased for slow down
-    this.velocity = Math.max(30, Math.min(400, this.velocity)); // Lower min, higher max for range
+    if (this.afterburnerLevel > 0) this.velocity += 100 * this.afterburnerLevel * deltaTime; // Strongly increased for speed up
+    if (this.brakeLevel > 0) this.velocity -= 100 * this.brakeLevel * deltaTime; // Strongly increased for slow down
+    this.velocity = Math.max(20, Math.min(600, this.velocity)); // Lower min, higher max for range
     console.log("Velocity updated to", this.velocity, "with accel", acceleration);
   }
   updateTurnSpeed() {

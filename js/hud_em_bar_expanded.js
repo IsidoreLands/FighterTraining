@@ -9,7 +9,7 @@ function HudEmBarExpanded() {
   const fuelFlowBar = document.getElementById("fuel-flow-bar");
   const initialWeight = 1000; // kg
   const maxDrag = 80000; // Increased for overflow fix
-  const referenceVelocity = 400; // Increased for airspeed overflow
+  const referenceVelocity = 600; // Increased for airspeed overflow
   const maxG = 9; // g
   const maxFuelFlow = 0.5; // kg/s
 
