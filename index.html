@@ -20,6 +20,7 @@
     .label { font-size: 12px; margin-bottom: 5px; text-align: center; }
     #expanded-hud { display: block; position: absolute; top: 60px; left: 10px; background: rgba(0,0,0,0.7); padding: 10px; border: 1px solid #0f0; z-index: 10; }
     #fuel-hud { display: block; position: absolute; bottom: 10px; left: 10px; z-index: 10; }
+    #thrust-hud canvas { width: 100px; height: 100px; }
     @media (max-width: 600px) {
       .bar-container { width: 200px; height: 15px; }
       .label { font-size: 10px; }
@@ -41,10 +42,8 @@
     </div>
     <div id="expanded-hud">
       <div id="thrust-hud">
-        <div class="label">Thrust</div>
-        <div class="bar-container">
-          <div class="bar vertical-bar" id="thrust-bar"></div>
-        </div>
+        <div class="label">Thrust RPM</div>
+        <canvas id="thrust-gauge" width="100" height="100"></canvas> // Added for gauge
       </div>
       <div id="drag-hud">
         <div class="label">Drag</div>

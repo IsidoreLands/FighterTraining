@@ -1,7 +1,7 @@
 // hud_em_bar_expanded.js - Expanded HUD for FighterTraining
 function HudEmBarExpanded() {
-  const thrustLabel = document.getElementById("thrust-label"); // Assume added in HTML
-  const thrustBar = document.getElementById("thrust-bar");
+  const thrustGauge = document.getElementById("thrust-gauge");
+  const gaugeCtx = thrustGauge ? thrustGauge.getContext('2d') : null;
   const dragBar = document.getElementById("drag-bar");
   const speedBar = document.getElementById("speed-bar");
   const weightBar = document.getElementById("weight-bar");
@@ -13,17 +13,33 @@ function HudEmBarExpanded() {
   const maxG = 9; // g
   const maxFuelFlow = 0.5; // kg/s
 
+  function drawGauge(percent) {
+    if (!gaugeCtx) return;
+    gaugeCtx.clearRect(0, 0, thrustGauge.width, thrustGauge.height);
+    gaugeCtx.lineWidth = 10;
+    gaugeCtx.strokeStyle = '#000';
+    gaugeCtx.beginPath();
+    gaugeCtx.arc(50, 50, 40, Math.PI, 0);
+    gaugeCtx.stroke();
+    gaugeCtx.strokeStyle = '#0f0';
+    gaugeCtx.beginPath();
+    gaugeCtx.arc(50, 50, 40, Math.PI, Math.PI + (Math.PI * percent / 100));
+    gaugeCtx.stroke();
+    gaugeCtx.fillStyle = '#0f0';
+    gaugeCtx.font = "14px monospace";
+    gaugeCtx.textAlign = "center";
+    gaugeCtx.fillText(`${percent}% RPM`, 50, 60);
+  }
+
   this.update = function (em) {
     console.log("Updating expanded HUD, Ps:", em.calculatePs(), "Fuel:", em.fuel);
-    if (!thrustBar || !dragBar || !speedBar || !weightBar || !gBar || !fuelFlowBar) {
+    if (!gaugeCtx || !dragBar || !speedBar || !weightBar || !gBar || !fuelFlowBar) {
       console.error("Expanded HUD elements missing");
       return;
     }
-    // Thrust: Digital % and bar
-    const thrustPercent = em.afterburnerLevel * 100;
-    if (thrustLabel) thrustLabel.textContent = `${Math.round(thrustPercent)}%`; // Digital readout
-    thrustBar.style.width = `${thrustPercent}%`;
-    thrustBar.classList.toggle("pulsing", em.afterburnerLevel > 0.5);
+    // Thrust: Gauge with digital %
+    const thrustPercent = Math.round(em.afterburnerLevel * 100);
+    drawGauge(thrustPercent);
 
     // Drag bar: 0-100% of max drag
     const dragPercent = (em.drag / maxDrag) * 100;
