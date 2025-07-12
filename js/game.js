@@ -34,7 +34,7 @@ function startGame(hud, expandedHud, fuelHud) {
   resizeCanvas();
   window.addEventListener('resize', resizeCanvas);
 
-  const keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false, KeyH: false };
+  const keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false, KeyH: false, KeyL: false };
   let lastTime = 0;
   let gameOver = false;
   let activeHud = 1; // Start with expanded visible for testing
@@ -45,6 +45,7 @@ function startGame(hud, expandedHud, fuelHud) {
       keys[e.key] = true;
       e.preventDefault();
     }
+    if (e.key === "KeyL") exportTelemetry(); // Export on 'L'
   });
   window.addEventListener("keyup", (e) => {
     console.log("Key up:", e.key);
@@ -53,6 +54,33 @@ function startGame(hud, expandedHud, fuelHud) {
       e.preventDefault();
     }
   });
+
+  let telemetryLog = []; // Buffer for telemetry
+  let lastLogTime = 0; // For interval logging
+
+  function logTelemetry(dt) {
+    telemetryLog.push({
+      timestamp: Date.now(),
+      dt: dt.toFixed(4),
+      velocity: em.velocity.toFixed(2),
+      thrust: em.thrust.toFixed(2),
+      drag: em.drag.toFixed(2),
+      Ps: em.calculatePs().toFixed(2),
+      fuel: em.fuel.toFixed(2)
+    });
+  }
+
+  function exportTelemetry() {
+    const blob = new Blob([JSON.stringify(telemetryLog, null, 2)], {type: "application/json"});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "telemetry_log.json";
+    a.click();
+    URL.revokeObjectURL(url);
+    console.log("Telemetry exported as JSON");
+    telemetryLog = []; // Clear after export
+  }
 
   let particles = [];
 
@@ -126,7 +154,10 @@ function startGame(hud, expandedHud, fuelHud) {
       isBraking: keys.ArrowDown,
       isTurning: keys.ArrowLeft || keys.ArrowRight
     });
-    console.log(`Telemetry: dt=${dt.toFixed(4)}, velocity=${em.velocity.toFixed(2)}, thrust=${em.thrust.toFixed(2)}, drag=${em.drag.toFixed(2)}, Ps=${em.calculatePs().toFixed(2)}, fuel=${em.fuel.toFixed(2)}`); // Telemetry log
+    if (time - lastLogTime > 0.5) { // Log every 0.5s to reduce volume
+      logTelemetry(dt);
+      lastLogTime = time;
+    }
     if (em.fuel <= 0) {
       gameOver = true;
       console.log("Fuel depleted, game over");
