@@ -3,8 +3,8 @@ function startGame(hud, expandedHud, fuelHud) {
   console.log("Loading game.js");
   let em;
   try {
-    em = new EnergyManeuverability(60000, 5000, 1000, 160, 60, 60, 0.1, 0.5, 0.85, 0.06);
-    console.log("EM initialized:", em);
+    em = new EnergyManeuverability(platonicParams);
+    console.log("EM initialized with platonic params:", em);
   } catch (e) {
     console.error("Failed to load energy_maneuverability.js:", e);
     return;
@@ -21,7 +21,9 @@ function startGame(hud, expandedHud, fuelHud) {
     canvas.width = window.innerWidth * dpr;
     canvas.height = (window.innerHeight - 60) * dpr; // Minus HUD space
     ctx.scale(dpr, dpr);
-    console.log("Canvas resized to", canvas.width / dpr, "x", canvas.height / dpr);
+    aircraft.x = window.innerWidth / 2;
+    aircraft.y = (window.innerHeight - 60) / 2;
+    console.log("Canvas resized to", window.innerWidth, "x", window.innerHeight - 60);
   }
   resizeCanvas();
   window.addEventListener('resize', resizeCanvas);
@@ -30,7 +32,7 @@ function startGame(hud, expandedHud, fuelHud) {
   let aircraft = { x: window.innerWidth / 2, y: (window.innerHeight - 60) / 2, angle: 0 };
   let lastTime = 0;
   let gameOver = false;
-  let activeHud = 0; // 0: Ps, 1: Expanded, 2: Fuel (but fuel always on)
+  let activeHud = 0; // 0: Ps, 1: Expanded, 2: Fuel (fuel always on)
 
   window.addEventListener("keydown", (e) => {
     console.log("Key down:", e.key);
