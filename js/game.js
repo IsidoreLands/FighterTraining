@@ -39,6 +39,7 @@ function startGame(hud, expandedHud, fuelHud) {
   let gameOver = false;
   let activeHud = 1; // Start with expanded visible for testing
   let startTime = Date.now(); // For filename
+  const API_KEY = "your_secret_api_key"; // Match droplet key
 
   window.addEventListener("keydown", (e) => {
     console.log("Key down:", e.key);
@@ -97,20 +98,10 @@ function startGame(hud, expandedHud, fuelHud) {
     const endTime = Date.now();
     const name = `telemetry_platonic_v1_g1_p${getPlayerHash()}_o_none_${Math.floor(startTime/1000)}_${Math.floor(endTime/1000)}_${getOutcome()}.json`;
     const data = JSON.stringify(telemetryLog, null, 2);
-    // Optional local download
-    // const blob = new Blob([data], {type: "application/json"});
-    // const url = URL.createObjectURL(blob);
-    // const a = document.createElement("a");
-    // a.href = url;
-    // a.download = name;
-    // a.click();
-    // URL.revokeObjectURL(url);
-    // console.log("Telemetry exported locally as", name);
-    // Upload to droplet
     try {
-      const response = await fetch('http://159.65.246.113:5000/upload', { // Droplet IP
+      const response = await fetch('http://159.65.246.113:5000/upload', {
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
+        headers: {'Content-Type': 'application/json', 'X-API-Key': API_KEY},
         body: JSON.stringify({filename: name, content: data})
       });
       if (response.ok) console.log("Telemetry uploaded to droplet");
